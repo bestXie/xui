@@ -1,0 +1,15 @@
+{
+  "name": "laytpl",
+  "version": "1.1.0",
+  "homepage": "https://github.com/sentsin/laytpl",
+  "authors": [
+    "sentsin (xu@sentsin.com)"
+  ],
+  "description": "精妙的JavaScript模板引擎",
+  "main": "lib/laytpl.js",
+  "keywords": [
+    "sentsin",
+    "laytpl"
+  ],
+  "license": "MIT"
+}
