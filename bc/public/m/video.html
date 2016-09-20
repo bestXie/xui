@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="WT.page_name" content="xinyitongindex"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <link rel="shortcut icon" href="http://wildwithin.cn/favicon.ico">
+    <title>加拿大BC省早鸟优惠计划</title>
+    <link rel="stylesheet" href="app_css/index.css">
+    <script src="app_js/access_token.js"></script>
+    <script src="app_js/const.js"></script>
+    <script type="text/javascript" src="app_js/fx.js"></script>
+    <script src="app_js/zepto.js"></script>
+</head>
+<body class="video ">
+<!-- content start -->
+<section class="main-wrapper">
+    <div class="video-banner">
+        <a href="video1.html" class="video_link2"></a>
+        <!--<iframe src="http://cdn.wildwithin.cn/2016ebo/ski-vr/index.html" frameborder="0" width="100%" height="100%"></iframe>-->
+    </div>
+    <div class="title-wrapper">
+        <p class="title-box clearfix">
+            360°VR虚拟滑雪
+            <span class="fr data-url video_play_num" data-url="http://cdn.wildwithin.cn/2016ebo/ski-vr/index.html">99999次播放</span>
+        </p>
+
+        <p class="tips">欢迎开启VR全景虚拟世界，VR带您360°玩转加拿大BC省，亲身感受“北美最佳滑雪度假胜地”的魅力。</p>
+        <a href="share-sms.html" class="btn"></a>
+    </div>
+    <div class="division">
+        更多VR视频
+    </div>
+    <a href="http://wildwithin.cn/2016vr/m-v.html?id=2946" class="product-box video_link">
+        <div class="left"><img src="app_img/video_1.jpg" alt=""/></div>
+        <div class="info-wrapper">
+            <div class="title-line">大熊雨林-II</div>
+            <div class="title-tips">山川湖泊畅游</div>
+            <div class="price-line data-url video_play_num"  data-url="http://wildwithin.cn/2016vr/m-v.html?id=2946">加载中</div>
+        </div>
+    </a>
+    <a  href="http://wildwithin.cn/2016vr/m-v.html?id=2947" class="product-box video_link">
+        <div class="left"><img src="app_img/video_2.jpg" alt=""/></div>
+        <div class="info-wrapper">
+            <div class="title-line">大熊雨林-II</div>
+            <div class="title-tips">原始松林漫步</div>
+            <div class="price-line data-url video_play_num" data-url="http://wildwithin.cn/2016vr/m-v.html?id=2947">加载中</div>
+        </div>
+    </a>
+</section>
+<!-- content end -->
+
+<!--common start-->
+<div class="xui-toast" id="xui-toast"><span></span></div>
+<div class="xui-preloader-indicator-overlay" id="xui-mask"><span></span></div>
+<div class="xui-preloader-indicator-modal" id="xui-indicator"><span class="xui-preloader xui-preloader-white"></span>
+</div>
+<!--common end-->
+<script type="text/javascript" src='app_js/zepto.js'></script>
+<script type="text/javascript" src='app_js/video.js'></script>
+<script type="text/javascript" src='app_js/jweixin-1.0.0.js'></script>
+<script type="text/javascript" src='app_js/wx-share.js'></script>
+<script>
+    function initWxShare() {
+        var title = "越早越省！【酷雪BC】滑雪早鸟优惠计划";
+        var desc = "冬游加拿大BC省，享超值优惠，赢双人旅行大奖。";
+        var link ="http://wildwithin.cn/vr2016/m/"
+        if (window.wx) {
+            wxShare({pic: "http://wildwithin.cn/vr2016/m/app_img/wx-share.jpg", link: link, desc: desc, title: title});
+        }
+    }
+    initWxShare();
+</script>
+<script>
+    var g = window.global;
+    $(".video_link").click( function() {
+        event.preventDefault();
+        var self = $(this);
+        var link = self.attr("href");
+        $.post(g.SERVER_URL.INC_LINK_VIEW, {url: link}, function(ret) {
+            window.location.href = link;
+        }, "json");
+    });
+    $(".video_link2").click( function() {
+        var link = 'http://cdn.wildwithin.cn/2016ebo/ski-vr/index.html';
+        $.post(g.SERVER_URL.INC_LINK_VIEW, {url: link}, function(ret) {
+            window.location.href = 'video.html';
+        }, "json");
+    });
+</script>
+</body>
+</html>

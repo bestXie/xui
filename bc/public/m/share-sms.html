@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="WT.page_name" content="xinyitongindex"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <link rel="shortcut icon" href="http://wildwithin.cn/favicon.ico">
+    <title>加拿大BC省早鸟优惠计划</title>
+    <link rel="stylesheet" href="app_css/index.css">
+    <script src="app_js/access_token.js"></script>
+    <script src="app_js/const.js"></script>
+    <script type="text/javascript" src="app_js/fx.js"></script>
+</head>
+<body class="share-like share-sms">
+<!-- content start -->
+<section class="main-wrapper">
+    <div class="ski"></div>
+    <div id="demo02" class="flexslider">
+        <ul class="slides">
+            <li><div class="img-banner"><img class="img" src="app_img/banner_5.jpg" alt="" /></div></li>
+            <li><div class="img-banner"><img class="img" src="app_img/banner_share.jpg" alt="" /><!--<img class="lapiao" src="app_img/lapiao.gif">--> </div></li>
+        </ul>
+    </div><!--flexslider end-->
+
+    <!--<div class="man_small"></div>-->
+    <!--<div class="title"></div>-->
+    <div class="sms-box">
+        <a href="javascript:;" class="top-btn" id='showRuler'></a>
+
+        <div class="like-tile">
+            <div class="head-img"><img src="" alt=""  id="headerImg"/></div>
+            <div class="name" id='name'></div>
+        </div>
+        <div class="textarea-box">
+            <textarea name="" id="textarea" maxlength="40" placeholder="分享你加拿大BC省冬季旅行愿望。
+（30字左右）"></textarea>
+        </div>
+        <a class="form-btn" id="formBtn"></a>
+        <a href="share-rank.html" class="ranking-btn">活动排行榜 ></a>
+
+        <a href="javascript:;" class="icon-vr2"></a>
+    </div>
+
+</section>
+<!-- content end -->
+
+<!--common start-->
+<div class="xui-toast" id="xui-toast"><span></span></div>
+<div class="xui-preloader-indicator-overlay" id="xui-mask"><span></span></div>
+<div class="xui-preloader-indicator-modal" id="xui-indicator"><span class="xui-preloader xui-preloader-white"></span>
+</div>
+<!--common end-->
+<script type="text/javascript" src='app_js/zepto.js'></script>
+<script type="text/javascript" src='app_js/share-sms.js'></script>
+<script type="text/javascript" src='app_js/jweixin-1.0.0.js'></script>
+<script type="text/javascript" src='app_js/wx-share.js'></script>
+<script type="text/javascript" src='app_js/mark.js'></script>
+<script src="app_js/jquery.min.js"></script>
+<script src="app_js/slider.js"></script>
+<script>
+    $(function(){
+        $('#demo02').flexslider({
+            animation: "slide",
+            direction:"vertical",
+            easing:"swing"
+        });
+
+    });
+    function initWxShare() {
+        var title = "越早越省！【酷雪BC】滑雪早鸟优惠计划";
+        var desc = "冬游加拿大BC省，享超值优惠，赢双人旅行大奖。";
+        var link ="http://wildwithin.cn/vr2016/m/"
+        if (window.wx) {
+            wxShare({pic: "http://wildwithin.cn/vr2016/m/app_img/wx-share.jpg", link: link, desc: desc, title: title});
+        }
+    }
+    initWxShare();
+</script>
+</body>
+</html>

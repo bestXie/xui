@@ -1,0 +1,22 @@
+{
+  "name": "bc-vr",
+  "description": "",
+  "main": "",
+  "authors": [
+    "wanglihui <lihui.wang@jingli.tech>"
+  ],
+  "license": "MIT",
+  "moduleType": [],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/libs",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~3.1.0"
+  }
+}

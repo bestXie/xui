@@ -1,0 +1,422 @@
+html{ width: 100%; height: 100%; font-size: 100px;}
+@media (max-width: 1366px){
+    html{
+        font-size: 71px;
+    }
+}
+body,h1,h2,h3,h4,h5,h6,dl,dt,dd,ul,ol,li,th,td,p,blockquote,pre,form,fieldset,legend,input,button,textarea,hr{margin:0;padding:0; box-sizing: border-box;}
+body,button,input,select,textarea{ font:12px/1.5 "microsoft yahei",arial, verdana, sans-serif}
+h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal}
+li{list-style:none}
+fieldset,img{border:0}
+table{border-collapse:collapse;border-spacing:0}
+q:before,q:after{content:''}
+button,input,select,textarea{font-size:100%}
+legend{color:#000}
+small{font-size:12px}
+hr{border:none;height:1px}
+a{text-decoration:none}
+a:hover{text-decoration:underline}
+.cle:after{content:".";display:block;height:0;clear:both;visibility:hidden}
+.cle{ display:inline-block}
+.cle{ display:block}
+.clear {clear: both;}
+sub, sup {
+    position: relative;
+    line-height: 0;
+    vertical-align: baseline;
+}
+sup {
+    top: -1em;
+}
+sub {
+    bottom: -.25em;
+}
+body{height: 100%;}
+.body-background{ width: 100%; background: url("../images/banner_1.jpg") no-repeat center center; background-size: cover; overflow: hidden; display: table;}
+.body-background-video{ width: 100%; background: url("../images/banner_2.jpg") no-repeat center center; background-size: cover;overflow: hidden; display: table;}
+
+.logo-2{ margin-left: 25px;}
+.header{
+    position: fixed;
+    z-index: 10;
+    left: 0; top: 0;
+    right: 0;
+    padding:10px 12px 8px 12px;
+    background-color: #202022;
+    min-width: 1024px;}
+.nav{
+    position:absolute;
+    top: 14px;
+    right: 35px;
+}
+.nav a{
+    position: relative;
+    float:left;
+    padding: 0 25px;
+    font-size: 16px;
+    line-height: 25px;
+    text-decoration: none;
+    border-right: 1px solid #58585a ;
+    color: #ffffff;
+}
+.nav a:hover,.nav a.active{
+    color: #8ea466;
+}
+.nav a:last-child{
+    border-right: none;
+}
+.icon-home{
+    width: 24px;
+    height: 25px;
+    background: url("../images/m-icon-home.png") no-repeat center;
+    background-size: 24px 20px;
+}
+.icon-home.active{
+    width: 25px;
+    height: 25px;
+    background: url("../images/icon-home.png") no-repeat center;
+    background-size: 24px 20px;
+}
+.icon-weibo{
+    width: 25px;
+    height: 25px;
+    background: url("../images/weibo.png") no-repeat center;
+    background-size: 25px 25px;
+}
+.icon-weixin{
+    width: 25px;
+    height: 25px;
+    background: url("../images/weixin.png") no-repeat center;
+    background-size: 25px 25px;
+}
+.icon-weixin:hover .icon-wechat{
+    display: block;
+}
+.icon-wechat{
+    position: absolute;
+    top: 45px;
+    right: 0;
+    display: none;
+    width: 216px;
+    height: 288px;
+    background: url("../images/share-weixin.png") no-repeat center;
+    background-size: 216px 288px;
+}
+.index-content{
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    padding-top: 52px;
+}
+.campaign-icon{
+    width: 2.97rem;
+    height: .7rem;
+}
+.title1-1{
+    display: block;
+    width: 4.239rem;
+    height: 2.277rem;
+    margin: 0 auto;
+    padding: .4rem 0 0 0;
+ }
+.title1-2{
+    display: block;
+    width: 4.869rem;
+    height: 1.206rem;
+    margin: 0 auto;
+    padding: 0 0 1.1rem 0;
+}
+.num{
+    width: 1.053rem;
+    height: 2.142rem;
+}
+.btn-an1{
+     width: 2.187rem;
+     height: 0.522rem;
+    animation: all 1.5s;
+ }
+.btn-an2{
+    width: 2.457rem;
+    height: 0.522rem;
+}
+.title2{
+    display: block;
+    width: 3.84rem;
+    height: 1.9rem;
+    margin: 0 auto;
+    padding: .69rem 0 .5rem 0;
+}
+.footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 29px;
+    background: url("../images/sibian.png");
+}
+.icon-campaign{
+    position: absolute;
+    top: 1.05rem;
+    right: .5rem;
+}
+.product-tab{
+    width: 9.927rem;
+    margin: 0 auto;
+}
+.product-tab dl:last-child dd{
+    background: url("../images/pci2.jpg") no-repeat;
+}
+.product{
+    float: left;
+    width:4.581rem;
+    height: 2.142rem;
+    margin-right: .729rem;
+}
+.index-pic1{
+    width: 3.92rem;
+    height: 2.38rem;
+}
+.product:hover dd:after{
+    display: block;
+}
+.product:last-child{
+    margin-right: 0;
+}
+.product dt{
+    float: left;
+}
+.product dd{
+    position: relative;
+    padding: .36rem .36rem .18rem  .36rem;
+    height: 2.142rem;
+    text-align: left;
+    background: url("../images/pci1.jpg") no-repeat;
+    background-size:  3.528rem 2.142rem;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.product dd:after{
+    display: none;
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: #000;
+    opacity: .6;
+}
+.product dd p{
+    position: absolute;
+    z-index: 2;
+    line-height: .4rem;
+    font-size: .315rem;
+    color: #fff;
+}
+.product dd img{
+    position: absolute;
+    z-index: 2;
+    bottom: 22px;
+}
+@-webkit-keyframes fadeOut2 {
+    0% {opacity: 1;}
+    100% {opacity: 0.3;}
+}
+
+@keyframes fadeOut2 {
+    0% {opacity: 1;}
+    100% {opacity: 0.3;}
+}
+
+.play{
+    display: inline-block;
+    width: 1.3122rem;
+    height: 1.3122rem;
+    margin: 0 auto;
+    padding: 0 0  0.5rem 0;
+    -webkit-animation: fadeOut2 2s both infinite;
+    -moz-animation: fadeOut2 2s both infinite;
+    -ms-animation: fadeOut2 2s both infinite;
+    animation: fadeOut2 2s both infinite;
+}
+.campaign-info{
+    color: #fff;
+    line-height:.5rem;
+    font-size: .2916rem;
+    text-align: left;
+}
+.btn-campaign{
+    width: 10.2rem;
+    margin: 0 auto;
+}
+.btn{
+    text-align: center;
+    overflow: hidden;
+}
+.btn img{
+    display: inline-block;
+    width: 3.52rem;
+    height: .69rem;
+    margin: .4rem .63rem 0 .63rem;
+}
+.model-map{
+    position: relative;
+    height: 295px;
+    background: url("../images/banner_3.jpg") no-repeat center ;
+    background-size: cover;
+}
+.model-map2{
+    position: relative;
+    height: 340px;
+    background: url("../images/banner_4.jpg") no-repeat center ;
+    background-size: cover;
+}
+.model-map img{
+    display: block;
+}
+.model-map .banner-03{
+    display: block;
+    width: 100%;
+}
+.title-btn{
+    position: absolute;
+    left: 10%;
+    top: 50%;
+    -webkit-transform: translate3d(0,-50%,0);
+    -moz-transform: translate3d(0,-50%,0);
+    -ms-transform: translate3d(0,-50%,0);
+    -o-transform: translate3d(0,-50%,0);
+    transform: translate3d(0,-50%,0);
+}
+.padding-top{
+    padding-top: 75px;
+}
+.position-gift{
+    width: 3.12rem;
+    height: .72rem;
+    position: absolute;
+    top: 1.05rem;
+    right: .5rem;
+    cursor: pointer;
+}
+.btn-search{
+    margin-top: 10%;
+}
+
+.bannerbox { width: 100%; height: 501px; overflow: hidden;}
+.bannerbox img{ width: 100%; height: 100%;}
+.bannerbox a{ display: block; width: 100%; height: 501px;}
+.bannerbox li:first-child{width: 100%; background:url("../images/banner_3.jpg") no-repeat; height: 501px; background-size: cover;}
+.bannerbox li:last-child{width: 100%; background:url("../images/banner_4.jpg") no-repeat; height: 501px; background-size: cover; }
+.product-list{
+    padding: 38px 0 70px 0;
+    background: #5b6a65;
+}
+.product-list h3{
+    text-align: center;
+    padding-bottom: 15px;
+}
+.list-pic{
+    width: 1000px;
+    margin: 0 auto;
+}
+.list-pic li{
+    float: left;
+    margin: 10px 8px 0 0;
+}
+.list-pic li:nth-child(3n){
+    margin-right: 0;
+}
+.bg-body{
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 11;
+    background: #000000;
+    opacity: .8;
+}
+.campaign{
+    display: none;
+    position: fixed;
+    z-index: 12;
+    left: 50%;
+    top: 50%;
+    /*width: 10.04rem;*/
+    width: 695px;
+    height: 90%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-transform:translate( -50%, -50%);
+    -moz-transform:translate( -50%, -50%);
+    -ms-transform:translate( -50%, -50%);
+    -o-transform:translate( -50%, -50%);
+    transform:translate( -50%, -50%);
+}
+.rule-img{
+   /*width: 9.8rem;*/
+    /*height: 17.7rem;*/
+    width: 695px;
+    height: 1256px;
+}
+.close-img{
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    cursor: pointer;
+}
+.body-play-video{
+    background: #000;
+    overflow: hidden;
+}
+.foot{
+    position: relative;
+    z-index: 2;
+    box-sizing: border-box;
+    background: url("../images/footer.png") no-repeat;
+    font-size: 14px;
+    padding-top: 110px;
+    height: 283px;
+    margin-top: -10px;
+}
+.social-media {
+    width: 75%;
+    margin: 0 auto;
+}
+.social-media .social {
+    box-sizing: border-box;
+    width: 25%;
+    height: 75px;
+    float: left;
+    color: #fff;
+    line-height: 24px;
+    padding: 12px 0 12px 85px;
+    background-repeat: no-repeat;
+    background-position: 0 50%;
+    background-size: 75px;
+}
+
+.social-media .social-weibo {
+    background-image: url("../images/logo-ywr.png");
+}
+.social-media .social-wechat {
+    background-image: url("../images/qr-code.png");
+}
+.social-media .social-website {
+    background-image: url("../images/logo-bc.png");
+}
+
+.social-media .social-weibo > img {
+    height: 20px;
+}
+.social-media .social-wechat > span {
+    background: url("../images/social-wechat.png") no-repeat;
+    padding: 8px 0 8px 30px;
+}
+.social-media .social-run {
+    background-image: url("../images/whistler.png");
+}

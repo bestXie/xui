@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="user-scalable=no, width=640">
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="WT.page_name" content="xinyitongindex"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <link rel="shortcut icon" href="http://wildwithin.cn/favicon.ico">
+    <title>加拿大BC省早鸟优惠计划</title>
+    <link rel="stylesheet" href="app_css/index.css">
+    <link rel="stylesheet" href="app_css/demo.css">
+    <script src="app_js/access_token.js"></script>
+    <script src="app_js/const.js"></script>
+    <script type="text/javascript" src="app_js/fx.js"></script>
+</head>
+<body class="index">
+<!-- content start -->
+<div class="main-wrapper" id="wrapper">
+    <div id="scroller">
+        <img src="app_img/home_1.jpg" alt=""/>
+        <img src="app_img/home_2.jpg" alt=""/>
+        <img src="app_img/home_3.jpg" alt=""/>
+    </div>
+</div>
+
+
+<div id="link">
+    <section class="video-play">
+        <a href="video-link.html"><img src="app_img/tiyan.png" alt="" class="tiyan"/></a>
+    </section>
+</div>
+<div class="video-wrapper js-video-wrapper">
+    <div class="video-responsive">
+        <video class="video js-video" webkit-playsinline muted id="myVideo">
+            <source src="../video/1.mp4" type="video/mp4">
+        </video>
+        <canvas class="canvas js-canvas"></canvas>
+        <div class="video-timeline js-timeline">
+            <div class="video-timeline-passed js-timeline-passed"></div>
+        </div>
+    </div>
+</div>
+
+
+<!--common start-->
+<div class="xui-toast" id="xui-toast"><span></span></div>
+<div class="xui-preloader-indicator-overlay" id="xui-mask"><span></span></div>
+<div class="xui-preloader-indicator-modal" id="xui-indicator"><span class="xui-preloader xui-preloader-white"></span>
+</div>
+<!--common end-->
+
+<script type="text/javascript" src='app_js/jweixin-1.0.0.js'></script>
+<script src="app_js/jquery.min.js"></script>
+<script src="app_js/canvas-video-player.js"></script>
+<script type="text/javascript" src="app_js/iscroll-probe.js"></script>
+<script type="text/javascript" src='app_js/wx-share.js'></script>
+<script>
+    $('#myVideo').get(0).load();
+    var isIphone = navigator.userAgent.toLowerCase().indexOf('iphone') >= 0;
+    var ld = vd = 0;
+    if (isIphone) {
+        var canvasVideo = new CanvasVideoPlayer({
+            videoSelector: '.js-video',
+            canvasSelector: '.js-canvas',
+            hideVideo: true,
+            audio: true,
+        });
+    } else {
+        vd = 1;
+        $('canvas').hide();
+        $('.video').remove();
+        $('.video-responsive').append('<video src="../video/1.mp4" id="video" width="0" height="0" webkit-playsinline  style="background:transparent;"></video>');
+
+        $('#video').get(0).load();
+        $('#video').get(0).addEventListener('canplaythrough', function () {
+        });
+
+        $('#video').on('ended', function () {
+            showBtn();
+            $('#video').remove();
+            $('#video').css('display','none');
+
+        })
+    }
+
+    function showBtn(){
+        $('#link').show();
+    }
+    function showBtn(){
+        $('#link').show();
+    }
+
+    $(document).ready(function () {
+        var i = new Image();
+        var j = new Image();
+        var k = new Image();
+        var l=0;
+        i.src = 'app_img/home_1.jpg';
+        j.src = 'app_img/home_2.jpg';
+        k.src = 'app_img/home_3.jpg';
+        i.onload = function () {
+            initScroll();
+        };
+        j.onload = function () {
+            initScroll();
+        };
+        k.onload = function () {
+            initScroll();
+        };
+        function initScroll(){
+            l+=1;
+            if(l<3){
+                return false;
+            }
+            var myScroll = new IScroll('#wrapper', {mouseWheel: true});
+            myScroll.on('scrollEnd', updatePosition);
+            function updatePosition(e){
+                var hh = -($('#scroller').height()-$(window).height());
+                if (myScroll.y > hh+10) {
+                    return false;
+                }
+                $('#wrapper').hide();
+                if (canvasVideo) {
+                    canvasVideo.play();
+                } else {
+                    $('#video').width(640).height(1040).get(0).play();
+                }
+            }
+        }
+
+    });
+
+    document.addEventListener('touchmove', function (e) {
+        e.preventDefault();
+    });
+
+    //微信分享
+    function initWxShare() {
+        var title = "越早越省！【酷雪BC】滑雪早鸟优惠计划";
+        var desc = "冬游加拿大BC省，享超值优惠，赢双人旅行大奖。";
+        var link = "http://wildwithin.cn/vr2016/m/";
+        if (window.wx) {
+            wxShare({pic: "http://wildwithin.cn/vr2016/m/app_img/wx-share.jpg", link: link, desc: desc, title: title});
+        }
+    }
+    initWxShare();
+</script>
+</body>
+</html>

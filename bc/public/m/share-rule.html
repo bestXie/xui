@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="WT.page_name" content="xinyitongindex"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <link rel="shortcut icon" href="http://wildwithin.cn/favicon.ico">
+    <title>加拿大BC省早鸟优惠计划</title>
+    <link rel="stylesheet" href="app_css/index.css">
+    <script src="app_js/access_token.js"></script>
+    <script src="app_js/const.js"></script>
+    <script type="text/javascript" src="app_js/fx.js"></script>
+</head>
+<body class="share-like share-rule">
+<!-- content start -->
+<section class="main-wrapper">
+    <div class="ski"></div>
+    <div class="man_small"></div>
+    <div class="title"></div>
+    <div class="rule-box">
+        <a href="javascript:;" class="icon-vr"></a>
+
+        <div class="rule-one" id="one"><a href="javascript:;" class="btn" id="btn"></a></div>
+        <div class="rule-three" id="three"><a href="javascript:;" class="btn" id="btn2"></a></div>
+        <div class="rule-two" id="two">
+            <a href="javascript:;" class="btn" id="btn3"></a>
+        </div>
+    </div>
+
+</section>
+<!-- content end -->
+
+<!--common start-->
+<div class="xui-toast" id="xui-toast"><span></span></div>
+<div class="xui-preloader-indicator-overlay" id="xui-mask"><span></span></div>
+<div class="xui-preloader-indicator-modal" id="xui-indicator"><span class="xui-preloader xui-preloader-white"></span>
+</div>
+<!--common end-->
+<script type="text/javascript" src='app_js/zepto.js'></script>
+<script type="text/javascript" src='app_js/jweixin-1.0.0.js'></script>
+<script type="text/javascript" src='app_js/wx-share.js'></script>
+<script type="text/javascript">
+    function getParamValue(oname) {
+        var paramsArray = getUrlParams();
+        function getUrlParams() {
+            var search = window.location.search;
+            var tmparray = search.substr(1, search.length).split("&");
+            var paramsArray = new Array;
+            if (tmparray != null) {
+                for (var i = 0; i < tmparray.length; i++) {
+                    var reg = /[=|^==]/;
+                    var set1 = tmparray[i].replace(reg, '&');
+                    var tmpStr2 = set1.split('&');
+                    var array = new Array;
+                    array[tmpStr2[0]] = tmpStr2[1];
+                    paramsArray.push(array);
+                }
+            }
+            return paramsArray;
+        }
+        if (paramsArray != null) {
+            for (var i = 0; i < paramsArray.length; i++) {
+                for (var j in paramsArray[i]) {
+                    if (j == oname) {
+                        return paramsArray[i][j];
+                    }
+                }
+            }
+        }
+        return null;
+    }
+    var dom = document;
+    var oBtn1 = dom.getElementById('btn');
+    var oBtn2 = dom.getElementById('btn2');
+    var oBtn3 = dom.getElementById('btn3');
+    var oOne = dom.getElementById('one');
+    var oTwo = dom.getElementById('two');
+    var oThree = dom.getElementById('three');
+
+    oBtn1.addEventListener('touchend', function (e) {
+        oOne.style.display = 'none';
+        oThree.style.display = 'block';
+        e.preventDefault();
+    });
+    oBtn2.addEventListener('touchend', function (e) {
+        oThree.style.display = 'none';
+        oTwo.style.display = 'block';
+        e.preventDefault();
+    });
+    oBtn3.addEventListener('touchend', function (e) {
+        var id = getParamValue('url_id') || '';
+        var url_h=getParamValue('url_h') || 'share-sms';
+        if (id) {
+            id = '?id=' + id;
+        }
+        window.location.href =url_h+'.html?'+id;
+        e.preventDefault();
+    });
+</script>
+<script>
+    function initWxShare() {
+        var title = "越早越省！【酷雪BC】滑雪早鸟优惠计划";
+        var desc = "冬游加拿大BC省，享超值优惠，赢双人旅行大奖。";
+        var link ="http://wildwithin.cn/vr2016/m/"
+        if (window.wx) {
+            wxShare({pic: "http://wildwithin.cn/vr2016/m/app_img/wx-share.jpg", link: link, desc: desc, title: title});
+        }
+    }
+    initWxShare();
+</script>
+</body>
+</html>

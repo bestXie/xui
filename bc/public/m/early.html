@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="WT.page_name" content="xinyitongindex"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <link rel="shortcut icon" href="http://wildwithin.cn/favicon.ico">
+    <title>加拿大BC省早鸟优惠计划</title>
+    <link rel="stylesheet" href="app_css/index.css">
+    <script src="app_js/access_token.js"></script>
+    <script src="app_js/const.js"></script>
+    <script type="text/javascript" src="app_js/fx.js"></script>
+    <style>
+
+    </style>
+</head>
+<body class="early">
+<!-- content start -->
+<section class="banner">
+    <div id="banner" style="display: block;">
+        <div class="hd">
+            <ul>
+                <li class="on">1</li>
+                <li class="">2</li>
+                <li class="">3</li>
+                <li class="">4</li>
+                <li class="">5</li>
+            </ul>
+        </div>
+        <div class="bd">
+            <div class="tempWrap" style="overflow:hidden; position:relative;">
+                <ul>
+                    <li>
+                        <a href="javascript:;">
+                            <img src="app_img/early_banner_1.jpg">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <img src="app_img/early_banner_2.jpg">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <img src="app_img/early_banner_3.jpg">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <img src="app_img/early_banner_4.jpg">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <img src="app_img/early_banner_5.jpg">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="content">
+    <img src="app_img/early_title.jpg" alt=""/>
+    <img src="app_img/early_1.jpg" alt=""/>
+    <img src="app_img/early_2.jpg" alt=""/>
+    <img src="app_img/early_3.jpg" alt=""/>
+    <div class="details">
+        <a href="pdf/Final-Chinese-ski-flatsheet.pdf"><img src="app_img/early_icon.jpg" alt=""/></a>
+    </div>
+    <div class="footer">
+        <div class="btn-box clearfix">
+            <a href="share-sms.html" class="btn-left fl"></a>
+            <a href="product-list.html" class="btn-right fr"></a>
+        </div>
+    </div>
+</section>
+<!--common start-->
+<div class="xui-toast" id="xui-toast"><span></span></div>
+<div class="xui-preloader-indicator-overlay" id="xui-mask"><span></span></div>
+<div class="xui-preloader-indicator-modal" id="xui-indicator"><span class="xui-preloader xui-preloader-white"></span>
+</div>
+<!--common end-->
+<script type="text/javascript" src='app_js/zepto.js'></script>
+<script type="text/javascript" src='app_js/jweixin-1.0.0.js'></script>
+<script type="text/javascript" src='app_js/wx-share.js'></script>
+<script type="text/javascript" src='app_js/TouchSlide.1.1.js'></script>
+<script>
+    TouchSlide({
+        slideCell: "#banner",
+        titCell: ".hd ul",
+        mainCell: ".bd ul",
+        delayTime: 400,
+        effect: "leftLoop",
+        autoPage: true,
+        autoPlay: true
+    });
+    function initWxShare() {
+        var title = "越早越省！【酷雪BC】滑雪早鸟优惠计划";
+        var desc = "冬游加拿大BC省，享超值优惠，赢双人旅行大奖。";
+        var link = "http://wildwithin.cn/vr2016/m/";
+        if (window.wx) {
+            wxShare({pic: "http://wildwithin.cn/vr2016/m/app_img/wx-share.jpg", link: link, desc: desc, title: title});
+        }
+    }
+    initWxShare();
+
+    var productList = ['http://www.aoyou.com/group/groupproductdetail/index?ProductID=104272',
+        'http://www.tuniu.com/tours/210336279',
+        'http://vacations.ctrip.com/grouptravel/p3149588s2.html',
+        'http://vacations.ctrip.com/grouptravel/p11790320s2.html',
+        'http://m.vipski.net/h5//party/detail/30.html?1=1&reguserid=27&source=ios&username=%E5%A4%A7%E5%91%80%E5%98%9B%E5%A4%A7%E5%9B%BE%E5%9B%BE&from=groupmessage&isappinstalled=0',
+
+        'http://www.sparkletour.com/ProductDetail/47012',
+        'http://www.sparkletour.com/ProductDetail/103993',
+        'http://www.sparkletour.com/ProductDetail/104128',
+        'http://www.sparkletour.com/ProductDetail/105043',
+        'http://www.iytrip.com/lines/show_262.html',
+
+        'http://www.huwaijijie.com/wx/?src=1&op=noop&curstate=shareact&params=6961471879224&code=0312YrCx1h981402G4Bx1jsrCx12YrCs&state=1#/user/actShare/6961471879224',
+        'http://www.huwaijijie.com/wx/?src=1&op=noop&curstate=shareact&params=6961471882831&code=001SfnZJ190ZN90jj8YJ1hwjZJ1SfnZy&state=1#/user/actShare/6961471882831',
+        'http://www.caissa.com.cn/201608/358605.shtml',
+        'http://bais.tuniu.com/tours/210341185',
+        'http://www.lncct.com/group/4031.html',
+        'http://www.lncct.com/group/4014.html'
+    ];
+    var productHtml = '';
+    var str = '<a href="{{herf}}" class="product-item"> <img src="app_img/cp_{{num}}.jpg" alt=""/></a>';
+    for (var i = 0, len = productList.length; i < len; i++) {
+        productHtml += str.replace(/{{herf}}/g, productList[i]).replace(/{{num}}/g, i + 1)
+    }
+    $('#productList').html(productHtml);
+</script>
+</body>
+</html>

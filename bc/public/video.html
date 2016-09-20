@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="css/index.css"/>
+    <link rel="stylesheet" href="css/animate.min.css"/>
+    <title>VR全景视频</title>
+</head>
+<body class="body-background-video" id="body">
+<header class="header">
+    <a href="http://www.hellobc.com.cn/" class="logo"><img src="images/logo.png" height="30" alt="logo"/></a>
+    <img class="logo-2" src="images/logo_2.png" height="30" alt=""/>
+    <nav class="nav">
+        <a class="icon-home " href="index.html"></a>
+        <a class="active"  href="video.html">VR全景视频</a>
+        <a href="product.html">早鸟优惠产品</a>
+        <a href="campaigns.html">活动集锦</a>
+        <a class="icon-weibo " href="javascript:void (0);"></a>
+        <a class="icon-weixin" href="javascript:void (0);">
+            <i class="icon-wechat"></i>
+        </a>
+    </nav>
+</header>
+    <article class="index-content">
+        <img class="title2  wow bounceInDown"  data-wow-duration="1.5s" data-wow-offset="300" src="images/title_2.png" alt=""/>
+        <a href="play.html" class="video_link"><img class="play" src="images/play.png" alt=""/></a>
+        <section class="btn-campaign " >
+            <p class="campaign-info">欢迎开启VR全景虚拟旅行世界，神奇的VR镜头将带您360<sup>。</sup>玩转加拿大BC省滑雪胜地，亲身感受世界级滑雪场的冰雪魅力。</p>
+            <div class="btn">
+                <a href="javascript:void (0);" id="position-gift"><img class="btn1" src="images/icon_VR.png" alt=""/></a>
+                <a href="product.html"><img class="btn1" src="images/icon_chanpin.png" alt=""/></a>
+            </div>
+        </section>
+
+    </article>
+    <footer class="footer"></footer>
+
+    <section class="bg-body" id="bg-body"></section>
+    <section class="campaign" id="alert-body">
+        <img class="rule-img" src="images/rule.png" alt=""/>
+        <img class="close-img" id="close" src="images/close.png" width="34" height="34" alt=""/>
+    </section>
+    <script src="js/animate.min.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/share.js"></script>
+    <script src="js/const.js"></script>
+<script>
+    var g = window.global;
+    $(".video_link").click( function() {
+        var link = 'http://cdn.wildwithin.cn/2016ebo/ski-vr/index.html';
+        $.post(g.SERVER_URL.INC_LINK_VIEW, {url: link}, function(ret) {
+            window.location.href = link;
+        }, "json");
+    });
+</script>
+</body>
+</html>

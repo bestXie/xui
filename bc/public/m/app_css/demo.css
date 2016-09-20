@@ -1,0 +1,124 @@
+html,
+body {
+	margin:0;
+	height:100%;
+	background:#fff;
+}
+
+.video-wrapper {
+	position: relative;
+	height:100%;
+	overflow:hidden;
+}
+.video-responsive {
+	position: relative;
+	width: 100%;
+	height:1040px;
+}
+#masker-box{
+	width: 100%;
+	position: relative;
+}
+.canvas,
+.video {
+	height: 100%;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	background: #000;
+	z-index: 5;
+	cursor: pointer;
+}
+
+#loading {
+	/*display:none;*/
+	position:absolute;
+	left:0;
+	top:0;
+	width:100%;
+	height:100%;
+	background:#fff;
+	z-index:99;
+}
+#loading>i,
+#loading>span {
+	position:absolute;
+	left:50%;
+	top:50%;
+}
+#loading>i {
+	margin:-300px 0 0 -170px;
+	width:340px;
+	height:340px;
+	background:url(../img/loading.png) no-repeat;
+	background-size:10200px;
+
+	-webkit-animation:loading 2s steps(30,end) infinite;
+}
+#loading>span {
+	margin:20px 0 0 -320px;
+	width:100%;
+	font-size:24px;
+	color:#434343;
+	text-align:center;
+}
+
+@-webkit-keyframes loading {
+	to {
+		background-position-x:-10200px;
+	}
+}
+
+#masker {
+	position:absolute;
+	left:0;
+	top:0;
+	width:100%;
+	height:100%;
+	overflow:auto;
+	z-index:50;
+}
+#link {
+	display:none;
+	position:absolute;
+	left:0;
+	top:0;
+	width: 100%;
+	height: 100%;
+	overflow:hidden;
+	background:url('../app_img/video_last.jpg') no-repeat center bottom;
+	z-index:45;
+}
+
+#wrapper {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	margin: 0 auto;
+	padding: 0;
+	overflow: hidden;
+
+	z-index: 1;
+}
+#scroller {
+	position: absolute;
+	z-index: 1;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	width: 100%;
+	-webkit-transform: translateZ(0);
+	-moz-transform: translateZ(0);
+	-ms-transform: translateZ(0);
+	-o-transform: translateZ(0);
+	transform: translateZ(0);
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	-webkit-text-size-adjust: none;
+	-moz-text-size-adjust: none;
+	-ms-text-size-adjust: none;
+	-o-text-size-adjust: none;
+	text-size-adjust: none;
+}
