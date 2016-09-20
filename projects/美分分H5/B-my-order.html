@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>我要还款</title>
+    <script src="js/mui.min.js"></script>
+    <link href="css/mui.css" rel="stylesheet"/>
+    <link rel="stylesheet" type="text/css" href="css/my-style.css"/>
+    <script type="text/javascript" charset="utf-8">
+      	mui.init();
+    </script>
+    <style type="text/css">
+    	.mui-table-view .mui-media-object {
+			height: 50px;
+			max-width: 50px;
+		}
+		.mui-media-body .mui-ellipsis {
+			height: 16px;
+			line-height: 16px;
+			font-size: 12px;
+		}
+		.mui-table-view-cell.mui-media{
+			position: relative;
+		}
+		.month-pay{
+			position: absolute;
+			bottom: 3px;
+			left: 113px;
+		}
+    
+    	.mui-segmented-control .mui-control-item.mui-active{
+			color: #FF6565;
+			background: #FFF;
+			border-bottom: 2px solid #FF6565;
+		}
+		.mui-segmented-control{
+			border: none;
+			border-bottom: 1px solid #ECECEC;
+			border-radius: 0;
+			background: #FFF;
+		}
+		.mui-segmented-control .mui-control-item{
+			border-left:none;
+		}
+		.mui-segmented-control .mui-control-item{
+			color: #000;
+		}
+		.mui-btn.mui-btn-outlined.mui-btn-negative{
+			width: 80px;
+			padding: 2px 0;
+		}
+    	/*没有代金券*/
+    	.no-coupon{
+    		height: 100px;
+    		width: 160px;
+    		position: absolute;
+    		top:50%;
+    		left: 50%;
+    		margin: -50px 0 0 -80px;
+    		text-align: center;
+    	}
+    	.no-coupon img{
+    		height: 60px;
+    		width: 60px;
+    	}
+    	/*没有代金券结束*/
+    	
+		.coupon-cont{
+			height: 100px;
+			width: 100%;
+			/*border: 1px solid #ECECEC;*/
+			/*background: #FFF;*/
+		}
+		.coupon-cont .fl{
+			width: 32%;
+			height: 100%;
+			background: url(img/coupon-bg-yellow.png) no-repeat center center;
+			background-size: 100% 100%;
+			line-height: 100px;
+			text-align: center;
+			color: #FFF;
+		}
+		.coupon-cont .fr{
+			width: 68%;
+			height: 100%;
+			border-width: 1px 1px 1px 0;
+			border-style: solid;
+			border-color:#ECECEC;
+			background: #FFF;
+			padding: 14px;
+		}
+		.mui-control-content{
+			min-height:400px;
+		}
+    </style>
+</head>
+<body>
+	<div class="mui-content">
+		
+		<div id="segmentedControl" class="mui-segmented-control">
+				<a class="mui-control-item mui-active" href="#item1mobile">
+						全部
+					</a>
+				<a class="mui-control-item" href="#item2mobile">
+						待支付
+					</a>
+				<a class="mui-control-item" href="#item3mobile">
+						待服务
+					</a>
+				<a class="mui-control-item" href="#item4mobile">
+						待评价
+					</a>
+			</div>
+			<div class="mui-content" style="margin-top: 10px;">
+				<div id="item1mobile" class="mui-control-content mui-active">
+					<ul class="mui-table-view">
+					 	<li class="mui-table-view-cell">
+					 		<a class="mui-navigate-right">
+					 			额度审核中
+					 		</a>
+					 	</li>
+						<li class="mui-table-view-cell mui-media">
+							<a href="A-hospital-detail.html">
+								<img class="mui-media-object mui-pull-left" src="img/pic1.png">
+								<div class="mui-media-body">
+									最新华丽美版Ulthera 还你紧致童颜
+									<p class='mui-ellipsis'>
+										<span>上海春夏秋冬外科整形医院</span>
+									</p>
+									<p class='mui-ellipsis'>
+										售价：<span>￥600</span>
+										<!--医院价：<span class="line-throu">￥1000</span>-->
+									</p>
+								</div>
+							</a>
+						</li>
+						<li class="mui-table-view-cell mui-media">
+							<p class="color-grey">首付:<span class="color-red">￥380</span></p>
+							<p class="color-grey">分期:￥126.54(含服务费￥26.52) × 3</p>
+							<button class="mui-btn mui-btn-outlined mui-btn-negative my-order-btn">查看进度</button>
+						</li>
+					</ul>
+					<ul class="mui-table-view has-m-top">
+					 	<li class="mui-table-view-cell">
+					 		<a class="mui-navigate-right">
+					 			待服务
+					 		</a>
+					 	</li>
+						<li class="mui-table-view-cell mui-media">
+							<a href="A-hospital-detail.html">
+								<img class="mui-media-object mui-pull-left" src="img/pic1.png">
+								<div class="mui-media-body">
+									<h4>最新华丽美版Ulthera 还你紧致童颜</h4>
+									<p class='mui-ellipsis'>
+										<span>上海春夏秋冬外科整形医院</span>
+									</p>
+									<p class='mui-ellipsis'>
+										售价：<span>￥600</span>
+										<!--医院价：<span class="line-throu">￥1000</span>-->
+									</p>
+								</div>
+							</a>
+						</li>
+						<li class="mui-table-view-cell mui-media">
+							<p class="color-grey">首付:<span class="color-red">￥380</span></p>
+							<p class="color-grey">分期:￥126.54(含服务费￥26.52) × 3</p>
+							<button class="mui-btn mui-btn-outlined mui-btn-negative">预约</button>
+						</li>
+					</ul>
+					<ul class="mui-table-view has-m-top">
+					 	<li class="mui-table-view-cell">
+					 		<a class="mui-navigate-right">
+					 			已完成
+					 		</a>
+					 	</li>
+						<li class="mui-table-view-cell mui-media">
+							<a href="A-hospital-detail.html">
+								<img class="mui-media-object mui-pull-left" src="img/pic1.png">
+								<div class="mui-media-body">
+									<h4>最新华丽美版Ulthera 还你紧致童颜</h4>
+									<p class='mui-ellipsis'>
+										<span>上海春夏秋冬外科整形医院</span>
+									</p>
+									<p class='mui-ellipsis'>
+										售价：<span>￥600</span>
+										<!--医院价：<span class="line-throu">￥1000</span>-->
+									</p>
+								</div>
+							</a>
+						</li>
+						<li class="mui-table-view-cell mui-media">
+							<p class="color-grey">代金券:<span>-￥300</span></p>
+							<p class="color-grey">首付:<span class="color-red">￥380</span></p>
+							<p class="color-grey">分期:￥126.54(含服务费￥26.52) × 3</p>
+							<button class="mui-btn mui-btn-outlined mui-btn-negative">去评价</button>
+						</li>
+					</ul>
+				</div>
+				<div id="item2mobile" class="mui-control-content">
+					<ul class="mui-table-view">
+					 	<li class="mui-table-view-cell">
+					 		<a class="mui-navigate-right">
+					 			待支付
+					 		</a>
+					 	</li>
+						<li class="mui-table-view-cell mui-media">
+							<a href="A-hospital-detail.html">
+								<img class="mui-media-object mui-pull-left" src="img/pic1.png">
+								<div class="mui-media-body">
+									最新华丽美版Ulthera 还你紧致童颜
+									<p class='mui-ellipsis'>
+										<span>上海春夏秋冬外科整形医院</span>
+									</p>
+									<p class='mui-ellipsis'>
+										售价：<span>￥600</span>
+										<!--医院价：<span class="line-throu">￥1000</span>-->
+									</p>
+								</div>
+							</a>
+						</li>
+						<li class="mui-table-view-cell mui-media">
+							<p class="color-grey">首付:<span class="color-red">￥380</span></p>
+							<p class="color-grey">分期:￥126.54(含服务费￥26.52) × 3</p>
+							<button class="mui-btn mui-btn-outlined mui-btn-negative my-order-btn">去支付</button>
+						</li>
+					</ul>
+				</div>
+				<div id="item3mobile" class="mui-control-content">
+					<ul class="mui-table-view">
+					 	<li class="mui-table-view-cell">
+					 		<a class="mui-navigate-right">
+					 			待服务
+					 		</a>
+					 	</li>
+						<li class="mui-table-view-cell mui-media">
+							<a href="A-hospital-detail.html">
+								<img class="mui-media-object mui-pull-left" src="img/pic1.png">
+								<div class="mui-media-body">
+									最新华丽美版Ulthera 还你紧致童颜
+									<p class='mui-ellipsis'>
+										<span>上海春夏秋冬外科整形医院</span>
+									</p>
+									<p class='mui-ellipsis'>
+										售价：<span>￥600</span>
+										<!--医院价：<span class="line-throu">￥1000</span>-->
+									</p>
+								</div>
+							</a>
+						</li>
+						<li class="mui-table-view-cell mui-media">
+							<p class="color-grey">首付:<span class="color-red">￥380</span></p>
+							<p class="color-grey">分期:￥126.54(含服务费￥26.52) × 3</p>
+							<button class="mui-btn mui-btn-outlined mui-btn-negative my-order-btn">查看进度</button>
+						</li>
+					</ul>
+				</div>
+				<div id="item4mobile" class="mui-control-content">
+					<ul class="mui-table-view">
+					 	<li class="mui-table-view-cell">
+					 		<a class="mui-navigate-right">
+					 			已完成
+					 		</a>
+					 	</li>
+						<li class="mui-table-view-cell mui-media">
+							<a href="A-hospital-detail.html">
+								<img class="mui-media-object mui-pull-left" src="img/pic1.png">
+								<div class="mui-media-body">
+									最新华丽美版Ulthera 还你紧致童颜
+									<p class='mui-ellipsis'>
+										<span>上海春夏秋冬外科整形医院</span>
+									</p>
+									<p class='mui-ellipsis'>
+										售价：<span>￥600</span>
+										<!--医院价：<span class="line-throu">￥1000</span>-->
+									</p>
+								</div>
+							</a>
+						</li>
+						<li class="mui-table-view-cell mui-media">
+							<p class="color-grey">首付:<span class="color-red">￥380</span></p>
+							<p class="color-grey">分期:￥126.54(含服务费￥26.52) × 3</p>
+							<button class="mui-btn mui-btn-outlined mui-btn-negative my-order-btn">去评价</button>
+						</li>
+					</ul>
+				</div>
+			</div>
+	</div>
+</body>
+</html>

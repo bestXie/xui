@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>客户订单</title>
+    <script src="js/mui.min.js"></script>
+    <link href="css/mui.css" rel="stylesheet"/>
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="css/popover.css"/>
+    <link rel="stylesheet" type="text/css" href="css/iconfont.css"/>
+    <script type="text/javascript" charset="utf-8">
+      	mui.init();
+    </script>
+    <style type="text/css">
+    	.mui-table-view .mui-media-object {
+			height: 50px;
+			max-width: 50px;
+		}
+		.mui-media-body .mui-ellipsis {
+			height: 16px;
+			line-height: 16px;
+			font-size: 12px;
+		}
+		.mui-table-view-cell.mui-media{
+			position: relative;
+		}
+		.mui-btn.mui-btn-outlined{
+			width: 80px;
+			padding: 2px 0;
+		}
+    	.mui-btn.mui-btn-outlined.has-two-btn{
+    		margin-right: 90px;
+    	}
+		.mui-control-content{
+			min-height:400px;
+		}
+		.dialog.lower-dialog{
+			height: 140px;
+			width: 240px;
+			margin: -70px 0 0 -120px;
+			text-align: center;
+		}
+		.dialog.lower-dialog .code{
+			height: 30px;
+			width: 80%;
+			margin-top: 10px;
+		}
+		.dialog.heigher-dialog{
+			height: 180px;
+			width: 260px;
+			margin: -90px 0 0 -130px;
+		}
+		#code-no-dialog,#code-yes-dialog{
+			padding-top: 20px;
+		}
+		#code-no-dialog .iconfont,#code-yes-dialog .iconfont{
+			font-size: 26px;
+		}
+		#code-no-dialog p,#code-yes-dialog p{
+			margin-top: 6px;
+			/*line-height: 25px;*/
+			border: ;
+		}
+    </style>
+</head>
+<body>
+	<div class="mui-content" style="padding: 60px 0 60px 0;">
+		<div class="b-search-cont">
+			<div class="out-cont">
+				<input type="text" name="" id="" value="" placeholder="请输入客户的手机号"/>
+				<div class="icon-cont">
+					<i class="iconfont">&#xe610;</i>
+				</div>
+			</div>
+		</div>
+		<div id="segmentedControl" class="mui-segmented-control active-red">
+				<a class="mui-control-item mui-active" href="#item1mobile">
+						全部
+						<span>(14)</span>
+					</a>
+				<a class="mui-control-item" href="#item2mobile">
+						待预约
+						<span>(5)</span>
+					</a>
+				<a class="mui-control-item" href="#item3mobile">
+						待验证
+						<span>(5)</span>
+					</a>
+				<a class="mui-control-item" href="#item4mobile">
+						待完成
+						<span>(4)</span>
+					</a>
+			</div>
+			<div class="mui-content" style="margin-top: 10px;">
+				<div id="item1mobile" class="mui-control-content mui-active">
+					<ul class="mui-table-view">
+						<li class="mui-table-view-cell mui-media">
+							<a href="A-hospital-detail.html">
+								<img class="mui-media-object mui-pull-left" src="img/pic1.png">
+								<div class="mui-media-body">
+									最新华丽美版Ulthera 还你紧致童颜
+									<p class='mui-ellipsis'>
+										售价：<span class="color-red">￥600</span>
+									</p>
+									<p class='mui-ellipsis'>
+										2015-11-11  16:22:22
+									</p>
+								</div>
+							</a>
+						</li>
+						<li class="mui-table-view-cell mui-media">
+							<p class="color-grey">姓名:<span class="mui-pull-right">马化腾</span></p>
+							<p class="color-grey">手机号:<span class="mui-pull-right">13983171812</span></p>
+							<p class="color-grey">身份证:<span class="mui-pull-right">6231478541247415</span></p>
+						</li>
+						<li class="mui-table-view-cell">
+					 		待确认预约
+							<button id="sure-btn" class="mui-btn mui-btn-outlined mui-btn-negative">确认预约</button>
+					 	</li>
+					</ul>
+					<ul class="mui-table-view has-m-top">
+						<li class="mui-table-view-cell mui-media">
+							<a href="A-hospital-detail.html">
+								<img class="mui-media-object mui-pull-left" src="img/pic1.png">
+								<div class="mui-media-body">
+									最新华丽美版Ulthera 还你紧致童颜
+									<p class='mui-ellipsis'>
+										售价：<span class="color-red">￥600</span>
+									</p>
+									<p class='mui-ellipsis'>
+										2015-11-11  16:22:22
+									</p>
+								</div>
+							</a>
+						</li>
+						<li class="mui-table-view-cell mui-media">
+							<p class="color-grey">姓名:<span class="mui-pull-right">马化腾</span></p>
+							<p class="color-grey">手机号:<span class="mui-pull-right">13983171812</span></p>
+							<p class="color-grey">身份证:<span class="mui-pull-right">6231478541247415</span></p>
+						</li>
+						<li class="mui-table-view-cell mui-media">
+					 		待到院验证
+					 		<p class="size-sm">已预约10-25 10:30</p>
+							<button class="mui-btn mui-btn-outlined mui-btn-negative has-two-btn">确认预约</button>
+							<button id="cancel-btn" class="mui-btn mui-btn-outlined">取消预约</button>
+					 	</li>
+					</ul>
+					<ul class="mui-table-view has-m-top">
+						<li class="mui-table-view-cell mui-media">
+							<a href="A-hospital-detail.html">
+								<img class="mui-media-object mui-pull-left" src="img/pic1.png">
+								<div class="mui-media-body">
+									最新华丽美版Ulthera 还你紧致童颜
+									<p class='mui-ellipsis'>
+										售价：<span class="color-red">￥600</span>
+									</p>
+									<p class='mui-ellipsis'>
+										2015-11-11  16:22:22
+									</p>
+								</div>
+							</a>
+						</li>
+						<li class="mui-table-view-cell mui-media">
+							<p class="color-grey">姓名:<span class="mui-pull-right">马化腾</span></p>
+							<p class="color-grey">手机号:<span class="mui-pull-right">13983171812</span></p>
+							<p class="color-grey">身份证:<span class="mui-pull-right">6231478541247415</span></p>
+						</li>
+						<li class="mui-table-view-cell mui-media">
+					 		待到院验证
+					 		<p class="size-sm">已预约10-25 10:30</p>
+							<button class="mui-btn mui-btn-outlined mui-btn-negative has-two-btn">手术完成</button>
+							<button class="mui-btn mui-btn-outlined">取消预约</button>
+					 	</li>
+					</ul>
+					<ul class="mui-table-view has-m-top">
+						<li class="mui-table-view-cell mui-media">
+							<a href="A-hospital-detail.html">
+								<img class="mui-media-object mui-pull-left" src="img/pic1.png">
+								<div class="mui-media-body">
+									最新华丽美版Ulthera 还你紧致童颜
+									<p class='mui-ellipsis'>
+										售价：<span class="color-red">￥600</span>
+									</p>
+									<p class='mui-ellipsis'>
+										2015-11-11  16:22:22
+									</p>
+								</div>
+							</a>
+						</li>
+						<li class="mui-table-view-cell mui-media">
+							<p class="color-grey">姓名:<span class="mui-pull-right">马化腾</span></p>
+							<p class="color-grey">手机号:<span class="mui-pull-right">13983171812</span></p>
+							<p class="color-grey">身份证:<span class="mui-pull-right">6231478541247415</span></p>
+						</li>
+						<li class="mui-table-view-cell">
+					 		已完成
+					 	</li>
+					</ul>
+				</div>
+				<div id="item2mobile" class="mui-control-content">
+					<ul class="mui-table-view">
+						<li class="mui-table-view-cell mui-media">
+							<a href="A-hospital-detail.html">
+								<img class="mui-media-object mui-pull-left" src="img/pic1.png">
+								<div class="mui-media-body">
+									最新华丽美版Ulthera 还你紧致童颜
+									<p class='mui-ellipsis'>
+										售价：<span class="color-red">￥600</span>
+									</p>
+									<p class='mui-ellipsis'>
+										2015-11-11  16:22:22
+									</p>
+								</div>
+							</a>
+						</li>
+						<li class="mui-table-view-cell mui-media">
+							<p class="color-grey">姓名:<span class="mui-pull-right">马化腾</span></p>
+							<p class="color-grey">手机号:<span class="mui-pull-right">13983171812</span></p>
+							<p class="color-grey">身份证:<span class="mui-pull-right">6231478541247415</span></p>
+						</li>
+						<li class="mui-table-view-cell">
+					 		待确认预约
+							<button class="mui-btn mui-btn-outlined mui-btn-negative">确认预约</button>
+					 	</li>
+					</ul>
+				</div>
+				<div id="item3mobile" class="mui-control-content">
+					<ul class="mui-table-view has-m-top">
+						<li class="mui-table-view-cell mui-media">
+							<a href="A-hospital-detail.html">
+								<img class="mui-media-object mui-pull-left" src="img/pic1.png">
+								<div class="mui-media-body">
+									最新华丽美版Ulthera 还你紧致童颜
+									<p class='mui-ellipsis'>
+										售价：<span class="color-red">￥600</span>
+									</p>
+									<p class='mui-ellipsis'>
+										2015-11-11  16:22:22
+									</p>
+								</div>
+							</a>
+						</li>
+						<li class="mui-table-view-cell mui-media">
+							<p class="color-grey">姓名:<span class="mui-pull-right">马化腾</span></p>
+							<p class="color-grey">手机号:<span class="mui-pull-right">13983171812</span></p>
+							<p class="color-grey">身份证:<span class="mui-pull-right">6231478541247415</span></p>
+						</li>
+						<li class="mui-table-view-cell mui-media">
+					 		待到院验证
+					 		<p class="size-sm">已预约10-25 10:30</p>
+							<button class="mui-btn mui-btn-outlined mui-btn-negative has-two-btn">手术完成</button>
+							<button class="mui-btn mui-btn-outlined">取消预约</button>
+					 	</li>
+					</ul>
+				</div>
+				<div id="item4mobile" class="mui-control-content">
+					<ul class="mui-table-view">
+						<li class="mui-table-view-cell mui-media">
+							<a href="A-hospital-detail.html">
+								<img class="mui-media-object mui-pull-left" src="img/pic1.png">
+								<div class="mui-media-body">
+									最新华丽美版Ulthera 还你紧致童颜
+									<p class='mui-ellipsis'>
+										售价：<span class="color-red">￥600</span>
+									</p>
+									<p class='mui-ellipsis'>
+										2015-11-11  16:22:22
+									</p>
+								</div>
+							</a>
+						</li>
+						<li class="mui-table-view-cell mui-media">
+							<p class="color-grey">姓名:<span class="mui-pull-right">马化腾</span></p>
+							<p class="color-grey">手机号:<span class="mui-pull-right">13983171812</span></p>
+							<p class="color-grey">身份证:<span class="mui-pull-right">6231478541247415</span></p>
+						</li>
+						<li class="mui-table-view-cell">
+					 		已完成
+					 	</li>
+					</ul>				
+				</div>
+				<nav class="mui-bar mui-bar-tab">
+					<a class="mui-tab-item mui-tab-item1 mui-active " href="home.html" >
+						<span class="mui-icon"></span>
+						<span class="mui-tab-label">客户订单</span>
+					</a>
+					<a class="mui-tab-item mui-tab-item2" href="shop.html" >
+						<span class="mui-icon"><i class="fa fa-shopping-cart"></i></span>
+						<span class="mui-tab-label">上线项目</span>
+					</a>
+					<a class="mui-tab-item mui-tab-item3" href="card.html" >
+						<span class="mui-icon"><i class="fa fa-tags"></i></span>
+						<span class="mui-tab-label">账号</span>
+					</a>
+				</nav>
+			</div>
+			<!--弹出层开始-->
+			<div id="dialogBg"></div>
+			<!--填写验证码-->
+			<div id="code-dialog" class="animated dialog lower-dialog">
+				<p class="color-black text-cont">
+					服务验证码
+					<input class="code" type="tel" name="" id="" value="" />
+				</p>
+				<ul class="btn-ul">
+					<li id="code-no">
+						<a class="close-pop">
+							取消
+						</a>
+					</li>
+					<li id="code-yes">
+						<a href="#">
+							确认
+						</a>
+					</li>
+				</ul>
+			</div>
+			<!--验证码错误弹窗-->
+			<div id="code-no-dialog" class="animated dialog lower-dialog">
+				<i class="iconfont color-red">&#xe646;</i>
+				<p class="color-black text-cont">
+					服务验证码错误，请核查是否输入正确或提供正确
+				</p>
+				<ul class="btn-ul">
+					<li>
+						<a class="close-pop">
+							取消
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							确认
+						</a>
+					</li>
+				</ul>
+			</div>
+			<!--验证码正确弹窗-->
+			<div id="code-yes-dialog" class="animated dialog lower-dialog">
+				<i class="iconfont color-blue">&#xe63d;</i>
+				<p class="color-black text-cont">
+					服务验证码
+				</p>
+				<ul class="btn-ul">
+					<li>
+						<a class="close-pop">
+							取消
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							确认
+						</a>
+					</li>
+				</ul>
+			</div>
+			<!--取消预约-->
+			<div id="quxiao-dialog" class="animated dialog heigher-dialog">
+				<p class="color-black text-cont">
+					请问是否取消该预约？
+				</p>
+				<ul class="mui-table-view no-after-line no-before-line">
+					<li class="mui-table-view-cell mui-media">
+						<a href="A-hospital-detail.html">
+							<img class="mui-media-object mui-pull-left" src="img/pic1.png">
+							<div class="mui-media-body">
+								最新华丽美版Ulthera 还你紧致童颜
+								<p class='mui-ellipsis'>
+									客户手机：13983171812
+								</p>
+								<p class='mui-ellipsis'>
+									预约时间：2015-11-11  16:22:22
+								</p>
+							</div>
+						</a>
+					</li>
+				</ul>
+				<ul class="btn-ul">
+					<li>
+						<a class="close-pop">
+							取消
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							确认
+						</a>
+					</li>
+				</ul>
+			</div>
+			<!--弹出层结束-->
+	</div>
+	<script type="text/javascript" src="js/jquery.min.js" ></script>
+	<script type="text/javascript">
+		var w,h;
+		function getSrceenWH(){
+			w = $(window).width();
+			h = $("html").height();
+			$('#dialogBg').width(w).height(h);
+		}
+		
+		window.onresize = function(){  
+			getSrceenWH();
+		}  
+		$(window).resize();  
+		
+		$(function(){
+			getSrceenWH();
+			//显示预约弹框
+			$('#sure-btn').click(function(){
+				$('#dialogBg').fadeIn(300);
+				$('#code-dialog').removeClass('animated').addClass('animated dialog'+"bounceIn"+'').fadeIn();
+			});
+			//显示取消预约弹框
+			$('#cancel-btn').click(function(){
+				$('#dialogBg').fadeIn(300);
+				$('#quxiao-dialog').removeClass('animated').addClass('animated dialog'+"bounceIn"+'').fadeIn();
+			});
+			
+			//关闭弹窗
+			$('.close-pop').click(function(){
+				$('#dialogBg').fadeOut(300,function(){
+					$('#code-dialog').removeClass('animated').addClass('animated dialog'+'bounceOutUp'+'').fadeOut();
+					$('#quxiao-dialog').removeClass('animated').addClass('animated dialog'+'bounceOutUp'+'').fadeOut();
+					$('#code-yes-dialog').removeClass('animated').addClass('animated dialog'+'bounceOutUp'+'').fadeOut();
+				});
+			});
+			
+			$('#code-no-dialog .close-pop').click(function(){
+				$('#dialogBg').fadeOut(300,function(){
+					$('#code-no-dialog').removeClass('animated').addClass('animated dialog'+'bounceOutUp'+'').fadeOut();
+				});
+			});
+			
+			$("#code-no").on("click",function(){
+				$('#dialogBg').fadeIn(300);
+				$('#code-no-dialog').removeClass('animated').addClass('animated dialog'+"bounceIn"+'').fadeIn()
+			});
+			
+			$("#code-yes").on("click",function(){
+				$('#dialogBg').fadeIn(300);
+				$('#code-yes-dialog').removeClass('animated').addClass('animated dialog'+"bounceIn"+'').fadeIn()
+			});
+		});
+	</script>
+</body>
+</html>

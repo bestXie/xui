@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>审核进度</title>
+    <script src="js/mui.min.js"></script>
+    <link href="css/mui.css" rel="stylesheet"/>
+    <link rel="stylesheet" type="text/css" href="css/iconfont.css"/>
+    <script type="text/javascript" charset="utf-8">
+      	mui.init();
+    </script>
+    <style type="text/css">
+    	.mui-table-view.apply-proccess .mui-media-object{
+    		height: 60px;
+    		width: 60px;
+    		max-width: 60px;
+    		text-align: center;
+    		line-height: 60px;
+    		border-radius: 40px;
+    		color: #FFF;
+    		position: relative;
+    	}
+    	.mui-table-view.apply-proccess .mui-media-object i{
+    		font-size: 24px;
+    	}
+    	.apply-proccess .bar{
+    		height: 20px;
+    		width: 4px;
+    		background: #CACACA;
+    	}
+    	.apply-proccess .bar.active{
+    		background: #00ABEB;
+    	}
+    	.apply-proccess .top-bar{
+    		position: absolute;
+    		top: -20px;
+    		left: 28px;
+    	}
+    	.apply-proccess .botm-bar{
+    		position: absolute;
+    		bottom: -20px;
+    		left: 28px;
+    	}
+    	.mui-table-view.apply-proccess .mui-media-body{
+    		padding-top: 8px;
+    	}
+    </style>
+</head>
+<body>
+	<div class="mui-content">
+	    <ul class="mui-table-view apply-proccess">
+			<li class="mui-table-view-cell mui-media no-after-line">
+				<a href="A-hospital-detail.html">
+					<div class="mui-media-object mui-pull-left bg-real-blue">
+						<i class="iconfont">&#xe612;</i>
+						<div class="bar botm-bar active"></div>
+					</div>
+					<div class="mui-media-body">
+						<h4 class="color-real-blue">额度申请已提交，等待审核</h4>
+						<p class='mui-ellipsis'>
+							<span>2015-11-11  10:25</span>
+						</p>
+					</div>
+				</a>
+			</li>
+			<li class="mui-table-view-cell mui-media no-after-line">
+				<a href="A-hospital-detail.html">
+					<div class="mui-media-object mui-pull-left bg-grey">
+						<i class="iconfont">&#xe610;</i>
+						<div class="bar top-bar"></div>
+						<div class="bar botm-bar"></div>
+					</div>
+					<div class="mui-media-body">
+						<h4>额度审核中</h4>
+						<p class='mui-ellipsis'>
+							<span>2015-11-11  10:25</span>
+						</p>
+					</div>
+				</a>
+			</li>
+			<li class="mui-table-view-cell mui-media">
+				<a href="A-hospital-detail.html">
+					<div class="mui-media-object mui-pull-left bg-grey">
+						<i class="iconfont">&#xe63d;</i>
+						<div class="bar top-bar"></div>
+					</div>
+					<div class="mui-media-body">
+						<h4>额度审核通过</h4>
+						<p class='mui-ellipsis'>
+							<span>2015-11-11  10:25</span>
+						</p>
+					</div>
+				</a>
+			</li>
+		</ul>
+
+	</div>
+</body>
+</html>

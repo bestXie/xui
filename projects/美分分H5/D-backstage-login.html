@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>后台登陆</title>
+		<script src="js/mui.min.js" type="text/javascript" charset="utf-8"></script>
+		<link href="css/mui.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="css/iconfont.css"/>
+		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+		<script type="text/javascript" charset="utf-8">
+			mui.init();
+		</script>
+		<style type="text/css">
+			html,
+			body,.mui-content{
+				height: 100%;
+				background: url(img/backstage-login-bg.png) no-repeat center center;
+				background-size: 100% 100%;
+			}
+			.mui-input-group .mui-input-row{
+		    	height: 46px;
+		    }
+			.mui-input-row label ~ input,.mui-input-row label ~ select{
+				margin-top: 4px;
+				width: 85%;
+				text-align: left;
+				/*border: 1px solid red;*/
+				font-size: 14px;
+				color: #9B9B9B;
+			}
+			.mui-input-row label ~ select{
+				position: relative;
+				left: -3px;
+			}
+			.mui-input-row label {
+				width: 40px;
+				padding: 12px 0 10px 14px;
+				/*border: 1px solid red;*/
+			}
+			.mui-input-row label i{
+				font-size: 22px;
+				color: #9B9B9B;
+			}
+			.login_top{
+				height: 180px;
+				text-align: center;
+				width: 100%;
+			}
+			.login_top img{
+				height: 100px;
+				width: 100px;
+				margin-top: 30px;
+			}
+			.login_top h4{
+				margin-bottom: 14px;
+			}
+		</style>
+
+	</head>
+
+	<body>
+		<div class="mui-content">
+
+			<div class="login_top">
+				<img src="img/logo.png" />
+				<h4 class="color-red">美分分医院后台管理系统</h4>
+			</div>
+			<form class="mui-input-group">
+				<div class="mui-input-row">
+					<label>
+						<i class="iconfont">&#xe615;</i>
+					</label>
+					<input type="text" class="mui-input-clear" maxlength="11" placeholder="请输入账号">
+				</div>
+				<div class="mui-input-row">
+					<label>
+						<i class="iconfont">&#xe636;</i>
+					</label>
+					<input type="password" class="mui-input-clear" placeholder="请输入密码">
+				</div>
+			</form>
+
+			<button disabled="disabled" class="mui-btn mui-btn-negative mui-btn-block">登录</button>
+		</div>
+
+	</body>
+</html>

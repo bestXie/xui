@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>手拉手亲子园光大路店</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<link href="css/uity.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/mui.picker.min.css">
+	<script src="js/mui.min.js"></script>
+	<script src='js/mui.picker.min.js'></script>
+	<link href="css/mui.css" rel="stylesheet"/>		
+	<style>
+		html{
+			font-size:62.5%;
+		}
+
+		.main .tit{
+			line-height: 40px;
+			text-align: right;
+			box-sizing: border-box;
+			padding-right: 1.8rem;
+		}
+		.main .tit span{
+			margin-right: 1rem;
+		}
+		.main ul{
+			padding-left:15px;
+			border-bottom: 1px solid #dddddd;
+		}
+		.main ul li{
+			border-top:1px solid #dddddd;
+			padding:1rem 1.8rem 1rem 2.3rem;
+		}
+		.main ul li:nth-child(1){
+			background:url(images/icon-1.png) no-repeat 0 13px;
+			background-size: auto 17px;
+		}
+		.main ul li:nth-child(2){
+			background:url(images/time.png) no-repeat 0 center;
+			background-size: auto 40%;
+		}
+		.main ul li:nth-child(3){
+			background:url(images/loca.png) no-repeat 2px center,url(images/icon-rigth.png) no-repeat 95% center;
+			background-size: auto 40%;
+		}		
+		.main ul li div{
+			margin-bottom: 1rem;
+			font-size:16px;
+		}
+		.main ul li p{
+			line-height:25px;
+			color:#525252;
+			font-size:14px;
+		}
+		.btn{
+			position: relative;
+		}
+		.btn button{
+			padding:0;
+			
+		}
+		footer ul{
+			padding-left:1.8rem;
+		}
+		footer ul li{
+			padding:15px 0;
+		}
+		footer ul li:nth-child(1){
+			border-bottom:1px solid #dddddd;
+		}
+		footer ul li button{
+			float: right;
+			padding:5px;
+			font-size:12px;
+			margin-right: 1.8rem;
+			margin-top:-5px;
+		}
+		.form{
+			background:#fff;
+			padding-left:1.8rem;
+			margin-top:1rem;
+			border-top:1px solid #dddddd;
+
+		}
+		.mui-input-row{
+			border-bottom:1px solid #dddddd;
+			padding:5px 0;
+		}
+		.mui-input-row label{
+			padding:1rem 15px 1rem 0;
+			/*margin-top:4px;*/
+		}
+		.main{
+			background:#fff;
+		}
+		.right{
+			background:url(images/icon-rigth.png) no-repeat 97% center;
+			background-size:auto 15px;
+		}
+		#right{
+			background:url(images/icon-rigth.png) no-repeat 97% center;
+			background-size:auto 15px;
+		}
+		.h40{
+			line-height:50px;
+			height:50px;
+		}
+		#option{
+			width: 90%;
+			color:#0c89d6;
+		}	
+.mui-input-row span {
+  width: 20px;
+  height: 20px;
+  background: url(images/clean.png) no-repeat center center;
+  background-size: 100% auto;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  margin-top: -10px;
+  display: none;
+    }	
+    .mui-dtpicker-title h5{
+    	background: #fff;
+    }
+    .mui-dtpicker-header{
+    	background: #fff;
+    }
+	.mui-dtpicker-header button{
+		background: #fff;
+		color: #333;
+    	border:none;
+    	}
+    .mui-poppicker-header .mui-btn{
+    	border:none;
+    	background:#fff;
+    	color: #333;
+    }	
+	</style>
+</head>
+<body>
+	<div id="cityResult" class="ui-alert"></div>
+
+	<div class="mui-content">
+		<header>
+			<img src="images/banner.png" alt="">
+			<div class="mask">
+				妈妈育儿讲座<br>
+				免费入场券
+			</div>
+		</header>
+		<div class="main">
+			<div class="tit" style="color:#888888;">
+				<span>推荐人:王一力</span>
+				浏览量:5
+			</div>
+			<ul>
+				<li>
+					<div>好友推荐报名享受最大优惠</div>
+					<p>(1) 精美教具一份(价值200元)</p>
+					<p>(2) 亲子课程3节(价值540元)</p>
+					<p>(3) 课程费用减免**元</p>
+				</li>
+			</ul>
+		</div>
+		<div class="form">
+			<div class="mui-input-row">
+				<label>
+					宝贝姓名
+				</label>
+				<input type="text" value="" placeholder="">
+					<span></span>
+			</div>
+			<div class="mui-input-row">
+				<label>
+					宝贝生日
+				</label>
+				<input type="text" value="" placeholder="">
+					<span></span>
+			</div>
+			<div class="mui-input-row">
+				<label>
+					家长手机号码
+				</label>
+				<input type="text" value="" placeholder="">
+				<span></span>
+			</div>
+			<div class="mui-input-row right h40" id='no1' data-options='{"type":"date"}'>
+				<label>
+					预约日期
+				</label>
+				<p id='demo1' style='line-height:40px;'></p>
+			</div>
+			<div class="mui-input-row right" id='no3' style="height:50px;">
+				<label>
+					预约时间
+				</label>
+				<p id='demo3' style='line-height:45px;color:#333;'>
+					
+				</p>
+			</div>													
+			<div class="mui-input-row right">
+				<label style="width:25%;">
+					活动地址
+				</label>
+				<p style='padding:1rem;'>上海市黄浦区徐家汇路120号B座320室</p>
+			</div>
+			<div class="mui-input-row" id="right" style="height:50px;">
+			<p id="showCityPicker" style="line-height: 40px;color: #0c89d6;">去其他分店同享优惠试听</p>	
+				<!-- <label for="" style='width:80%;color:#0c89d6;'>去其他分店同享优惠试听</label> -->
+				<!--<select name="" id="option">
+					<optgroup label='上海'>
+						<option value="">去其他分店同享优惠试听</option>
+						<option value="">世纪公园中心</option>
+						<option value="">五角场中心</option>
+						<option value="">莘庄中心</option>
+						<option value="">徐家汇中心</option>
+						<option value="">四川路中心</option>
+					</optgroup>	
+
+				</select>	-->
+			</div>								
+		</div>
+		<div class="btn" style="background:#fff;">
+			<button>立即报名</button>
+		</div>
+
+	</div>
+	<nav class="mui-bar mui-bar-tab">
+		<a class="mui-tab-item" href="#mff">
+			<span class="mui-tab-label">品牌教育</span>
+		</a>
+		<a class="mui-tab-item" href="#project">
+			<span class="mui-tab-label">教育理念</span>
+		</a>
+		<a class="mui-tab-item" href="#me">
+			<span class="mui-tab-label">课程介绍</span>
+		</a>
+	</nav>
+
+	<div id='result' class="ui-alert" style="display: none;"></div>
+
+	
+	<script src='js/jquery.min.js'></script>
+	<script src='js/mui.poppicker.js'></script>
+	<script>
+		(function($) {
+//普通示例
+					var userPicker = new $.PopPicker();
+					userPicker.setData([ {
+						value: 'aaa',
+						text: '9:00-11:00'
+					}, {
+						value: 'lj',
+						text: '11:00-13:00'
+					}, {
+						value: 'ymt',
+						text: '13:00-15:00'
+					}, {
+						value: 'shq',
+						text: '15:00-17:00'
+					}, {
+						value: 'zhbh',
+						text: '17:00-19:00'
+					}
+					]);
+					var showUserPickerButton = document.getElementById('no3');
+					var userResult = document.getElementById('demo3');
+					showUserPickerButton.addEventListener('tap', function(event) {
+						userPicker.show(function(items) {
+							userResult.innerText = items[0].text
+							//返回 false 可以阻止选择框的关闭
+							//return false;
+						});
+					}, false);
+					//-----------------------------------------			
+			$.init();
+			var result = $('#result')[0];
+			var btns = $('.h40');
+			btns.each(function(i, btn) {
+				btn.addEventListener('tap', function() {
+					var optionsJson = this.getAttribute('data-options') || '{}';
+					var options = JSON.parse(optionsJson);
+					var id = this.getAttribute('id');
+							/*
+							 * 首次显示时实例化组件
+							 * 示例为了简洁，将 options 放在了按钮的 dom 上
+							 * 也可以直接通过代码声明 optinos 用于实例化 DtPicker
+							 */
+							 var picker = new $.DtPicker(options);
+							 picker.show(function(rs) {
+								/*
+								 * rs.value 拼合后的 value
+								 * rs.text 拼合后的 text
+								 * rs.y 年，可以通过 rs.y.vaue 和 rs.y.text 获取值和文本
+								 * rs.m 月，用法同年
+								 * rs.d 日，用法同年
+								 * rs.h 时，用法同年
+								 * rs.i 分（minutes 的第二个字母），用法同年
+								 */
+								 result.innerText = '选择结果: ' + rs.text;
+								 
+								 if(id=="no1"){
+								 	document.getElementById("demo1").innerHTML=(rs.text).substr(5)
+								 	document.getElementById("demo1").style.color="#333";
+								 }else{
+								 	document.getElementById("demo2").innerHTML=rs.text;
+								 	document.getElementById("demo2").style.color="#333";
+								 }
+								/* 
+								 * 返回 false 可以阻止选择框的关闭
+								 * return false;
+								 */
+								/*
+								 * 释放组件资源，释放后将将不能再操作组件
+								 * 通常情况下，不需要示放组件，new DtPicker(options) 后，可以一直使用。
+								 * 当前示例，因为内容较多，如不进行资原释放，在某些设备上会较慢。
+								 * 所以每次用完便立即调用 dispose 进行释放，下次用时再创建新实例。
+								 */
+								 picker.dispose();
+								});
+							}, false);
+});
+})(mui);
+$('#demo1').on('tap',function(){
+	$('input').blur()
+})
+$('#demo2').on('tap',function(){
+	$('input').blur()
+})
+		$('input').focus(function(){
+			$(this).parent('div').find('span').show(400)
+		})
+		$('input').blur(function(){
+			$('.mui-input-row span').fadeOut(400)
+		})
+		$('.mui-input-row span').on('click',function(){
+			$(this).parent('div').find('input').val('');
+			$(this).fadeOut(400)
+		})	
+</script>
+
+<script>
+ // 地点两级联动
+
+	 (function($, doc) {
+	 	$.init();
+	 	$.ready(function() {
+	 				//级联示例
+	 				var cityPicker = new $.PopPicker({
+	 					layer: 2
+	 				});
+	 				cityPicker.setData(cityData);
+	 				var showCityPickerButton = doc.getElementById('showCityPicker');
+	 				var cityResult = doc.getElementById('showCityPicker');
+	 				showCityPickerButton.addEventListener('tap', function(event) {
+	 					cityPicker.show(function(items) {
+	 						cityResult.innerText = items[0].text + " " + items[1].text;
+	 						//返回 false 可以阻止选择框的关闭
+	 						//return false;
+	 					});
+	 				}, false);
+	 				//-----------------------------------------
+	 			});
+	 })(mui, document);
+	 var cityData = [{
+	 	value: '110000',
+	 	text: '上海',
+	 	children: [{
+	 		value: "110101",
+	 		text: "莘庄中心"
+	 	}, {
+	 		value: "110102",
+	 		text: "四川路中心"
+	 	}, {
+	 		value: "110103",
+	 		text: "世界公园"
+	 	}, {
+	 		value: "110104",
+	 		text: "虹口足球场"
+	 	},]
+	 }]	
+</script>
+</body>
+</html>

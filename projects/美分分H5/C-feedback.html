@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>意见反馈</title>
+		<script src="js/mui.min.js" type="text/javascript" charset="utf-8"></script>
+		<link href="css/mui.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="css/iconfont.css"/>
+		<link rel="stylesheet" type="text/css" href="css/my-style.css"/>
+		<style type="text/css">
+		    .mui-input-group .mui-input-row{
+		    	height: 46px;
+		    }
+			.mui-input-row label ~ input{
+				margin-top: 2px;
+				width: 75%;
+				text-align: left;
+				/*border: 1px solid red;*/
+				font-size: 14px;
+				color: #9B9B9B;
+			}
+			.mui-input-row label {
+				width: 60px;
+				padding: 15px 0 10px 15px;
+				/*border: 1px solid red;*/
+			}
+			.mui-input-row label i{
+				font-size: 22px;
+				color: #9B9B9B;
+			}
+			#get-btn{
+				position: absolute;
+				top: 4px;
+				right: 14px;
+				width: 100px;
+			}
+			textarea{
+				margin-top: 10px;
+				border-width: 1px 0px 1px 0;
+				border-style: solid;
+				border-color: #D8D8D8;
+				border-radius: 0;
+			}
+		</style>
+
+	</head>
+
+	<body>
+		<div class="mui-content">
+			<ul class="color-line">
+				<li class="gold-line"></li>
+				<li class="green-line"></li>
+				<li class="yellow-line"></li>
+				<li class="red-line"></li>
+				<li class="brown-line"></li>
+			</ul>
+			<form class="mui-input-group has-m-top">
+				<div class="mui-input-row">
+					<label>
+						手机
+					</label>
+					<input type="tel" maxlength="11" placeholder="请输入手机号码">
+				</div>
+			</form>
+			<textarea name="feedb" rows="10" cols=""></textarea>
+
+			<button disabled="disabled" class="mui-btn mui-btn-negative mui-btn-block">提交</button>
+		</div>
+		<script type="text/javascript">
+			window.onload=function(){
+//				获取验证码倒计时
+				var oBtn=document.getElementById('get-btn');
+				var num=3;
+				var timer=null;
+				oBtn.onclick=function(){
+					oBtn.disabled=true;
+					timer=setInterval(function(){
+						num--;
+						oBtn.innerHTML=num;
+						if(num==0){
+							num=3;
+							oBtn.innerHTML='获取验证码';
+							clearInterval(timer);
+							oBtn.disabled=false;
+						}
+					},1000);
+				}
+			}
+		</script>
+	</body>
+</html>

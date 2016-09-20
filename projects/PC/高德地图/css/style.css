@@ -1,0 +1,98 @@
+@charset "utf-8";
+/* CSS Document */
+/*css初始化    css reset*/
+html,body,ul,ol,li,dl,dt,dd,p,h1,h2,h3,h4,h5,h6,form,fieldset,legend,input,img{ margin:0;padding:0;}
+fieldset,img,textarea{ border:0;}/*去掉边框*/
+li{ list-style:none;}/*去掉列表样式*/
+h1,h2,h3,h4,h5,h6{ font-weight:normal;}
+/*设置链接*/
+a{ color:#333; text-decoration:none;  font-family:微软雅黑;}
+a:hover{ text-decoratrion:underline;}
+/*特殊声明*/
+body{ font-size:12px; color:#666666; font-family:微软雅黑; background:#EBEBEB;}
+.clearfix:after{ content:"."; clear:both; display:block; height:0; visibility:hidden;}
+.clearfix{ zoom:1;}
+                                   /*初始化结束*/               
+.box{background: #fff none repeat scroll 0 0;
+    box-shadow: 1px 0 3px rgba(0, 0, 0, 0.1);
+    clear: both;
+    margin: 0 auto 20px;
+    overflow: hidden;
+    width: 980px;}
+.header{ height:80px}
+h1 a{ width:149px; height:41px; display:block; background:url(../images/logo.png) no-repeat; text-indent:-9999px;}
+.header h1{ float:left; margin: 20px 0 0 50px;}
+.header ul{ float:right;}
+.header li{ float:left; line-height:80px; padding-right:50px;}
+.header li a{ font-size:14px;}
+.header li .fist{color:#0075C2;}
+.header li a:hover{ color:#0075C2;}
+                            /*导航结束*/
+							
+							
+							/*banner开始*/
+.banner{ height:420px; margin-bottom:0px;}							
+							/*banner结束*/
+.nav{ border-top:#EBEBEB 1px solid;}							
+.nav li{ height:91px; width:245px; /*background:#063;*/ text-align:center; position:relative; float:left;}
+
+.nav i{ width:60px; height:65px; display:block; background:#F00; background:url(../images/os_logo01.png) no-repeat 0 -68px; position:absolute; top:15px; left:25px;}
+.nav .pg{ background-position:0 0;}
+.nav .wp{ background-position:0 -132px;}
+.nav .pad{ background-position:-21px -200px;}
+	
+.nav span{ font-size:22px; color:#9ACE00;}
+.nav .hei{ color:#281F1C;}
+.nav .lan{ color:#0075C2;}	
+.nav p{ font-size:14px; color:#7E7E7E; padding-top:20px; padding-left:60px;}	
+                             /*特色功能开始	*/	
+							 
+.tsgn{ height:257px; padding:0 20px; width:940px;}
+ h2{ line-height:40px;border-bottom:#EBEBEB 1px solid; color:#333333; font-weight:bold;}
+ h2 a{ float:right; font-size:14px;}
+.tsgn li{ width:190px; /*background:#093;*/ padding:5px 22px 0; text-align:center; /*position:relative;*/ float:left;}
+.tsgn li i{ width:69px; height:69px; background:#999; display:block; margin-top:35px; background:url(../images/index_more.jpg) no-repeat 0 -71px; /*position:absolute;*/ margin-left:62px;}
+.tsgn li .cx{ background-position:0 -211px;}
+.tsgn li .zb{ background-position:0 0px;}
+.tsgn li .lx{ background-position:0 -421px;}
+
+.tsgn li p{ padding-top:20px; line-height:20px; color:#333333;}
+
+
+                                 /*特色结束	*/	
+								 
+								 /*热点开始			*/	
+.hot{ height:150px;}
+.hot-l{ width:445px; height:150px;/*background:#906;*/ float:left; padding:0 20px}
+.hot ul{ padding-top:10px;}
+.hot li{ line-height:40px; padding-left:20px;}
+.hot li span{ float:right;}
+.hot-r{ width:445px; height:150px;/*background:#0C6;*/ float:right; padding:0 20px;}
+
+.cpfk{ padding:0 20px 10px 20px; width:940px;}
+.cpfk ul{ padding:10px 0;}
+.cpfk li{ width:180px; padding-left:30px; line-height:20px;  border-right:1px #ccc solid;
+float:left;}
+.cpfk span{margin-bottom:5px;}
+.cpfk .w240{ width:240px;}
+.cpfk .noborder{ border-right:0;}
+.cpfk .noborder span{ padding-left:30px; background:url(../images/ico_touch.png) no-repeat 0 2px; }
+.cpfk .noborder .wx{ background-position:0 -25px;}
+.cpfk span{ display:inline-block;}
+
+
+.snav{ line-height:60px; padding-left:30px; width:950px; color:#333; margin-bottom:0;}
+.snav a{ padding:0 10px; color:#666;}
+
+.bnav{ width:980px; margin:0 auto; line-height:40px;border-bottom:1px solid #B2B2B2;}
+.bnav span{ float:left;}
+.bnav ul{ float:right;}
+.bnav li{ float:left; margin-left:10px;}
+
+
+.bq{ text-align:center; position:relative; margin-top:5px; /*padding-top:20px;*/ line-height:48px;
+margin-bottom:5px;}
+.bq img{ position:absolute; left:50%; margin-left:363px;}
+								 
+								 	 
+							 		

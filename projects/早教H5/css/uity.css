@@ -1,0 +1,128 @@
+	html{
+		font-size: 62.5%;
+	}
+	.mui-content{
+		padding-bottom:50px;
+				
+	}
+	header{
+		position:relative;
+	}
+	header img{
+		width:100%;
+		display:block;
+	}
+	header div{
+		position:absolute;
+		width:100%;
+		padding:10px 0;
+		text-align:center;
+		background:rgba(0, 0, 0, 0.5);
+		color:#f4f2f3;
+		font-size:1.8rem;
+
+		bottom: 0;
+	}
+	.centent {
+		background:#fff;
+		/*padding:1.6rem 0;*/
+		padding-top:2.5rem;
+		padding-bottom: 1.6rem;
+		/*border-bottom: 1px solid #DDDDDD;*/
+	}
+	.centent .top{
+		vertical-align:middle;
+		text-align:center;
+
+	}
+	.centent .top img{
+		width: 45px;
+		height: 45px;
+	}
+	.centent .top span{
+		vertical-align:16px;
+		font-size:1.8rem;
+		/*margin-top:5%;*/
+		margin-left:1rem;
+		display:inline-block;
+	}
+	.centent p{
+		text-align:center;
+		margin-top:1rem;
+	}
+	.add{
+		margin-top:0.8rem;
+	}
+	.add ul{
+		background:#fff;
+		border-bottom:1px solid #dddddd;
+		border-top:1px solid #dddddd;
+		padding-left:1.6rem;
+	}
+	.add ul li{
+		line-height:50px;
+		padding-left:2.3rem;
+		background-size:auto 40%;
+	}
+	.add ul li:nth-child(1){
+		border-bottom:1px solid #dddddd;
+		background:url(../images/time.png) no-repeat left center;
+		background-size:auto 18px;
+	}
+	.add ul li:nth-child(2){
+		background:url(../images/loca.png) no-repeat left center;
+		background-size:auto 20px;
+		position: relative;
+	}
+	.add ul li:nth-child(2):before{
+		position: absolute;
+		content: '';
+		width: 20px;
+		height: 20px;
+		background: url(../images/icon-rigth.png) no-repeat center center;
+		background-size: auto 15px;
+		right: 15px;
+		top:50%;
+		margin-top:-10px;
+	}
+	.btn{
+		/*margin:20px;*/
+		padding:1.6rem;
+	}
+	.btn button{
+		width:100%;
+		line-height:3.8rem;
+		background:#0c89d6;
+		color:#fff;
+		
+		font-size:1.6rem;
+		border:none;
+		padding:0;
+	}
+	nav.mui-bar-tab .mui-tab-item.mui-active{
+		color:#929292;
+	}
+	nav a{
+		border-right:1px solid #dddddd;
+	}
+	.mui-picker-inner{
+		background: #fff;
+	}
+	.mui-dtpicker .mui-picker{
+		background: #fff;
+	}
+	.mui-poppicker-body .mui-picker{
+		background: #fff;
+	}
+	.mui-poppicker-header{
+		background: #fff;
+	}
+	.mui-dtpicker-title h5{
+		background-color: #fff;
+	}
+	.mui-dtpicker-title h5
+/*	.mui-btn-blue {
+		border:none;
+		background: #fff;
+		color:#333;
+	}*/

@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>个人信息</title>
+		<script src="js/mui.min.js" type="text/javascript" charset="utf-8"></script>
+		<link href="css/mui.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="css/iconfont.css"/>
+		<link rel="stylesheet" type="text/css" href="css/my-style.css"/>
+		<script type="text/javascript" src="js/common.js" ></script>
+		<script type="text/javascript" charset="utf-8">
+			mui.init();
+		</script>
+		<style type="text/css">
+		    .mui-input-group .mui-input-row{
+		    	height: 46px;
+		    }
+			.mui-input-row label ~ input,.mui-input-row label ~ select{
+				margin-top: 4px;
+				width: 65%;
+				text-align: left;
+				/*border: 1px solid red;*/
+				font-size: 14px;
+				color: #9B9B9B;
+			}
+			.mui-input-row label ~ select{
+				position: relative;
+				left: -3px;
+			}
+			.mui-input-row label ~ i{
+				position: absolute;
+				top: 12px;
+				right: 5%;
+				color: #3A3A3A;
+				font-size: 12px;
+			}
+			.mui-input-row label {
+				width: 110px;
+				padding: 15px 0 10px 12px;
+				/*margin-top: 8px;*/
+				/*border: 1px solid red;*/
+			}
+			.mui-input-row label i{
+				font-size: 22px;
+			}
+			.user-state{
+				position: absolute;
+				top: 16px;
+				right: 15px;
+				height: 30px;
+			}
+			.user-state .mui-btn{
+				width: 50%;
+				padding: 6px 14px;
+				border-radius: 0;
+			}
+			.photo img{
+				height: 40px;
+				width: 40px;
+				position: absolute;
+				top: 10px;
+				left: 40%;
+			}
+			
+			.limit-cont{
+				width: 94%;
+				margin: 10px auto;
+				background: #FFF;
+				/*padding: 10px;*/
+				border-radius: 3px;
+			}
+			.limit-cont .blue-bg{
+				height: 55px;
+				line-height: 55px;
+				width: 100%;
+				background: url(img/limit-bg-blue.png) no-repeat center center;
+				background-size: 100% 100%;
+				margin-bottom: 10px;
+				color: #FFF;
+				padding: 0 10px;
+			}
+			.limit-process{
+				width: 100%;
+				overflow: hidden;
+				padding: 4px 15px;
+			}
+			.limit-process li{
+				width: 50%;
+				height: 30px;
+				line-height: 30px;
+				float: left;
+				text-align: left;
+			}
+			.limit-cont .size-big-xl{
+				font-weight: bold;
+			}
+			.limit-process p{
+				padding: 0 100px;
+			}
+			.limit-process .circle{
+				display: inline-block;
+				height: 18px;
+				line-height: 18px;
+				width: 18px;
+				border-radius: 10px;
+				color: #FFF;
+				text-align: center;
+			}
+			.limit-process .circle.bg-blue{
+				background: #00ABEC;
+			}
+			.limit-process .circle.bg-no{
+				background: none;
+				border:1px solid #00ABEC;
+				color: #00ABEC;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="mui-content">
+			<div class="limit-cont">
+				<div class="blue-bg">
+					<span class="size-big-xl">￥6000</span>
+					<span>起消费额度</span>
+				</div>
+				<p class="has-lr-padded" style="padding-left: 14px;">只需简单2步</p>
+				<ul class="limit-process">
+					<li>
+						<span class="circle bg-blue">1</span>
+						填写基本信息
+					</li>
+					<li>
+						<span class="circle bg-no">2</span>
+						上传手持证件照片
+					</li>
+				</ul>
+			</div>
+			<form class="mui-input-group">
+				<div class="mui-input-row">
+					<label>
+						姓名
+					</label>
+					<input type="text" value="" placeholder="请输入你的姓名">
+				</div>
+				<div class="mui-input-row" style="position: relative;">
+					<label>
+						身份证号
+					</label>
+					<input type="text" value="" placeholder="请输入你的身份证号">
+				</div>
+				<div class="mui-input-row">
+					<label>
+						学校名称
+					</label>
+					<select class="select-infor" name="college">
+						<option value="">请选择你就读学校名称</option>
+						<option value="">哈佛大学</option>
+						<option value="">麻省理工学院</option>
+					</select>
+					<i class="iconfont">&#xe639;</i>
+				</div>
+				<div class="mui-input-row">
+					<label>
+						入学时间
+					</label>
+					<select class="select-infor" name="college">
+						<option value="">请选择你入学时间</option>
+					</select>
+					<i class="iconfont">&#xe639;</i>
+				</div>
+				<div class="mui-input-row">
+					<label>
+						毕业时间
+					</label>
+					<select class="select-infor" name="college">
+						<option value="">请选择你毕业时间</option>
+					</select>
+					<i class="iconfont">&#xe639;</i>
+				</div>
+				<div class="mui-input-row">
+					<label>
+						学历
+					</label>
+					<select class="select-infor" name="college">
+						<option value="">请选择你的学历</option>
+					</select>
+					<i class="iconfont">&#xe639;</i>
+				</div>
+				<div class="mui-input-row">
+					<label>
+						专业
+					</label>
+					<input type="text" value="" placeholder="请输入你的专业">
+				</div>
+				<div class="mui-input-row">
+					<label>
+						学号
+					</label>
+					<input type="text" value="" placeholder="请输入你的学号">
+				</div>
+				<div class="mui-input-row">
+					<label>
+						宿舍详细地址
+					</label>
+					<input type="text" value="" placeholder="请输入你的宿舍地址">
+				</div>
+				<div class="mui-input-row">
+					<label>
+						学信网账号
+					</label>
+					<input type="text" value="" placeholder="请输入你的学信网账号">
+				</div>
+				<div class="mui-input-row">
+					<label>
+						学信网密码
+					</label>
+					<input type="text" value="" placeholder="请输入你的学信网密码">
+				</div>
+				<div class="mui-input-row">
+					<label>
+						父或母联系电话
+					</label>
+					<input type="tel" value="" placeholder="请输入你的父母联系号码">
+				</div>
+			</form>
+			<button disabled="disabled" class="mui-btn mui-btn-negative mui-btn-block">下一步</button>
+		</div>
+
+	</body>
+</html>

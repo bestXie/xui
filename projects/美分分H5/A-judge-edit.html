@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>发表评价</title>
+    <script src="js/mui.min.js"></script>
+    <link href="css/mui.css" rel="stylesheet"/>
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="css/iconfont.css"/>
+    <script type="text/javascript" charset="utf-8">
+      	mui.init();
+    </script>
+    <style type="text/css">
+    	.mui-table-view .mui-media-object {
+			height: 60px;
+			max-width: 60px;
+		}
+		.mui-control-content{
+			min-height:300px;
+		}
+		.mui-table-view-cell.mui-checkbox.mui-left {
+			padding-left: 40px;
+			vertical-align: middle;
+		}
+		.mui-radio input[type="radio"]:checked:before, .mui-checkbox input[type="checkbox"]:checked:before{
+			color: #FF6565;
+		}
+		.mui-checkbox.repayed input[type="checkbox"]:checked:before{
+			color: #9B9B9B;
+		}
+		
+		.check-all-cont{
+			position: fixed;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			background: #FFF;
+			overflow: hidden;
+		}
+		.check-all-cont li{
+			float: left;
+			height: 40px;
+			line-height: 40px;
+		}
+		.check-all-cont li:first-of-type{
+			width: 70%;
+		}
+		.check-all-cont li:last-of-type{
+			width: 30%;
+		}
+		.check-all-cont li:last-of-type button{
+			height: 100%;
+			width: 100%;
+			border-radius: 0;
+		}
+		#star{
+			display: inline-block;
+		}
+		.star-cont{
+			height: 40px;
+			line-height: 40px;
+			padding:0 14px;
+			background: #FFF;
+		}
+		.star-cont span{
+			display: inline-block;
+			/*line-height: 30px;*/
+		}
+		textarea{
+			border: none;
+			margin: 0;
+		}
+		.judge-pic-cont{
+			width: 100%;
+			overflow: hidden;
+			margin-top: -6px;
+		}
+		.judge-pic-cont li{
+			width: 25%;
+			float: left;
+			padding: 4px;
+			position: relative
+		}
+		.judge-pic-cont li img{
+			width: 100%;
+		}
+		.judge-pic-cont li input{
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			opacity: 0;
+		}
+		.load-cont{
+			height: 10px;
+			width: 80%;
+			border: 1px solid #ECECEC;
+			position: absolute;
+			bottom: 30px;
+			left: 10%;
+			border-radius: 10px;
+			background: #FFF;
+		}
+		.del{
+			color:#9B9B9B;
+			font-size: 24px;
+			position: absolute;
+			top: 8px;
+			left: 8px;
+		}
+    </style>
+</head>
+<body>
+	<div class="mui-content">
+		<div class="star-cont has-after-line has-l-padded">
+			<span>服务评价</span>
+			<div id="star"></div>
+		</div>
+		<textarea name="" rows="6" cols="" placeholder="写下你对本次服务的感受以及带来的改变，为其他小伙伴提供参考，一起加分！"></textarea>
+		<ul class="judge-pic-cont bg-white">
+			<li>
+				<img src="img/apply-plus-pic1.png"/>
+				<input type="file" name="" id="" value="" />
+			</li>
+			<li>
+				<img src="img/plus-pic-uploading.png"/>
+			    <div class="load-cont"> 
+			      <div class="load-bar"> 
+			        <div class="load-bar-inner" data-loading="0"></div> 
+			      </div> 
+			    </div> 
+			</li>
+			<li>
+				<img src="img/pic1.png"/>
+				<i class="iconfont del">&#xe625;</i>
+			</li>
+			<li>
+				<img src="img/plus-pic-btn.png"/>
+				<input type="file" name="" id="" value="" />
+			</li>
+		</ul>
+		<ul class="check-all-cont mui-checkbox">
+			<li>
+				<div class="mui-input-row mui-checkbox mui-left">
+					<label>匿名评价</label>
+					<input name="checkbox" type="checkbox">
+				</div>
+			</li>
+			<li>
+				<button class="mui-btn-negative">发表评价</button>
+			</li>
+		</ul>
+	</div>
+	<script type="text/javascript" src="js/jquery.min.js" ></script>
+	<script type="text/javascript" src="js/jquery.raty.min.js" ></script>
+	<script>
+		$('#star').raty({
+            hints: ['1', '2', '3', '4', '5'],
+            click: function (score, evt) {
+                alert(score);
+            }
+       });
+       
+       $(function(){
+       	  $(".del").on("click",function(){
+       	  	  $(this).parent().remove();
+       	  });
+       });
+	</script>
+</body>
+</html>

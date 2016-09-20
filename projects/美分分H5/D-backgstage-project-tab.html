@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>上线项目</title>
+    <script src="js/mui.min.js"></script>
+    <link href="css/mui.css" rel="stylesheet"/>
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="css/iconfont.css"/>
+    <script type="text/javascript" charset="utf-8">
+      	mui.init();
+    </script>
+    <style type="text/css">
+    	.mui-table-view .mui-media-object {
+			height: 50px;
+			max-width: 50px;
+		}
+		.mui-media-body .mui-ellipsis {
+			height: 16px;
+			line-height: 16px;
+			font-size: 12px;
+		}
+		.mui-table-view-cell.mui-media{
+			position: relative;
+		}
+		.mui-btn.mui-btn-outlined{
+			width: 80px;
+			padding: 2px 0;
+		}
+    	.mui-btn.mui-btn-outlined.has-two-btn{
+    		margin-right: 90px;
+    	}
+		.mui-control-content{
+			min-height:400px;
+		}
+		.tab-vertical li p{
+			line-height: 40px;
+		}
+    </style>
+</head>
+<body>
+	<div class="mui-content" style="padding: 60px 0 60px 0;">
+		<div class="b-search-cont">
+			<div class="out-cont">
+				<input type="text" name="" id="" value="" placeholder="请输入项目名称或编号"/>
+				<div class="icon-cont">
+					<i class="iconfont">&#xe610;</i>
+				</div>
+			</div>
+		</div>
+		<div id="drop-list1" class="self-clear-flow">
+			<ul class="tab-vertical fl">
+	    		<li class="active">
+	    			<p class="size-sm color-black">
+	    				全部
+	    				<span>(59)</span>
+	    			</p>
+	    		</li>
+	    		<li>
+	    			<p class="size-sm color-black">
+	    				眼部
+	    				<span>(20)</span>
+	    			</p>
+	    		</li>
+	    		<li>
+	    			<p class="size-sm color-black">
+	    				鼻部
+	    				<span>(10)</span>
+	    			</p>
+	    		</li>
+	    		<li>
+	    			<p class="size-sm color-black">
+	    				牙齿
+	    				<span>(19)</span>
+	    			</p>
+	    		</li>
+	    	</ul>
+	    	<div class="fr operation-cont bg-white">
+	    		<ul class="mui-table-view select-operation no-after-line">
+					<li class="mui-table-view-cell no-after-dotted">
+						全部（12）
+						<i class="iconfont mui-pull-right">&#xe63e;</i>
+					</li>
+					<li class="mui-table-view-cell no-after-dotted active">
+						软骨塑鼻（30）
+						<i class="iconfont mui-pull-right">&#xe627;</i>
+					</li>
+					<li class="mui-table-view-cell no-after-dotted">
+						牙齿美白（10）
+						<i class="iconfont mui-pull-right">&#xe63e;</i>
+					</li>
+					<li class="mui-table-view-cell no-after-dotted">
+						软骨塑鼻（30）
+						<i class="iconfont mui-pull-right">&#xe63e;</i>
+					</li>
+					<li class="mui-table-view-cell no-after-dotted">
+						牙齿美白（10）
+						<i class="iconfont mui-pull-right">&#xe63e;</i>
+					</li>
+					<li class="mui-table-view-cell no-after-dotted">
+						软骨塑鼻（30）
+						<i class="iconfont mui-pull-right">&#xe63e;</i>
+					</li>
+					<li class="mui-table-view-cell no-after-dotted">
+						牙齿美白（10）
+						<i class="iconfont mui-pull-right">&#xe63e;</i>
+					</li>
+				</ul>
+	    	</div>
+		</div>
+		<nav class="mui-bar mui-bar-tab">
+			<a class="mui-tab-item mui-tab-item1" href="home.html" >
+				<span class="mui-icon"></span>
+				<span class="mui-tab-label">客户订单</span>
+			</a>
+			<a class="mui-tab-item mui-tab-item2 mui-active" href="shop.html" >
+				<span class="mui-icon"><i class="fa fa-shopping-cart"></i></span>
+				<span class="mui-tab-label">上线项目</span>
+			</a>
+			<a class="mui-tab-item mui-tab-item3" href="card.html" >
+				<span class="mui-icon"><i class="fa fa-tags"></i></span>
+				<span class="mui-tab-label">账号</span>
+			</a>
+		</nav>
+	</div>
+	<script type="text/javascript" src="js/jquery.min.js" ></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+//				菜单的右侧子菜单点击事件
+				$(".select-operation li").on("click",function(){
+					$(".select-operation li").removeClass("active").find("i").html("&#xe63e;");
+					$(this).addClass("active").find("i").html("&#xe627;");
+				});
+//				菜单的左侧子菜单点击事件
+				$(".tab-vertical li").on("click",function(){
+				$(".tab-vertical li").removeClass("active");
+				$(this).addClass("active");
+			});
+			});
+		</script>
+</body>
+</html>

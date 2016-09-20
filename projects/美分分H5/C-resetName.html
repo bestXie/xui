@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>修改昵称</title>
+		<script src="js/mui.min.js" type="text/javascript" charset="utf-8"></script>
+		<link href="css/mui.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="css/iconfont.css"/>
+		<link rel="stylesheet" type="text/css" href="css/my-style.css"/>
+		<style type="text/css">
+		    .mui-input-group .mui-input-row{
+		    	height: 46px;
+		    }
+			.mui-input-row  input{
+				margin-top: 4px;
+				width: 85%;
+				text-align: left;
+				/*border: 1px solid red;*/
+				font-size: 14px;
+				color: #333;
+			}
+			.has-lr-padded{
+				padding: 0 14px;
+				margin-top: 10px;
+			}
+		</style>
+
+	</head>
+
+	<body>
+		<div class="mui-content">
+			<form class="mui-input-group has-m-top">
+				<div class="mui-input-row no-after-line">
+					<input id="username" type="text" maxlength="11" placeholder="请输入你的昵称">
+					<i id="clear" class="iconfont">&#xe60f;</i>
+				</div>
+			</form>
+			<p class="has-lr-padded">昵称必须为4-11个字符，只可以修改一次</p>
+			<button disabled="disabled" class="mui-btn mui-btn-negative mui-btn-block">保存</button>
+		</div>
+		<script type="text/javascript">
+			window.onload=function(){
+//				清除输入框内容
+				var oClear=document.getElementById('clear');
+				var oName=document.getElementById('username');
+				oClear.onclick=function(){
+					oName.value="";
+				}
+			}
+		</script>
+	</body>
+</html>

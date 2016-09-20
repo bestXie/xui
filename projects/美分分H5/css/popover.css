@@ -1,0 +1,339 @@
+@CHARSET "UTF-8";
+.animated {
+	-webkit-animation-duration: 1.4s;
+	animation-duration: 1.4s;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both
+}
+
+@-webkit-keyframes bounceIn {
+	0% {
+		opacity: 0;
+		-webkit-transform: scale(.3);
+		transform: scale(.3)
+	}
+	50% {
+		opacity: 1;
+		-webkit-transform: scale(1.05);
+		transform: scale(1.05)
+	}
+	70% {
+		-webkit-transform: scale(.9);
+		transform: scale(.9)
+	}
+	100% {
+		opacity: 1;
+		-webkit-transform: scale(1);
+		transform: scale(1)
+	}
+}
+
+@keyframes bounceIn {
+	0% {
+		opacity: 0;
+		-webkit-transform: scale(.3);
+		-ms-transform: scale(.3);
+		transform: scale(.3)
+	}
+	50% {
+		opacity: 1;
+		-webkit-transform: scale(1.05);
+		-ms-transform: scale(1.05);
+		transform: scale(1.05)
+	}
+	70% {
+		-webkit-transform: scale(.9);
+		-ms-transform: scale(.9);
+		transform: scale(.9)
+	}
+	100% {
+		opacity: 1;
+		-webkit-transform: scale(1);
+		-ms-transform: scale(1);
+		transform: scale(1)
+	}
+}
+
+.bounceIn {
+	-webkit-animation-name: bounceIn;
+	animation-name: bounceIn
+}
+
+@-webkit-keyframes bounceInDown {
+	0% {
+		opacity: 0;
+		-webkit-transform: translateY(-2000px);
+		-moz-transform: translateY(-2000px);
+		transform: translateY(-2000px);
+	}
+	60% {
+		opacity: 1;
+		-webkit-transform: translateY(30px);
+		-moz-transform: translateY(30px);
+		transform: translateY(30px);
+	}
+	80% {
+		-webkit-transform: translateY(-10px);
+		-moz-transform: translateY(-10px);
+		transform: translateY(-10px);
+	}
+	100% {
+		-webkit-transform: translateY(0);
+		-moz-transform: translateY(0);
+		transform: translateY(0);
+	}
+}
+
+@keyframes bounceInDown {
+	0% {
+		opacity: 0;
+		-webkit-transform: translateY(-2000px);
+		-moz-transform: translateY(-2000px);
+		-ms-transform: translateY(-2000px);
+		transform: translateY(-2000px);
+	}
+	60% {
+		opacity: 1;
+		-webkit-transform: translateY(30px);
+		-moz-transform: translateY(30px);
+		-ms-transform: translateY(30px);
+		transform: translateY(30px);
+	}
+	80% {
+		-webkit-transform: translateY(-10px);
+		-moz-transform: translateY(-10px);
+		-ms-transform: translateY(-10px);
+		transform: translateY(-10px);
+	}
+	100% {
+		-webkit-transform: translateY(0);
+		-moz-transform: translateY(0);
+		-ms-transform: translateY(0);
+		transform: translateY(0);
+	}
+}
+
+.bounceInDown {
+	-webkit-animation-name: bounceInDown;
+	-moz-animation-name: bounceInDown;
+	animation-name: bounceInDown;
+}
+
+@-webkit-keyframes bounceOutUp {
+	0% {
+		-webkit-transform: translateY(0);
+		-moz-transform: translateY(0);
+		transform: translateY(0);
+	}
+	20% {
+		opacity: 1;
+		-webkit-transform: translateY(20px);
+		-moz-transform: translateY(20px);
+		transform: translateY(20px);
+	}
+	100% {
+		opacity: 0;
+		-webkit-transform: translateY(-2000px);
+		-moz-transform: translateY(-2000px);
+		transform: translateY(-2000px);
+	}
+}
+
+@keyframes bounceOutUp {
+	0% {
+		-webkit-transform: translateY(0);
+		-moz-transform: translateY(0);
+		-ms-transform: translateY(0);
+		transform: translateY(0);
+	}
+	20% {
+		opacity: 1;
+		-webkit-transform: translateY(20px);
+		-moz-transform: translateY(20px);
+		-ms-transform: translateY(20px);
+		transform: translateY(20px);
+	}
+	100% {
+		opacity: 0;
+		-webkit-transform: translateY(-2000px);
+		-moz-transform: translateY(-2000px);
+		-ms-transform: translateY(-2000px);
+		transform: translateY(-2000px);
+	}
+}
+
+.bounceOutUp {
+	-webkit-animation-name: bounceOutUp;
+	-moz-animation-name: bounceOutUp;
+	animation-name: bounceOutUp;
+}
+
+@-webkit-keyframes rollIn {
+	0% {
+		opacity: 0;
+		-webkit-transform: translateX(-100%) rotate(-120deg);
+		-moz-transform: translateX(-100%) rotate(-120deg);
+		transform: translateX(-100%) rotate(-120deg);
+	}
+	100% {
+		opacity: 1;
+		-webkit-transform: translateX(0px) rotate(0deg);
+		-moz-transform: translateX(0px) rotate(0deg);
+		transform: translateX(0px) rotate(0deg);
+	}
+}
+
+@keyframes rollIn {
+	0% {
+		opacity: 0;
+		-webkit-transform: translateX(-100%) rotate(-120deg);
+		-ms-transform: translateX(-100%) rotate(-120deg);
+		transform: translateX(-100%) rotate(-120deg);
+	}
+	100% {
+		opacity: 1;
+		-webkit-transform: translateX(0px) rotate(0deg);
+		-ms-transform: translateX(0px) rotate(0deg);
+		transform: translateX(0px) rotate(0deg);
+	}
+}
+
+.rollIn {
+	-webkit-animation-name: rollIn;
+	animation-name: rollIn;
+}
+
+@-webkit-keyframes flipInX {
+	0% {
+		-webkit-transform: perspective(400px) rotateX(90deg);
+		transform: perspective(400px) rotateX(90deg);
+		opacity: 0;
+	}
+	40% {
+		-webkit-transform: perspective(400px) rotateX(-10deg);
+		transform: perspective(400px) rotateX(-10deg);
+	}
+	70% {
+		-webkit-transform: perspective(400px) rotateX(10deg);
+		transform: perspective(400px) rotateX(10deg);
+	}
+	100% {
+		-webkit-transform: perspective(400px) rotateX(0deg);
+		transform: perspective(400px) rotateX(0deg);
+		opacity: 1;
+	}
+}
+
+@keyframes flipInX {
+	0% {
+		-webkit-transform: perspective(400px) rotateX(90deg);
+		-ms-transform: perspective(400px) rotateX(90deg);
+		transform: perspective(400px) rotateX(90deg);
+		opacity: 0;
+	}
+	40% {
+		-webkit-transform: perspective(400px) rotateX(-10deg);
+		-ms-transform: perspective(400px) rotateX(-10deg);
+		transform: perspective(400px) rotateX(-10deg);
+	}
+	70% {
+		-webkit-transform: perspective(400px) rotateX(10deg);
+		-ms-transform: perspective(400px) rotateX(10deg);
+		transform: perspective(400px) rotateX(10deg);
+	}
+	100% {
+		-webkit-transform: perspective(400px) rotateX(0deg);
+		-ms-transform: perspective(400px) rotateX(0deg);
+		transform: perspective(400px) rotateX(0deg);
+		opacity: 1;
+	}
+}
+
+.flipInX {
+	-webkit-backface-visibility: visible !important;
+	-ms-backface-visibility: visible !important;
+	backface-visibility: visible !important;
+	-webkit-animation-name: flipInX;
+	animation-name: flipInX;
+}
+
+
+/*------------------- 华丽分割线 -----------------------*/
+
+#dialogBg {
+	width: 100%;
+	height: 100%;
+	background-color: #000000;
+	opacity: .6;
+	filter: alpha(opacity=60);
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 99;
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+/*额度申请弹窗*/
+#apply-pop {
+	color: #9B9B9B;
+	font-size: 17px;
+}
+
+.dialog {
+	width: 300px;
+	margin: 0 auto;
+	display: none;
+	background-color: #ffffff;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	z-index: 100;
+	/*border: 1px solid #ccc;*/
+	border-radius: 4px;
+	/*padding: 14px;*/
+}
+#apply-dialog{
+	height: 200px;
+	margin: -100px 0 0 -150px;
+}
+#cancel-dialog{
+	height: 140px;
+	margin: -70px 0 0 -150px;
+}
+.dialog .text-cont,.dialog .text-cont-left {
+	padding: 0 14px;
+	margin: 14px 0;
+}
+.dialog .text-cont{
+	text-align: center;
+}
+.dialog .btn-ul {
+	width: 100%;
+	overflow: hidden;
+	border-top: 1px solid #ECECEC;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+
+.dialog .btn-ul li {
+	width: 50%;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	float: left;
+}
+
+.dialog .btn-ul li:first-of-type {
+	border-right: 1px solid #ECECEC;
+}
+
+.dialog .btn-ul li a {
+	display: inline-block;
+	height: 40px;
+	width: 100%;
+	cursor: pointer;
+}

@@ -1,0 +1,121 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>爱代驾</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+    <div style="display:none;">
+        <img src="images/400.jpg" />
+    </div>
+    <div class="layout-default">
+        <div class="form">
+            <input id="bankCode" type="tel" placeholder='输入浦发信用卡卡号前6位'>
+            <input id="phone" type="tel" placeholder='输入手机号码'>
+            <input id="code" type="text" placeholder='验证码'>
+            <input id="getCode" type="button" value='获取验证码'>
+            <input id="submit" type="button" value='立即领券'>
+            <p>立即下单请 <a href="http://h.aidaijia.com/redirect?s=2b5df734b8158586c8cbc9feca5bc8dd"><span>点击这里</span></a></p>
+        </div>
+        <div class='rule'>
+            <div class="tit">活动规则</div>
+            <div class="txt">领券时间：2015年7月13日至7月15日</div>
+            <div class="txt">每个手机号码只可领取一次</div>
+            <div class="txt">优惠券绑定至输入的手机号码</div>
+        </div>
+    </div>
+    <div class="end">
+        <article>
+            <header>活动结束</header>
+            <div class="content">
+                <span class="txt">
+                    非常遗憾！您来晚了一步！<br>
+                    下载爱代驾APP叫代驾，<br>
+                    下次活动更精彩!<br>
+                </span>
+                <div class="downApp">
+                    <a href="http://wap.aidaijia.com">
+                        <img src="images/app.png">
+                        <span class="down">下载爱代驾</span>
+                    </a>
+                </div>
+            </div>
+        </article>
+    </div>
+    <script src="js/zepto.min.js"></script>
+    <script src="../../js/jweixin-1.0.0.js"></script>
+    <script src="js/index.js"></script>
+    <script type="text/javascript">
+        var chars = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
+        function generateMixed(n) {
+            var res = "";
+            for (var i = 0; i < n ; i++) {
+                var id = Math.ceil(Math.random() * 35);
+                res += chars[id];
+            }
+            return res;
+        }
+
+        var sign;
+        var nonce = generateMixed(15);
+        var times = Date.parse(new Date());
+        var url = location.href.split('#')[0];
+        //判断系统中是否存在
+        function getSign() {
+            $.ajax({
+                async: false,
+                type: "GET",
+                url: "../../GetSignature.ashx?nonceStr=" + nonce + "&timestamp=" + times + "&url=" + encodeURIComponent(url),
+                dataType: "text",
+                success: function (data) {
+                    sign = data;
+                },
+                error: function (XMLHttpRequest, textStatus, errorThrown) {
+                    alert(textStatus);
+                },
+                complete: function (XMLHttpRequest, textStatus) {
+                }
+            });
+            return sign;
+        }
+        wx.config({
+            debug: false, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
+            appId: 'wx1fd2478602e6c8e4', // 必填，公众号的唯一标识
+            timestamp: times, // 必填，生成签名的时间戳
+            nonceStr: nonce, // 必填，生成签名的随机串
+            signature: getSign(),// 必填，签名，见附录1
+            jsApiList: ['onMenuShareTimeline', 'onMenuShareAppMessage'] // 必填，需要使用的JS接口列表，所有JS接口列表见附录2
+        });
+
+        wx.ready(function () {
+            wx.onMenuShareTimeline({
+                title: '浦发银行信用卡携手爱代驾，优惠券大放送！', // 分享标题
+                link: 'http://wx.aidaijia.com/Activities/PuFaBank/index.html', // 分享链接
+                imgUrl: 'http://wx.aidaijia.com/Activities/PuFaBank/images/400.jpg', // 分享图标
+                success: function () {
+                },
+                cancel: function () {
+                }
+            });
+
+            wx.onMenuShareAppMessage({
+                title: '浦发银行信用卡携手爱代驾，优惠券大放送！', // 分享标题
+                desc: '在奋斗的路上，爱代驾始终陪你拼！38元代驾券拿走不谢！', // 分享描述
+                link: 'http://wx.aidaijia.com/Activities/PuFaBank/index.html', // 分享链接
+                imgUrl: 'http://wx.aidaijia.com/Activities/PuFaBank/images/400.jpg', // 分享图标
+                type: 'link', // 分享类型,music、video或link，不填默认为link
+                dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
+                success: function () {
+                },
+                cancel: function () {
+                }
+            });
+        });
+    </script>
+</body>
+</html>

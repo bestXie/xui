@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>我要还款</title>
+    <script src="js/mui.min.js"></script>
+    <link href="css/mui.css" rel="stylesheet"/>
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <script type="text/javascript" charset="utf-8">
+      	mui.init();
+    </script>
+    <style type="text/css">
+		.coupon-cont{
+			height: 100px;
+			width: 100%;
+			/*border: 1px solid #ECECEC;*/
+			/*background: #FFF;*/
+		}
+		.coupon-cont .fl{
+			width: 32%;
+			height: 100%;
+			background: url(img/coupon-bg-yellow.png) no-repeat center center;
+			background-size: 100% 100%;
+			line-height: 100px;
+			text-align: center;
+			color: #FFF;
+		}
+		.coupon-cont .fr{
+			width: 68%;
+			height: 100%;
+			border-width: 1px 1px 1px 0;
+			border-style: solid;
+			border-color:#ECECEC;
+			background: #FFF;
+			padding: 14px;
+		}
+		.mui-control-content{
+			min-height:300px;
+		}
+    </style>
+</head>
+<body>
+	<div class="mui-content">
+		
+		<div id="segmentedControl" class="mui-segmented-control active-red">
+				<a class="mui-control-item mui-active" href="#item1mobile">
+						本期账单
+					</a>
+				<a class="mui-control-item" href="#item2mobile">
+						下期账单
+					</a>
+				<a class="mui-control-item" href="#item3mobile">
+						历史还款
+					</a>
+			</div>
+			<div class="mui-content-padded">
+				<div id="item1mobile" class="mui-control-content mui-active">
+					<div class="no-coupon">
+						<img src="img/icon-no-repay.png"/>
+						<p>暂无分期账单</p>
+						<p>美丽分期，为自己加分</p>
+					</div>
+				</div>
+				<div id="item2mobile" class="mui-control-content">
+					<div class="no-coupon">
+						<img src="img/icon-no-repay.png"/>
+						<p>暂无分期账单</p>
+						<p>美丽分期，为自己加分</p>
+					</div>
+				</div>
+				<div id="item3mobile" class="mui-control-content">
+					<div class="no-coupon">
+						<img src="img/icon-no-repay.png"/>
+						<p>暂无分期账单</p>
+						<p>美丽分期，为自己加分</p>
+					</div>
+				</div>
+			</div>
+			 <ul class="mui-table-view item-list" style="margin-top: 0;">
+			 	<li class="mui-table-view-cell">
+			 		<span class="color-grey">你可能还感兴趣</span>
+			 		<span class="mui-pull-right color-grey">更多</span>
+			 	</li>
+				<li class="mui-table-view-cell mui-media">
+					<a href="A-hospital-detail.html">
+						<img class="mui-media-object mui-pull-left" src="img/pic1.png">
+						<div class="mui-media-body">
+							<h4>最新华丽美版Ulthera 还你紧致童颜</h4>
+							<p class='mui-ellipsis'>
+								<span>上海春夏秋冬外科整形医院</span>
+							</p>
+							<p class='mui-ellipsis'>
+								售价：<span class="color-red">￥600</span>
+								医院价：<span class="line-throu">￥1000</span>
+							</p>
+						</div>
+						<div class="month-pay  month-pay-sm">
+							<div class="tit">月供</div>
+							<div class="num">
+								<p class="color-red">
+									<b>￥50</b>
+									<span>x 12</span>
+								</p>
+							</div>
+						</div>
+					</a>
+				</li>
+			</ul>
+	</div>
+</body>
+</html>

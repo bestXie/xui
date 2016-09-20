@@ -1,0 +1,167 @@
+html{
+	font-size:62.5%;
+}
+@media only screen and (min-width:374px){
+  html{
+    font-size:75%;
+  }
+}
+body {
+  font-size: 16px;
+  margin: 20px 20px 20px 20px;
+  font-family: Arial, "Microsoft Yahei", "Helvetica Neue", Helvetica, sans-serif;
+  color: #000;
+  background: #6cc5f1 url("../images/bg.png") no-repeat 0 0;
+  background-size: 100% auto;
+}
+
+img{
+	display: block;
+}
+input{
+	border:0;
+	  appearance:none;
+  -webkit-appearance:none;
+  -moz-appearance:none;
+}
+.layout-default{
+	width: 100%;
+	height: 100%;
+	text-align:center;
+	margin-top: 75%; 
+	font-family: '微软雅黑';
+}
+.from{
+	width: 100%;
+	height: auto;
+	background: rgba(255,255,255,0.3);
+	border-radius: 8px;
+	padding: 20px;
+	box-sizing: border-box;
+
+}
+.from p{
+	font-size:1.4rem;
+	margin: 0;
+	color: #3b3b3b;
+}
+.from .none{
+	display: none;
+}
+.from img{
+	width: 100%;
+/*	height: 100%;*/
+	margin-top: 10px;
+}
+.from input{
+	width: 100%;
+	line-height: 40px;
+	margin-top: 10px;
+	border-radius: 8px;
+	color: #fff;
+	background:#0366dd;/*按钮颜色活动替换*/
+	font-size: 1.4rem;
+	font-family: '微软雅黑';
+	cursor: pointer;
+}
+ .tit-1{
+ 	padding: 5px 0;
+ 	text-decoration: underline;
+ 	color: #fff;
+ 	font-size: 1.4rem;
+ 	cursor: pointer;
+ }
+ .img img{
+ 	width: 100%;
+ 	display: inline-block;
+ 	margin-top: 5px;
+ }	
+ .img{
+ 	text-align: center;
+ }
+ .mask{
+ 	background:rgba(0,0,0,0.8);
+ 	position: fixed;
+ 	top: 0;
+ 	left: 0;
+ 	right: 0;
+ 	bottom: 0;
+ 	display: none;
+ }
+ .mask img{
+ 	width: 40%;
+ 	position: absolute;
+ 	right: 20px;
+ 	top: 20px;
+
+ }
+
+ .shad{
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+  background: rgba(0,0,0,0.7);
+  overflow: hidden;
+  color: #474747;
+}
+
+  .shad:before{
+  	content: '';
+  	height:100%;
+  	display:inline-block;
+  	vertical-align: middle;
+  }
+  .shad article{
+  	background:#fff;
+  	width: 80%;
+  	display: inline-block;
+  	padding: 15px 8px;
+  	border-radius: 6px;
+  	vertical-align: middle;
+  	text-align: center;
+  }
+  .shad article div{
+  	text-align: left;
+  }
+  .shad article .know{
+  	text-align: center;
+  }
+  .shad article .tit{
+  	text-decoration: none;
+  	font-size: 1.4rem;
+  	  	color:#000;
+  }
+  .shad article .txt{
+  	font-size: 1.4rem;
+        padding-top: 4px;
+
+  }
+  .shad article .txt:before{
+  	content: '';
+  	width: 7px;
+  	height: 7px;
+  	background:#474747;
+  	display: inline-block;
+  	border-radius: 4px;
+  	vertical-align: middle;
+  	margin-top:-4px;
+  	margin-right: 5px;
+  }
+  .know{
+  	text-align: center;
+  	margin:10px 0 0 0;
+  }
+  .know span{
+  	display: inline-block;
+  	width: 65%;
+  	height: 35px;
+  	line-height: 35px;
+  	background: #0366dd;
+  	color: #fff;
+  	border-radius: 15px;
+  	text-align: center;
+  }

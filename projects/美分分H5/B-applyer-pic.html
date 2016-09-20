@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>个人信息</title>
+		<script src="js/mui.min.js" type="text/javascript" charset="utf-8"></script>
+		<link href="css/mui.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="css/iconfont.css"/>
+		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+		<script type="text/javascript" charset="utf-8">
+			mui.init();
+		</script>
+		<style type="text/css">
+		    .mui-input-group .mui-input-row{
+		    	height: 46px;
+		    }
+			.mui-input-row label ~ input,.mui-input-row label ~ select{
+				margin-top: 4px;
+				width: 65%;
+				text-align: left;
+				/*border: 1px solid red;*/
+				font-size: 14px;
+				color: #9B9B9B;
+			}
+			.mui-input-row label ~ select{
+				position: relative;
+				left: -3px;
+			}
+			.mui-input-row label ~ i{
+				position: absolute;
+				top: 12px;
+				right: 5%;
+				color: #3A3A3A;
+				font-size: 12px;
+			}
+			.mui-input-row label {
+				width: 110px;
+				padding: 15px 0 10px 12px;
+				/*margin-top: 8px;*/
+				/*border: 1px solid red;*/
+			}
+			.mui-input-row label i{
+				font-size: 22px;
+			}
+			.apply-pic-cont .pic-cont{
+				width: 100%;
+				margin: auto;
+				overflow: hidden;
+				padding: 14px 0;
+				text-align: center;
+				padding-left: 10%;
+				position: relative;
+			}
+			/*.apply-pic-cont .pic-cont:after{
+				    position: absolute;
+				    right: 0;
+				    bottom: 0;
+				    left: 0;
+				    height: 1px;
+				    content: '';
+				    -webkit-transform: scaleY(.5);
+				    transform: scaleY(.5);
+				    background-color: #c8c7cc;
+			}
+			.apply-pic-cont .pic-cont.has-l-padded:after{
+				    position: absolute;
+				    right: 0;
+				    bottom: 0;
+				    left: 14px;
+				    height: 1px;
+				    content: '';
+				    -webkit-transform: scaleY(.5);
+				    transform: scaleY(.5);
+				    background-color: #c8c7cc;
+			}*/
+			.apply-pic-cont .pic-cont li{
+				width: 45%;
+				float: left;
+				text-align: center;
+			}
+			.apply-pic-cont .pic-cont li img{
+				height: 100px;
+				width: 100px;
+			}
+			.agree{
+				margin-top: 14px;
+				padding-left: 4%;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="mui-content">
+			<div class="limit-cont">
+				<div class="blue-bg">
+					<span class="size-big-xl">￥6000</span>
+					<span>起消费额度</span>
+				</div>
+				<p class="has-lr-padded" style="padding-left: 14px;">只需简单2步</p>
+				<ul class="limit-process">
+					<li>
+						<span class="circle bg-no">1</span>
+						填写基本信息
+					</li>
+					<li>
+						<span class="circle bg-blue">2</span>
+						上传手持证件照片
+					</li>
+				</ul>
+			</div>
+			<div class="apply-pic-cont bg-white">
+				 <ul class="mui-table-view has-m-top no-after-line has-after-line has-l-padded">
+					<li class="mui-table-view-cell">
+						照片要求能看清证件信息及本人
+					</li>
+				</ul>
+				<ul class="pic-cont has-after-line has-l-padded">
+					<li>
+						<img src="img/apply-plus-pic1.png"/>
+						<h4>上传身份证</h4>
+						<p class="size-sm">（需上传证件正反面）</p>
+					</li>
+					<li>
+						<img src="img/apply-show-pic1.png"/>
+						<h4>示例</h4>
+					</li>
+				</ul>
+				<ul class="pic-cont has-after-line">
+					<li>
+						<img src="img/apply-plus-pic2.png"/>
+						<h4>上传学生证</h4>
+						<p class="size-sm">（需打开学籍信息页）</p>
+					</li>
+					<li>
+						<img src="img/apply-show-pic2.png"/>
+						<h4>示例</h4>
+					</li>
+				</ul>
+			</div>
+			<div class="agree">
+				<i id="agree" class="iconfont color-grey">&#xe607;</i>
+				提交申请即同意
+				<a class="color-black" href="#">《美分分授信协议》</a>
+			</div>
+			<button disabled="disabled" class="mui-btn mui-btn-negative mui-btn-block">提交申请</button>
+		</div>
+		<script>
+			//	同意并接受
+			var oAgree=document.getElementById('agree');
+			var onOff=true;
+			oAgree.onclick=function(){
+				if(onOff){
+					oAgree.innerHTML='&#xe61a;';
+					oAgree.style.color='#FF4200';
+					onOff=false;
+				}else{
+					oAgree.innerHTML='&#xe607;';
+					oAgree.style.color='#9B9B9B';
+					onOff=true;
+				}
+			}
+		</script>
+	</body>
+</html>

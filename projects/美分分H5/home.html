@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <meta content="telephone=no" name="format-detection" />
+    <title>首页</title>
+    <script src="js/mui.min.js"></script>
+    <link href="css/mui.css" rel="stylesheet"/>
+    <link rel="stylesheet" type="text/css" href="css/iconfont.css"/>
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="css/popover.css"/>
+    <script type="text/javascript" charset="utf-8">
+      	mui.init();
+    </script>
+    <style type="text/css">
+    	html{
+    		min-height: 100%;
+    	}
+    	h4{
+    		margin-top: 0;
+    		margin-bottom: 0;
+    		/*line-height: 20px;*/
+    	}
+    	.ad-big-pic{
+    		position: absolute;
+    		bottom: 0;
+    		right: 10px;
+    		height: 150px;
+    		width: 90px;
+    		z-index: 1;
+    	}
+    	.h-ad p,.h-ad h4,.s-ad p,.s-ad h4{
+    		line-height: 20px;
+    	}
+    	.h-ad .month-pay-sm{
+    		margin-top: 20px;
+    	}
+    	.line{
+    		width: 100%;
+    		height: 1px;
+    		background: #ECECEC;
+    		margin:10px 0;
+    	}
+    	.city-btn{
+    		display: inline-block;
+    		color: #FFF;
+    		position: absolute;
+    		top: 10px;
+    		left: 10px;
+    		z-index: 98;
+    		font-size: 16px;
+    	}
+    	#city-dialog{
+    		/*height: 400px;
+    		width: 300px;
+    		margin: -200px 0 0 -150px;*/
+    		overflow-y: scroll;
+    		padding-bottom: 50px;
+    		position: absolute;
+    		top: 0;
+    		left: 0;
+    		border-radius: 0;
+    	}
+    	.icon-close.iconfont{
+    		font-size: 25px;
+    		color: #9B9B9B;
+    		position: absolute;
+    		top: 6px;
+    		right: 6px;
+    		font-size: 30px;
+    		z-index: 100;
+    	}
+    </style>
+</head>
+<body>
+	<div class="mui-content" style="padding-bottom: 50px;">
+		<div class="city-btn">
+			<i class="iconfont">&#xe643;</i>
+			<span>上海</span>
+		</div>
+		<div id="slider" class="mui-slider">
+			<div class="mui-slider-group mui-slider-loop">
+				<div class="mui-slider-item mui-slider-item-duplicate">
+					<a href="#"><img src="img/slide.png"></a>
+				</div>
+				<div class="mui-slider-item">
+					<a href="#"><img src="img/slide.png"></a>
+				</div>
+				<div class="mui-slider-item">
+					<a href="#"><img src="img/slide.png"></a>
+				</div>
+				<div class="mui-slider-item">
+					<a href="#"><img src="img/slide.png"></a>
+				</div>
+				<div class="mui-slider-item">
+					<a href="#"><img src="img/slide.png"></a>
+				</div>
+				<div class="mui-slider-item mui-slider-item-duplicate">
+					<a href="#"><img src="img/slide.png"></a>
+				</div>
+			</div>
+			<div class="mui-slider-indicator">
+				<div class="mui-indicator mui-active"></div>
+				<div class="mui-indicator"></div>
+				<div class="mui-indicator"></div>
+				<div class="mui-indicator"></div>
+			</div>
+		</div>
+		<ul class="three-pic">
+			<li>
+				<a href="#">
+					<img src="img/home-btn1.png"/>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<img src="img/home-btn2.png"/>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<img src="img/home-btn3.png"/>
+				</a>
+			</li>
+		</ul>
+		<ul class="mui-table-view has-m-top" style="overflow: hidden;">
+			<li class="mui-table-view-cell lower-view-cell">
+				限时美折
+				<span class="mui-pull-right color-red">
+					<i class="iconfont">&#xe60d;</i>
+					仅剩12时12分19秒
+				</span>
+			</li>
+			<li class="mui-table-view-cell h-ad no-after-line size-sm">
+				<h4 class="color-black">埋双皮线</h4>
+				<p class="size-sm">防脱永久曲秒</p>
+				<span class="color-red">￥600</span>
+				<p class="size-sm">医院价：<span class="line-throu">￥1000</span></p>
+				<div class="month-pay  month-pay-sm">
+					<div class="tit">月供</div>
+					<div class="num color-red">
+						<b>￥50</b>
+						<span>x 12</span>
+					</div>
+				</div>
+				<img class="free-mark" src="img/free.png"/>
+				<!--<img class="ad-big-pic" src="img/ad-big-pic.png"/>-->
+			</li>
+			<li class="mui-table-view-cell s-ad s-ad-top">
+				<h4 class="color-black">3D牙齿清洁美白</h4>
+				<p class="size-sm"><span class="color-red">￥600</span>医院价:<span class="line-throu">￥1000</span></p>
+				<span class="size-sm">月供：<b>56</b>x12</span>
+			</li>
+			<li class="mui-table-view-cell s-ad s-ad-botm">
+				<h4 class="color-black">3D牙齿清洁美白</h4>
+				<p class="size-sm"><span class="color-red">￥600</span> 医院价:<span class="line-throu">￥1000</span></p>
+				<span class="size-sm">月供：<b>56</b>x12</span>
+			</li>
+		</ul>
+		<div class="recommend">
+			<h4 class="top-tit">分分推荐</h4>
+			<div class="img-cont">
+				<img class="big-img" src="img/home-big-pic1.png"/>
+				<h5>深层清洁  肌肤透亮白净</h5>
+				<img class="free-mark" src="img/free.png"/>
+			</div>
+			<h4>伊婉玻尿酸2ml 肌肤嫩白水润</h4>
+			<div class="month-pay  month-pay-sm">
+				<div class="tit">月供</div>
+				<div class="num color-red">
+					<b>￥50</b>
+					<span>x 12</span>
+				</div>
+			</div>
+			<div class="line"></div>
+			<div class="img-cont">
+				<img class="big-img" src="img/home-big-pic2.png"/>
+				<h5>深层清洁  肌肤透亮白净</h5>
+				<img class="free-mark" src="img/free.png"/>
+			</div>
+			<h4>伊婉玻尿酸2ml 肌肤嫩白水润</h4>
+			<div class="month-pay  month-pay-sm">
+				<div class="tit">月供</div>
+				<div class="num color-red">
+					<b>￥50</b>
+					<span>x 12</span>
+				</div>
+			</div>
+		</div>
+		<!--弹出层开始-->
+			<div id="dialogBg"></div>
+			<div id="city-dialog" class="animated dialog">
+				<i class="icon-close iconfont">&#xe625;</i>
+				 <ul class="mui-table-view" style="margin-top: 0;">
+					<li class="mui-table-view-cell">
+						<span class="color-grey">当前定位</span>
+						<span>上海</span>
+					</li>
+				</ul>
+				 <ul class="mui-table-view city-cont">
+					<li class="mui-table-view-cell no-after-line">
+						<span class="color-grey">其他城市</span>
+					</li>
+					<li class="city">
+						<div>北京</div>
+					</li>
+					<li class="city">
+						<div>上海</div>
+					</li>
+					<li class="city">
+						<div>天津</div>
+					</li>
+					<li class="city">
+						<div>成都</div>
+					</li>
+					<li class="city">
+						<div>深圳</div>
+					</li>
+					<li class="city">
+						<div>重庆</div>
+					</li>
+					<li class="city">
+						<div>南京</div>
+					</li>
+					<li class="city">
+						<div>合肥</div>
+					</li>
+					<li class="city">
+						<div>武汉</div>
+					</li>
+				</ul>
+				<!--<ul class="btn-ul">
+					<li>
+						<a class="close-pop">
+							取消
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							确定
+						</a>
+					</li>
+				</ul>-->
+			</div>
+			<!--弹出层结束-->
+		<nav class="mui-bar mui-bar-tab">
+		  <a class="mui-tab-item mui-active" href="#mff">
+				<span class="mui-icon">
+					<i class="iconfont">&#xe616;</i>
+				</span>
+				<span class="mui-tab-label">美分分</span>
+			</a>
+			<a class="mui-tab-item" href="#project">
+				<span class="mui-icon">
+					<i class="iconfont">&#xe600;</i>
+				</span>
+				<span class="mui-tab-label">项目</span>
+			</a>
+			<a class="mui-tab-item" href="#me">
+				<span class="mui-icon">
+					<i class="iconfont">&#xe60e;</i>
+				</span>
+				<span class="mui-tab-label">我</span>
+			</a>
+		</nav>
+	</div>
+	<script type="text/javascript" src="js/jquery.min.js" ></script>
+	<script type="text/javascript">
+		var w,h;
+		function getSrceenWH(){
+			w = $(window).width();
+			h = $("html").height();
+			hw=$(window).height();
+			$('#dialogBg').width(w).height(h);
+			$("#city-dialog").width(w).height(hw);
+		}
+		
+		window.onresize = function(){  
+			getSrceenWH();
+		}  
+		$(window).resize();  
+		
+		$(function(){
+			getSrceenWH();
+			//显示弹框
+			$('.city-btn').click(function(){
+				$('#dialogBg').fadeIn(300);
+				$('#city-dialog').removeClass('animated').addClass('animated dialog'+"bounceIn"+'').fadeIn();
+			});
+			
+			//关闭弹窗
+			$('.close-pop').click(function(){
+				$('#dialogBg').fadeOut(300,function(){
+					$('#city-dialog').removeClass('animated').addClass('animated dialog'+'bounceOutUp'+'').fadeOut();
+				});
+			});
+			
+			$('.icon-close.iconfont').click(function(){
+				$('#dialogBg').fadeOut(300,function(){
+					$('#city-dialog').removeClass('animated').addClass('animated dialog'+'bounceOutUp'+'').fadeOut();
+				});
+			});
+			
+//			选择城市后关闭弹窗
+			$(".city").on("click",function(){
+				$('#dialogBg').fadeOut(300);
+				$(".city-btn span").html($(this).find("div").html());
+				$('#city-dialog').removeClass('animated').addClass('animated dialog'+'bounceOutUp'+'').fadeOut();
+				
+			});
+		});
+	</script>
+
+</body>
+</html>

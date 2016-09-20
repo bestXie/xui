@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>客户订单</title>
+    <script src="js/mui.min.js"></script>
+    <link href="css/mui.css" rel="stylesheet"/>
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="css/iconfont.css"/>
+    <script type="text/javascript" charset="utf-8">
+      	mui.init();
+    </script>
+    <style type="text/css">
+    	.mui-table-view .mui-media-object {
+			height: 50px;
+			max-width: 50px;
+		}
+		.mui-media-body .mui-ellipsis {
+			height: 16px;
+			line-height: 16px;
+			font-size: 12px;
+		}
+		.mui-table-view-cell.mui-media{
+			position: relative;
+		}
+		.mui-btn.mui-btn-outlined{
+			width: 80px;
+			padding: 2px 0;
+		}
+    	.mui-btn.mui-btn-outlined.has-two-btn{
+    		margin-right: 90px;
+    	}
+		.mui-control-content{
+			min-height:400px;
+		}
+		.guide{
+			height: 50px;
+			line-height: 50px;
+			padding: 0 14px;
+			background: #F4F4F4;
+			border-top: 1px solid #ECECEC;
+		}
+    </style>
+</head>
+<body>
+	<div class="mui-content" style="padding: 60px 0 60px 0;">
+		<div class="b-search-cont">
+			<div class="out-cont">
+				<input type="text" name="" id="" value="" placeholder="请输入项目名称或编号"/>
+				<div class="icon-cont">
+					<i class="iconfont">&#xe610;</i>
+				</div>
+			</div>
+		</div>
+		<div class="guide">
+			<span class="color-grey">眼部</span>
+			<i class="iconfont color-grey">&#xe639;</i>
+			<span class="color-black">切开双眼皮</span>
+			
+		</div>
+		<ul class="mui-table-view">
+			<li class="mui-table-view-cell">
+		 		<span>编号：25414786415</span>
+		 		<span class="mui-pull-right color-grey">上线时间:10-20 16:20:41</span>
+		 	</li>
+			<li class="mui-table-view-cell mui-media">
+				<a href="A-hospital-detail.html">
+					<img class="mui-media-object mui-pull-left" src="img/pic1.png">
+					<div class="mui-media-body">
+						最新华丽美版Ulthera 还你紧致童颜
+						<p class='mui-ellipsis'>
+							售价：<span class="color-red">￥600</span>
+						</p>
+						<p class='mui-ellipsis'>
+							预定：<span class="color-black">890人</span>
+						</p>
+					</div>
+				</a>
+			</li>
+		</ul>
+		<ul class="mui-table-view has-m-top">
+			<li class="mui-table-view-cell">
+		 		<span>编号：25414786415</span>
+		 		<span class="mui-pull-right color-grey">上线时间:10-20 16:20:41</span>
+		 	</li>
+			<li class="mui-table-view-cell mui-media">
+				<a href="A-hospital-detail.html">
+					<img class="mui-media-object mui-pull-left" src="img/pic1.png">
+					<div class="mui-media-body">
+						最新华丽美版Ulthera 还你紧致童颜
+						<p class='mui-ellipsis'>
+							售价：<span class="color-red">￥600</span>
+						</p>
+						<p class='mui-ellipsis'>
+							预定：<span class="color-black">890人</span>
+						</p>
+					</div>
+				</a>
+			</li>
+		</ul>
+		<ul class="mui-table-view has-m-top">
+			<li class="mui-table-view-cell">
+		 		<span>编号：25414786415</span>
+		 		<span class="mui-pull-right color-grey">上线时间:10-20 16:20:41</span>
+		 	</li>
+			<li class="mui-table-view-cell mui-media">
+				<a href="A-hospital-detail.html">
+					<img class="mui-media-object mui-pull-left" src="img/pic1.png">
+					<div class="mui-media-body">
+						最新华丽美版Ulthera 还你紧致童颜
+						<p class='mui-ellipsis'>
+							售价：<span class="color-red">￥600</span>
+						</p>
+						<p class='mui-ellipsis'>
+							预定：<span class="color-black">890人</span>
+						</p>
+					</div>
+				</a>
+			</li>
+		</ul>
+		<nav class="mui-bar mui-bar-tab">
+			<a class="mui-tab-item mui-tab-item1 mui-active " href="home.html" >
+				<span class="mui-icon"></span>
+				<span class="mui-tab-label">客户订单</span>
+			</a>
+			<a class="mui-tab-item mui-tab-item2" href="shop.html" >
+				<span class="mui-icon"><i class="fa fa-shopping-cart"></i></span>
+				<span class="mui-tab-label">上线项目</span>
+			</a>
+			<a class="mui-tab-item mui-tab-item3" href="card.html" >
+				<span class="mui-icon"><i class="fa fa-tags"></i></span>
+				<span class="mui-tab-label">账号</span>
+			</a>
+		</nav>
+	</div>
+	<script type="text/javascript" src="js/jquery.min.js" ></script>
+	<script>
+		$(function(){
+			$(".mui-control-item").on("click",function(){
+				$(".mui-control-item").attr("class","color-grey");
+				$(this).find("span").attr("class","color-red");
+			});
+		});
+	</script>
+</body>
+</html>

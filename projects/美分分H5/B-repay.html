@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>我要还款</title>
+    <script src="js/mui.min.js"></script>
+    <link href="css/mui.css" rel="stylesheet"/>
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <script type="text/javascript" charset="utf-8">
+      	mui.init();
+    </script>
+    <style type="text/css">
+		.mui-control-content{
+			min-height:300px;
+		}
+		.mui-table-view-cell.mui-checkbox.mui-left {
+			padding-left: 40px;
+			vertical-align: middle;
+		}
+		.mui-table-view-cell.mui-checkbox.mui-left .mycar_input {
+			margin-top: 20px;
+			z-index: 10;
+		}
+		.mui-radio input[type="radio"]:checked:before, .mui-checkbox input[type="checkbox"]:checked:before{
+			color:#FF6565;
+		}
+		
+		.repay-top{
+			padding: 14px;
+		}
+		.repay-bg-cont{
+			width: 100%;
+			background: #FFF;
+		}
+		.repay-bg-cont ul{
+			width: 100%;
+			overflow: hidden;
+		}
+		.repay-bg-cont ul li{
+			width: 50%;
+			height: 50px;
+			float: left;
+			color: #FFF;
+			padding-left: 14px;
+		}
+		.repay-bg-cont ul li:last-of-type{
+			border-left: 1px solid #00c4f2;
+		}
+		.repay-bg-cont ul li p,.repay-bg-cont ul li h4{
+			color: #FFF;
+		}
+		/*.repay-bg-cont ul li p{
+			margin-top: 10px;
+		}*/
+		.repay-bg-cont ul li h4{
+			font-size: 24px;
+		}
+		.repay-bg-cont .has-lr-padded{
+			line-height: 35px;
+		}
+		.repay-bg-blue{
+			padding: 14px;
+			background: url(img/repay-bg-blue.png) no-repeat center center;
+			background-size: 100% 100%;
+		}
+		.check-all-cont{
+			position: fixed;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			background: #FFF;
+			overflow: hidden;
+		}
+		.check-all-cont li{
+			float: left;
+			height: 40px;
+			line-height: 40px;
+		}
+		.check-all-cont li:first-of-type{
+			width: 70%;
+		}
+		.check-all-cont li:last-of-type{
+			width: 30%;
+		}
+		.check-all-cont li:last-of-type button{
+			height: 100%;
+			width: 100%;
+			border-radius: 0;
+		}
+    </style>
+</head>
+<body>
+	<div class="mui-content">
+		
+		<div id="segmentedControl" class="mui-segmented-control active-red">
+				<a class="mui-control-item mui-active" href="#item1mobile">
+						本期账单
+					</a>
+				<a class="mui-control-item" href="#item2mobile">
+						下期账单
+					</a>
+				<a class="mui-control-item" href="#item3mobile">
+						历史还款
+					</a>
+			</div>
+			<div class="mui-content">
+				<div id="item1mobile" class="mui-control-content mui-active">
+					<div class="repay-top">
+						<p>2015年10月账单   <span>(9.1-9.30)</span> </p>
+						<div class="repay-bg-cont">
+							<div class="repay-bg-blue">
+								<ul>
+									<li>
+										<p>账单金额</p>
+										<h4>￥600</h4>
+									</li>
+									<li>
+										<p>账单金额</p>
+										<h4>￥600</h4>
+									</li>
+								</ul>
+							</div>
+							<p class="has-lr-padded">还款日至10月15日结束</p>
+						</div>
+					</div>
+					<ul class="mui-table-view" style="margin-top:0;">
+						<li class="mui-table-view-cell">
+							账单明细
+						</li>
+						<li class="mui-table-view-cell mui-checkbox mui-left">
+							<input name="checkbox" type="checkbox" class="mycar_input">
+							<a href="#" class="mui-navigate-right">
+								<div class="mui-media-body">
+									<span class="color-red">￥380</span>
+									<h4>光子联合有效嫩肤 PPP镭射净肤</h4>
+									<p class='mui-ellipsis'>
+										<span>2015-9-26（2/6期）</span>
+										<span class="color-black">待还</span>
+									</p>
+								</div>
+							</a>
+						</li>
+						<li class="mui-table-view-cell mui-checkbox mui-left">
+							<input name="checkbox" type="checkbox" class="mycar_input">
+							<a href="#" class="mui-navigate-right">
+								<div class="mui-media-body">
+									<span class="color-red">￥380</span>
+									<h4>光子联合有效嫩肤 PPP镭射净肤</h4>
+									<p class='mui-ellipsis'>
+										<span>2015-9-26（2/6期）</span>
+										<span class="color-black">待还</span>
+									</p>
+								</div>
+							</a>
+						</li>
+					</ul>
+					<ul class="check-all-cont mui-checkbox">
+						<li>
+							<div class="mui-input-row mui-checkbox mui-left">
+								<label>全选<span class="color-red">￥680</span></label>
+								<input id="check_all" name="checkbox" type="checkbox">
+							</div>
+						</li>
+						<li>
+							<button class="mui-btn-negative">立即还款</button>
+						</li>
+					</ul>
+				</div>
+				<div id="item2mobile" class="mui-control-content">
+					<div class="repay-top">
+						<p>2015年10月账单   <span>(9.1-9.30)</span> </p>
+						<div class="repay-bg-cont">
+							<div class="repay-bg-blue">
+								<ul>
+									<li>
+										<p>账单金额</p>
+										<h4>￥600</h4>
+									</li>
+									<li>
+										<p>账单金额</p>
+										<h4>￥600</h4>
+									</li>
+								</ul>
+							</div>
+							<p class="has-lr-padded">还款日至10月15日结束</p>
+						</div>
+					</div>
+					<ul class="mui-table-view" style="margin-top:0;">
+						<li class="mui-table-view-cell">
+							账单明细
+						</li>
+						<li class="mui-table-view-cell mui-checkbox mui-left">
+							<input name="checkbox" type="checkbox" class="mycar_input">
+							<a href="#" class="mui-navigate-right">
+								<div class="mui-media-body">
+									<span class="color-red">￥380</span>
+									<h4>光子联合有效嫩肤 PPP镭射净肤</h4>
+									<p class='mui-ellipsis'>
+										<span>2015-9-26（2/6期）</span>
+										<span class="color-black">待还</span>
+									</p>
+								</div>
+							</a>
+						</li>
+						<li class="mui-table-view-cell mui-checkbox mui-left">
+							<input name="checkbox" type="checkbox" class="mycar_input">
+							<a href="#" class="mui-navigate-right">
+								<div class="mui-media-body">
+									<span class="color-red">￥380</span>
+									<h4>光子联合有效嫩肤 PPP镭射净肤</h4>
+									<p class='mui-ellipsis'>
+										<span>2015-9-26（2/6期）</span>
+										<span class="color-black">待还</span>
+									</p>
+								</div>
+							</a>
+						</li>
+					</ul>
+					<ul class="check-all-cont mui-checkbox">
+						<li>
+							<div class="mui-input-row mui-checkbox mui-left">
+								<label>全选<span class="color-red">￥680</span></label>
+								<input id="check_all" name="checkbox" type="checkbox">
+							</div>
+						</li>
+						<li>
+							<button class="mui-btn-negative">立即还款</button>
+						</li>
+					</ul>
+				</div>
+				<div id="item3mobile" class="mui-control-content">
+					<ul class="mui-table-view has-m-top">
+						<li class="mui-table-view-cell">
+							账单明细
+						</li>
+						<li class="mui-table-view-cell">
+							<a href="#" class="mui-navigate-right">
+								<div class="mui-media-body">
+									<span class="color-red">￥380</span>
+									<h4>光子联合有效嫩肤 PPP镭射净肤</h4>
+									<p class='mui-ellipsis'>
+										<span>2015-9-26（2/6期）</span>
+										<span class="color-black">已还</span>
+									</p>
+								</div>
+							</a>
+						</li>
+						<li class="mui-table-view-cell">
+							<a href="#" class="mui-navigate-right">
+								<div class="mui-media-body">
+									<span class="color-red">￥380</span>
+									<h4>光子联合有效嫩肤 PPP镭射净肤</h4>
+									<p class='mui-ellipsis'>
+										<span>2015-9-26（2/6期）</span>
+										<span class="color-black">已还</span>
+									</p>
+								</div>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+	</div>
+	<script type="text/javascript">
+	window.onload=function(){
+		var oCheck=document.getElementById('check_all');
+		var aInput=document.getElementsByClassName('mycar_input');
+		var Len=aInput.length;
+		var onOff=true;
+		oCheck.onclick=function(){
+			if(onOff){
+				for(var i=0;i<Len;i++){
+					aInput[i].checked=true;
+					onOff=false;
+				}
+			}else{
+				for(var j=0;j<Len;j++){
+					aInput[j].checked=false;
+					onOff=true;
+				}
+			}
+		}
+		
+//		for(var i=0;i<Len;i++){
+//			 
+//		}
+	}
+</script>
+</body>
+</html>

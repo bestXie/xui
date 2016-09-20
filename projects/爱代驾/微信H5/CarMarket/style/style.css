@@ -1,0 +1,166 @@
+html {
+  font-size: 62.5%;
+}
+@media only screen and (min-width:374px){
+  html{
+    font-size:75%;
+  }
+}
+body {
+  font-size: 16px;
+  margin: 20px 20px 20px 20px;
+  font-family: Arial, "Microsoft Yahei", "Helvetica Neue", Helvetica, sans-serif;
+  color: #000;
+  background: #6cc5f1 url("../images/bg.png") no-repeat 0 0;
+  background-size: 100% auto;
+}
+input{
+	border:none;
+	height:40px;
+	border-radius: 8px;
+	padding: 0 20px;
+	display: inline-block;
+	font-size: 1.4rem;
+  font-family:'微软雅黑';
+  appearance:none;
+  -webkit-appearance:none;
+  -moz-appearance:none;
+}
+.layout-default{
+	width: 100%;
+	margin-top: 75%;
+	text-align: center;
+}
+.form{
+	background: rgba(255,255,255,0.3);
+	font-size: 0;
+	border-radius: 8px;
+	padding:20px;
+}
+.form p{
+	width: 100%;
+	font-size: 1.4rem;
+	margin:10px 0 0 0;
+	font-weight:800;
+	color: #333;
+
+}
+.form span{
+	display: inline-block;
+	color: #0366dd;
+
+}
+/*input::-webkit-input-placeholder{
+  color: #474747;
+}*/
+input:nth-child(1){
+	width: 100%;
+	box-sizing: border-box;
+	margin-bottom: 10px;
+}
+input:nth-child(2){
+	width: 50%;
+	box-sizing: border-box;
+}
+input:nth-child(3){
+	width: 47%;
+	box-sizing: border-box;
+  background: #0366dd;
+	color: #fff;
+  margin-left: 3%;
+}
+input:nth-child(4){
+	width: 100%;
+	box-sizing: border-box;
+	margin-top: 10px;
+  
+	background: #0366dd;
+	color: #fff;
+}
+/*input:nth-child(5){
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 10px;
+  background: #0366dd;
+  color: #fff;
+}*/
+.rule{
+	text-align:center;
+	color: #fff;
+}
+.tit{
+	text-decoration: none;
+	font-size: 1.6rem;
+	line-height:30px;
+	margin-top: 10px;
+}
+.txt{
+	margin-bottom: 5px;
+	font-size: 1.4rem;
+}
+  .end{
+  	display: none;
+  	  position: fixed;
+  	  top: 0;
+	  right: 0;
+	  bottom: 0;
+	  left: 0;
+	  background: rgba(0,0,0,0.7);
+	  text-align: center;
+  }
+  .end:before{
+  	content: '';
+  	width:0;
+  	height: 100%;
+  	display:inline-block;
+  	vertical-align: middle;
+  }
+  .end article {
+  display: inline-block;
+  width: 88%;
+  background: #fff;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  -o-border-radius: 7px;
+  border-radius: 7px;
+  margin-bottom: 30px;
+  vertical-align: middle;
+  overflow: hidden;}
+  .end header {
+  font-size: 20px;
+  color: #fff;
+  background: #0366dd;
+  height: 60px;
+  line-height: 60px;}
+  .end .content .txt {
+  display: block;
+  margin: 20px 0 20px 0;
+  line-height: 27px}
+  .end .content .downApp {
+  display: inline-block;
+  width: 50%;
+  height: 35px;
+  line-height: 35px;
+  -webkit-border-radius: 40px;
+  -moz-border-radius: 40px;
+  -o-border-radius: 40px;
+  border-radius: 40px;
+  margin-bottom: 30px;
+  border: 1px solid #44b1ab;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;}
+  .end .content .downApp img {
+  display: inline-block;
+  vertical-align: middle;
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+  margin-top: -2px;}
+  a{
+  	text-decoration: none;
+  	color: inherit;
+  }
+  .end .content .downApp .down {
+  display: inline-block;
+  font-size: 1.4rem;

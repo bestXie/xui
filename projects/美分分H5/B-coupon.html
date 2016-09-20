@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <script src="js/mui.min.js"></script>
+    <link href="css/mui.css" rel="stylesheet"/>
+    <script type="text/javascript" charset="utf-8">
+      	mui.init();
+    </script>
+    <style type="text/css">
+    	.mui-segmented-control .mui-control-item.mui-active{
+			color: #FF6565;
+			background: #FFF;
+			border-bottom: 2px solid #FF6565;
+		}
+		.mui-segmented-control{
+			border: none;
+			border-bottom: 1px solid #ECECEC;
+			border-radius: 0;
+			background: #FFF;
+		}
+		.mui-segmented-control .mui-control-item{
+			border-left:none;
+		}
+		.mui-segmented-control .mui-control-item{
+			color: #000;
+		}
+    	/*没有代金券*/
+    	.no-coupon{
+    		height: 100px;
+    		width: 100px;
+    		position: absolute;
+    		top:50%;
+    		left: 50%;
+    		margin: -50px 0 0 -50px;
+    		text-align: center;
+    	}
+    	.no-coupon img{
+    		height: 60px;
+    		width: 60px;
+    	}
+    	/*没有代金券结束*/
+    	
+		.coupon-cont{
+			height: 100px;
+			width: 100%;
+			position: relative;
+			/*border: 1px solid #ECECEC;*/
+			/*background: #FFF;*/
+		}
+		/*.coupon-cont .stamp{
+			height: 65px;
+			position: absolute;
+			top: 10px;
+			right: 10px;
+		}*/
+		.coupon-cont .fl{
+			width: 32%;
+			height: 100%;
+			line-height: 100px;
+			text-align: center;
+			color: #FFF;
+			font-size: 26px;
+			font-weight: bold;
+		}
+		.coupon-cont .fl.yellow{
+			background: url(img/coupon-bg-yellow.png) no-repeat center center;
+			background-size: 100% 100%;
+		}
+		.coupon-cont .fl.blue{
+			background: url(img/coupon-bg-blue.png) no-repeat center center;
+			background-size: 100% 100%;
+		}
+		.coupon-cont .fl.grey{
+			background: url(img/coupon-bg-grey.png) no-repeat center center;
+			background-size: 100% 100%;
+		}
+		.coupon-cont .fr{
+			width: 68%;
+			height: 100%;
+			border-width: 1px 1px 1px 0;
+			border-style: solid;
+			border-color:#ECECEC;
+			background: #FFF;
+			padding: 14px;
+		}
+		.coupon-cont .fr.used{
+			background: url(img/coupon-used.png) #FFF no-repeat 95% 30%;
+			background-size: 70px 70px;
+		}
+		.coupon-cont .fr.pased{
+			background: url(img/coupon-pased.png) #FFF no-repeat 95% 30%;
+			background-size: 70px 70px;
+		}
+		.coupon-cont .fr h4{
+			font-size: 16px;
+		}
+    </style>
+</head>
+<body>
+	<div class="mui-content">
+		<!--<div class="no-coupon">
+			<img src="img/iconfont-biaoqingwunai4.png"/>
+			<p>没有代金券!</p>
+		</div>-->
+		<div id="segmentedControl" class="mui-segmented-control">
+				<a class="mui-control-item mui-active" href="#item1mobile">
+						未使用
+					</a>
+				<a class="mui-control-item" href="#item2mobile">
+						已使用
+					</a>
+				<a class="mui-control-item" href="#item3mobile">
+						已过期
+					</a>
+			</div>
+			<div class="mui-content-padded">
+				<div id="item1mobile" class="mui-control-content">
+					<div class="coupon-cont">
+						<div class="fl yellow">
+							<span>￥180</span>
+						</div>
+						<div class="fr">
+							<ul>
+								<li>
+									<h4>新手体验券</h4>
+								</li>
+								<li>
+									<span class="color-grey">使用范围:</span>
+									<span class="color-black">适用全部服务</span>
+								</li>
+								<li>
+									<span class="color-grey">使用期限:</span>
+									<span class="color-black">11-20至11-30</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="coupon-cont has-m-top">
+						<div class="fl yellow">
+							<span>￥180</span>
+						</div>
+						<div class="fr">
+							<ul>
+								<li>
+									<h4>新手体验券</h4>
+								</li>
+								<li>
+									<span class="color-grey">使用范围:</span>
+									<span class="color-black">适用全部服务</span>
+								</li>
+								<li>
+									<span class="color-grey">使用期限:</span>
+									<span class="color-black">11-20至11-30</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div id="item2mobile" class="mui-control-content mui-active">
+					<div class="coupon-cont">
+						<div class="fl blue">
+							<span>￥180</span>
+						</div>
+						<div class="fr used">
+							<ul>
+								<li>
+									<h4>新手体验券</h4>
+								</li>
+								<li>
+									<span class="color-grey">使用范围:</span>
+									<span class="color-black">适用全部服务</span>
+								</li>
+								<li>
+									<span class="color-grey">使用期限:</span>
+									<span class="color-black">11-20至11-30</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div id="item3mobile" class="mui-control-content">
+					<div class="coupon-cont">
+						<div class="fl grey">
+							<span>￥180</span>
+						</div>
+						<div class="fr pased">
+							<ul>
+								<li>
+									<h4>新手体验券</h4>
+								</li>
+								<li>
+									<span class="color-grey">使用范围:</span>
+									<span class="color-black">适用全部服务</span>
+								</li>
+								<li>
+									<span class="color-grey">使用期限:</span>
+									<span class="color-black">11-20至11-30</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+
+	</div>
+</body>
+</html>

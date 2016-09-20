@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <meta content="telephone=no" name="format-detection" />
+    <title>待服务</title>
+    <script src="js/mui.min.js"></script>
+    <link href="css/mui.css" rel="stylesheet"/>
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="css/iconfont.css"/>
+    <script type="text/javascript" charset="utf-8">
+      	mui.init();
+    </script>
+    <style type="text/css">
+    	
+    	.mui-table-view .mui-media-object {
+			height: 60px;
+			max-width: 60px;
+		}
+		.mui-table-view .mui-media-body.has-top-padded{
+			padding-top: 10px;
+		}
+		.mui-btn.mui-btn-outlined.mui-btn-primary{
+			border-radius: 20px;
+			padding: 3px 20px 1px 20px;
+			margin-top: 6px;
+			border: 1px solid #00abec;
+			color: #00abec;
+		}
+		.mui-badge{
+			background: none;
+			padding: 0;
+			color: #ffa200;
+		}
+		.mui-table-view.lower-table-view .mui-table-view-cell{
+			padding: 6px 15px 0 15px;
+			font-size: 12px;
+			color: #9B9B9B;
+		}
+		.mui-table-view.lower-table-view .mui-table-view-cell.mui-active{
+			background: #FFF;
+		}
+		.mui-table-view.lower-table-view{
+			padding-bottom: 6px;
+		}
+		.serve-process .has-bg .stamp{
+			position: absolute;
+			top: 10px;
+			right: 14px;
+			height: 60px;
+			opacity: 0.5;
+		}
+    </style>
+</head>
+<body>
+	<div class="mui-content" style="padding-bottom: 70px;">
+	    <div class="serve-process">
+	    	<div class="has-bg bg-real-blue">
+	    		<p class="color-white">服务验证码</p>
+	    		<h4 class="color-white size-big">68921475647</h4>
+	    		<img class="stamp" src="img/icon-noused.png"/>
+	    	</div>
+	    	<p class="has-lr-padded color-black">消费流程</p>
+	    	<ul class="use-process">
+				<li>
+					<div class="circle bg-red color-white">
+						<!--<i class="iconfont">&#xe624;</i>-->
+						<img class="sm-icon" src="img/icon-callout.png"/>
+					</div>
+					<i class="iconfont color-red pointo">&#xe62a;</i>
+					<p class="size-sm color-black">电话预约医院</p>
+				</li>
+				<li>
+					<div class="circle bg-blue color-white">
+						<!--<i class="iconfont">&#xe628;</i>-->
+						<img class="sm-icon" src="img/icon-checkcode.png"/>
+					</div>
+					<i class="iconfont color-blue pointo">&#xe62a;</i>
+					<p class="size-sm color-black">到院消费验证服务码</p>
+				</li>
+				<li>
+					<div class="circle bg-green color-white">
+						<!--<i class="iconfont">&#xe633;</i>-->
+						<img class="sm-icon" src="img/icon-smileface.png"/>
+					</div>
+					<p class="size-sm color-black">手术完成</p>
+					<!--<i class="iconfont color-g">&#xe62a;</i>-->
+				</li>
+			</ul>
+
+	    </div>
+	    <ul class="mui-table-view has-m-top">
+			<li class="mui-table-view-cell mui-media">
+				<a>
+					<img class="mui-media-object mui-pull-left" src="img/pic1.png"/>
+					<div class="mui-media-body has-top-padded">
+						最新华丽美版Ulthera 还你紧致童颜
+						<p class='mui-ellipsis'>
+							售价：<span class="color-red">￥600</span>
+						</p>
+					</div>
+				</a>
+			</li>
+			<li class="mui-table-view-cell mui-media">
+				<a class="mui-navigate-right" href="hospital-list.html">
+					<div class="mui-media-body">
+						<img class="icon-hospital" src="img/icon-hospital.png"/>
+						<!--<i class="iconfont color-blue size-big">&#xe62e;</i>-->
+						上海春夏秋冬外科整形医院
+						<p class="mui-ellipsis" style="padding-left: 24px;">
+							上海市黄浦区人民广场路1号
+						</p>
+					</div>
+				</a>
+			</li>
+			<li class="mui-table-view-cell">
+				<i class="iconfont size-sm color-blue">&#xe60a;</i>
+				<span>咨询电话：  021-2865379</span> 
+			</li>
+		</ul>
+		<ul class="mui-table-view lower-table-view">
+			<li class="mui-table-view-cell no-after-line">
+				订单金额
+				<span class="mui-pull-right">￥680</span>
+			</li>
+			<li class="mui-table-view-cell no-after-line">
+				代金券
+				<span class="mui-pull-right">￥180</span>
+			</li>
+			<li class="mui-table-view-cell no-after-line">
+				分期金额
+				<span class="mui-pull-right">￥380</span>
+			</li>
+			<li class="mui-table-view-cell no-after-line">
+				分期月数
+				<span class="mui-pull-right">3个月</span>
+			</li>
+			<li class="mui-table-view-cell no-after-line">
+				分期月借
+				<span class="mui-pull-right">￥126.54 (含服务费￥22)</span>
+			</li>
+			<li class="mui-table-view-cell no-after-line">
+				首付金额
+				<span class="mui-pull-right color-red">￥200</span>
+			</li>
+		</ul>
+		<ul class="mui-table-view">
+			<li class="mui-table-view-cell mui-media">
+				<span class="size-sm">订单编号：25412557</span>
+				<span class="mui-pull-right size-sm">下单时间:2015-11-11  16:22:32</span>
+			</li>
+		</ul>
+		<div class="btn-cont">
+			<button class="mui-btn">取消订单</button>
+			<button class="mui-btn mui-btn-negative">预约</button>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>牙齿美白</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<script src="js/mui.min.js"></script>
+		<link rel="stylesheet" href="css/mui.css">
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<link rel="stylesheet" type="text/css" href="css/popover.css"/>
+		<link rel="stylesheet" type="text/css" href="css/iconfont.css"/>
+		<style type="text/css">
+			html{
+				min-height: 100%;
+			}
+			.mui-card{
+				margin: 0 5px;
+			}
+			#drop-list1{
+				height: 264px;
+				overflow-y: scroll;
+				border-bottom: 1px solid #D8D8D8;
+			}
+			#drop-list1,#drop-list2,#drop-list3{
+				position: absolute;
+				top: -264px;left: 0;
+				width: 100%;
+				z-index: 5;
+				-webkit-transition: all 0.5s;
+				-moz-transition: all 0.5s;
+				transition: all 0.5s;
+				z-index: 100;
+			}
+			#dialogBg{
+				margin-top: 40px;
+			}
+			.drop-list i{
+				font-size: 22px;
+				color: #9B9B9B;
+			}
+			.drop-list .active,.drop-list .active i{
+				color: #FF6565;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="mui-content">
+			<ul id="select_tit">
+				<li id="drop1" class="drop-btn">
+					<a class="bord">
+						<span>牙齿美白</span>
+						<i class="iconfont color-grey">&#xe604;</i>
+					</a>
+				</li>
+				<li id="drop2" class="drop-btn">
+					<a class="bord">
+						<span>综合排序</span>
+						<i class="iconfont color-grey">&#xe604;</i>
+					</a>
+				</li>
+				<li id="drop3" class="drop-btn">
+					<a class="bord" style="border: 0;">
+						<span>上海市</span>
+						<i class="iconfont color-grey">&#xe604;</i>
+					</a>
+				</li>
+			</ul>
+			<div class="mui-card" style="padding: 1px;">
+				 <ul class="mui-table-view item-list" style="margin-top: 0;">
+					<li class="mui-table-view-cell no-after-dotted mui-media">
+						<a href="A-hospital-detail.html">
+							<img class="mui-media-object mui-pull-left" src="img/pic1.png">
+							<div class="mui-media-body">
+								<h4>最新华丽美版Ulthera 还你紧致童颜</h4>
+								<p class='mui-ellipsis'>
+									<span>上海春夏秋冬外科整形医院</span>
+								</p>
+								<p class='mui-ellipsis'>
+									售价：<span class="color-red">￥600</span>
+									医院价：<span class="line-throu">￥1000</span>
+								</p>
+							</div>
+							<div class="month-pay  month-pay-sm">
+							<div class="tit">月供</div>
+							<div class="num">
+								<p class="color-red">
+									<b>￥50</b>
+									<span>x 12</span>
+								</p>
+							</div>
+						</div>
+						</a>
+					</li>
+					<li class="mui-table-view-cell mui-media">
+						<a href="A-hospital-detail.html">
+							<img class="mui-media-object mui-pull-left" src="img/pic1.png">
+							<div class="mui-media-body">
+								<h4>最新华丽美版Ulthera 还你紧致童颜</h4>
+								<p class='mui-ellipsis'>
+									<span>上海春夏秋冬外科整形医院</span>
+								</p>
+								<p class='mui-ellipsis'>
+									售价：<span class="color-red">￥600</span>
+									医院价：<span class="line-throu">￥1000</span>
+								</p>
+							</div>
+							<div class="month-pay  month-pay-sm">
+							<div class="tit">月供</div>
+							<div class="num">
+								<p class="color-red">
+									<b>￥50</b>
+									<span>x 12</span>
+								</p>
+							</div>
+						</div>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div id="dialogBg"></div>
+			<div id="drop-list1" class="self-clear-flow drop-list">
+				<ul class="tab-vertical fl">
+		    		<li class="active">
+		    			<i class="iconfont">&#xe608;</i>
+		    			<p class="size-sm color-black">推荐</p>
+		    		</li>
+		    		<li>
+		    			<i class="iconfont">&#xe61c;</i>
+		    			<p class="size-sm color-black">眼部</p>
+		    		</li>
+		    		<li>
+		    			<i class="iconfont">&#xe62c;</i>
+		    			<p class="size-sm color-black">鼻部</p>
+		    		</li>
+		    		<li>
+		    			<i class="iconfont">&#xe623;</i>
+		    			<p class="size-sm color-black">牙齿</p>
+		    		</li>
+		    	</ul>
+		    	<div class="fr operation-cont bg-white">
+		    		<ul class="mui-table-view select-operation no-after-line">
+						<li class="mui-table-view-cell no-after-dotted">
+							注射器吸脂去掉双下巴
+							<i class="iconfont mui-pull-right">&#xe63e;</i>
+						</li>
+						<li class="mui-table-view-cell no-after-dotted active">
+							水动力吸脂去掉双下巴
+							<i class="iconfont mui-pull-right">&#xe627;</i>
+						</li>
+						<li class="mui-table-view-cell no-after-dotted">
+							注射器吸脂去掉双下巴
+							<i class="iconfont mui-pull-right">&#xe63e;</i>
+						</li>
+						<li class="mui-table-view-cell no-after-dotted">
+							水动力吸脂去掉双下巴
+							<i class="iconfont mui-pull-right">&#xe63e;</i>
+						</li>
+						<li class="mui-table-view-cell no-after-dotted">
+							注射器吸脂去掉双下巴
+							<i class="iconfont mui-pull-right">&#xe63e;</i>
+						</li>
+						<li class="mui-table-view-cell">
+							水动力吸脂去掉双下巴
+							<i class="iconfont mui-pull-right">&#xe63e;</i>
+						</li>
+					</ul>
+		    	</div>
+
+			</div>
+			<ul id="drop-list2" class="mui-table-view drop-list">
+				<li class="mui-table-view-cell active">
+					<span>综合排序</span>
+					<i class="iconfont mui-pull-right">&#xe627;</i>
+				</li>
+				<li class="mui-table-view-cell">
+					<span>销量优先</span>
+					<i class="iconfont mui-pull-right">&#xe63e;</i>
+				</li>
+				<li class="mui-table-view-cell">
+					<span>低价优先</span>
+					<i class="iconfont mui-pull-right">&#xe63e;</i>
+				</li>
+				<li class="mui-table-view-cell">
+					<span>高价优先</span>
+					<i class="iconfont mui-pull-right">&#xe63e;</i>
+				</li>
+			</ul>
+			<ul id="drop-list3" class="mui-table-view drop-list">
+				<li class="mui-table-view-cell">
+					<span>北京市</span>
+					<i class="iconfont mui-pull-right">&#xe63e;</i>
+				</li>
+				<li class="mui-table-view-cell active">
+					<span>上海市</span>
+					<i class="iconfont mui-pull-right">&#xe627;</i>
+				</li>
+				<li class="mui-table-view-cell">
+					<span>天津市</span>
+					<i class="iconfont mui-pull-right">&#xe63e;</i>
+				</li>
+				<li class="mui-table-view-cell">
+					<span>重庆市</span>
+					<i class="iconfont mui-pull-right">&#xe63e;</i>
+				</li>
+			</ul>
+		</div>
+		<script type="text/javascript" src="js/jquery.min.js" ></script>
+		<script type="text/javascript">
+			var w,h;
+			function getSrceenWH(){
+				w = $(window).width();
+				h = $("html").height();
+				$('#dialogBg').width(w).height(h);
+			}
+			
+			window.onresize = function(){  
+				getSrceenWH();
+			}  
+			$(window).resize();  
+			$(document).ready(function(){
+				getSrceenWH();
+//				顶部菜单颜色与图标变换
+				$(".drop-btn").on("click",function(){
+					$(".drop-btn").removeClass("active").find("i").html("&#xe604;");
+					$(this).addClass("active").find("i").html("&#xe603;");
+				});
+				
+//				第一个菜单点击事件				
+				$("#drop1").on("click",function(){
+					$(".drop-list").css("top","-264px");
+					$("#drop-list1").css("top","40px");
+					$("#dialogBg").fadeIn(300);
+				});
+//				第一个菜单的右侧子菜单点击事件
+				$(".select-operation li").on("click",function(){
+					$(".select-operation li").removeClass("active").find("i").html("&#xe63e;");
+					$(this).addClass("active").find("i").html("&#xe627;");
+					$(".drop-list").css("top","-264px");
+					$(".drop-btn").removeClass("active").find("i").html("&#xe604;");
+					$("#dialogBg").fadeOut(300);
+				});
+//				第一个菜单的左侧子菜单点击事件
+				$(".tab-vertical li").on("click",function(){
+					$(".tab-vertical li").removeClass("active");
+					$(this).addClass("active");
+				});
+				
+				
+//				第二个菜单点击事件				
+				$("#drop2").on("click",function(){
+					$(".drop-list").css("top","-264px");
+					$("#drop-list2").css("top","40px");
+					$("#dialogBg").fadeIn(300);
+				});
+//				第二个下拉菜单点击事件
+				$("#drop-list2 li").on("click",function(){
+					$(".drop-list").css("top","-264px");
+					$("#drop2").find("span").html($(this).find("span").html());
+					$("#drop-list2 li").removeClass("active").find("i").html("&#xe63e;");
+					$(".drop-btn").removeClass("active").find("i").html("&#xe604;");
+					$(this).addClass("active").find("i").html("&#xe627;");
+					$("#dialogBg").fadeOut(300);
+				});
+//				第三个菜单点击事件				
+				$("#drop3").on("click",function(){
+					$(".drop-list").css("top","-264px");
+					$("#drop-list3").css("top","40px");
+					$("#dialogBg").fadeIn(300);
+				});
+//				第三个下拉菜单点击事件
+				$("#drop-list3 li").on("click",function(){
+					$(".drop-list").css("top","-264px");
+					$("#drop3").find("span").html($(this).find("span").html());
+					$("#drop-list3 li").removeClass("active").find("i").html("&#xe63e;");
+					$(".drop-btn").removeClass("active").find("i").html("&#xe604;");
+					$(this).addClass("active").find("i").html("&#xe627;");
+					$("#dialogBg").fadeOut(300);
+				});				
+//				背景点击事件
+				$("#dialogBg").on("click",function(){
+					$(".drop-list").css("top","-264px");
+					$(".drop-btn").removeClass("active").find("i").html("&#xe604;");
+					$("#dialogBg").fadeOut(300);
+				});
+
+			});
+		</script>
+	</body>
+</html>

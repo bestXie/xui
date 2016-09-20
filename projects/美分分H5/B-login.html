@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>登陆</title>
+		<script src="js/mui.min.js" type="text/javascript" charset="utf-8"></script>
+		<link href="css/mui.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="css/iconfont.css"/>
+		<!--<link rel="stylesheet" type="text/css" href="css/style.css"/>-->
+		<script type="text/javascript" charset="utf-8">
+			mui.init();
+		</script>
+		<style type="text/css">
+		    .mui-input-group .mui-input-row{
+		    	height: 46px;
+		    }
+			.mui-input-row label ~ input,.mui-input-row label ~ select{
+				margin-top: 4px;
+				width: 85%;
+				text-align: left;
+				/*border: 1px solid red;*/
+				font-size: 14px;
+				color: #333;
+			}
+			.mui-input-row label ~ select{
+				position: relative;
+				left: -3px;
+			}
+			.mui-input-row label {
+				width: 40px;
+				padding: 12px 0 10px 14px;
+				/*border: 1px solid red;*/
+			}
+			.mui-input-row label i{
+				font-size: 22px;
+				color: #9B9B9B;
+			}
+			.login_botm{
+				overflow: hidden;
+				padding: 0 15px;
+				width: 100%;
+			}
+			.login_botm a{
+				color: #9c9c9c;
+			}
+		</style>
+
+	</head>
+
+	<body>
+		<div class="mui-content has-m-top">
+			<form class="mui-input-group">
+				<div class="mui-input-row">
+					<label>
+						<i class="iconfont">&#xe615;</i>
+					</label>
+					<input type="tel" maxlength="11" placeholder="请输入手机号">
+				</div>
+				<div class="mui-input-row">
+					<label>
+						<i class="iconfont">&#xe636;</i>
+					</label>
+					<input type="password" placeholder="请输入密码">
+				</div>
+			</form>
+			<!--<ul class="mui-table-view">
+				<li class="mui-table-view-cell mui-checkbox mui-left">
+					<input name="checkbox" type="checkbox">记住密码
+				</li>
+			</ul>-->
+
+			<button disabled="disabled"  class="mui-btn mui-btn-negative mui-btn-block">登录</button>
+
+			<div class="login_botm">
+				<a href="reg.html" class="fl">新用户注册</a>
+				<a href="change-password.html" class="fr">忘记密码？</a>
+			</div>
+		</div>
+	</body>
+</html>

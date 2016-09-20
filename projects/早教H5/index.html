@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>手拉手亲自园大光路店</title>
+    <script src="js/mui.min.js"></script>
+    <link href="css/mui.css" rel="stylesheet"/>
+    <link href="css/style.css" rel="stylesheet"/>
+    <script type="text/javascript" charset="utf-8">
+     mui.init();
+ </script>
+</head>
+<body>
+    <div class='mui-content'>
+        <header>
+            <div class="left">
+                <img class='portrait' src="images/tx.png" alt="" />
+                <img class='phone' src="images/phone.png" alt="" />
+            </div>
+            <div class="rigth">
+                <p class="tit" style="font-size:1.8rem;">Andy的分享平台</p>
+                <ul>
+                    <li>
+                        <span>40</span>
+                        <p>浏览</p>
+                    </li>
+                    <li>
+                        <span>40</span>
+                        <p>成功报名</p>
+                    </li>
+                    <li>
+                        <span>40</span>
+                        <p>预约试听</p>
+                    </li>
+                    <li>
+                        <span>40</span>
+                        <p>兑奖</p>
+                    </li>                                                           
+                </ul>    
+            </div>
+        </header>
+        <div class="main">
+            <div id="segmentedControl" class="mui-segmented-control mui-segmented-control-inverted">
+                <a class="mui-control-item mui-active" href="#item1mobile">
+                    <div>
+                        <span class='no1'></span>
+                        <p>试听分享</p>
+                    </div>
+                </a>
+                <a class="mui-control-item" href="#item2mobile">
+                   <div>
+                    <span class='no2'></span>
+                    <p>试听报名</p>
+                </div>      
+            </a>
+            <a class="mui-control-item" href="#item3mobile">
+               <div>
+                <span class='no3'></span>
+                <p>推荐奖励</p>
+            </div>  
+        </a>
+    </div>
+    <div class="mui-content-padded">
+        <div id="item1mobile" class="mui-control-content mui-active">                                       
+            <div class="tit">可以分享试听圈<span>2</span>张</div>
+            <ul>
+                <li>
+                    <img src="images/pic.png"  alt="">
+                    <h3>好友推荐专享 免费试听券</h3>
+                    <p>好友推荐报名享受最大优惠,精美教具一份(价值200元)精美教具一份(价值200元)</p>
+                </li>
+                <li>
+                    <img src="images/pic.png"  alt="">
+                    <h3>好友推荐专享 免费试听券</h3>
+                    <p>好友推荐报名享受最大优惠,精美教具一份(价值200元)精美教具一份(价值200元)</p>
+                </li>                                                    
+            </ul>
+        </div>
+        <div id="item2mobile" class="mui-control-content">
+           <div class="tit">可报名<span>4</span>人</div>
+           <ul>
+            <li>
+                <div class="top">
+                    王一粒 131****2388 <button style="border-color:#d0021b;color:#d0021b;">已报名</button>
+                </div>
+                <div class="bottom">试听课，2015-01-10 10：00 新天地分店</div>
+            </li>
+            <li>
+                <div class="top">
+                    王一粒 131****2388 <button>已签到</button>
+                </div>
+                <div class="bottom">试听课，2015-01-10 10：00 新天地分店</div>
+            </li>                                        
+            <li style="border:none;">
+                <div class="top">
+                    王一粒 131****2388 <button class='not'>未签到</button>
+                </div>
+                <div class="bottom">试听课，2015-01-10 10：00 新天地分店</div>
+            </li>                                                
+        </ul>                       
+    </div>
+    <div id="item3mobile" class="mui-control-content">
+        <div class="tit"><i>兑奖电话: 94822019</i>可成功推荐<span>4</span>人</div>
+        <ul style="border-bottom:1px solid #ccc;">
+            <li>
+                <div class="top">
+                    王一粒 131****2388 <button class='not' style="border-color:#d0021b;color:#d0021b;">已报名</button>
+                </div>
+
+            </li> 
+            <li style="border:none;">
+                <div class="top">
+                    王一粒 131****2388 <button class='not'>已兑奖</button>
+                </div>
+                <div class="bottom"><span>奖品:</span><p>某某某美容院spa体验券, 号码29999000</p></div>                            
+            </li>                                                       
+        </ul>
+        <ul style='margin-top:15px;border-top:1px solid #ccc;border-bottom:1px solid #ccc;'>
+            <li style="border:none">
+                <div class="top">
+                    心意奖 <button class='not'>已兑奖</button>
+                </div>
+                <div class="bottom"><span>奖品:</span><p>某某某美容院spa体验券, 号码29999000</p></div>                            
+            </li>                                                      
+        </ul> 
+        <div class="tit" style='text-align: left;padding-left:20px;margin-top:15px;border-top:1px #ccc solid;color:#333;'>我的手机<span id='myPhone'>(预留手机方便商家联系兑奖) </span>
+        <i id='icon-right'></i>
+        </div>       
+    </div>
+    
+</div>
+</div>    
+</div>
+<div class="mark">
+   <div class="from">
+      <p>修改手机号码</p>
+      <input id='phoneNumber' type="text" />
+      <div class="buttom">
+         <span class='close'>取消</span>
+         <span class='submit'>确定</span>
+     </div>
+ </div>
+</div>
+<script src='js/jquery.min.js'></script>
+<script>
+$('#icon-right').on('click',function(){
+    $('.mark').show();
+})
+    $('#item1mobile ul li').last().css('border','none');
+    $('.phone').on('click', function(event) {
+        $('.mark').show();
+    });
+    $('.submit').on('click', function(event) {
+        event.preventDefault();
+        if (!$('#phoneNumber').val().trim()) {
+            alert('请输入手机号码');
+            return;
+        }else{
+            $('#myPhone').html($('#phoneNumber').val());
+            $('.mark').hide();
+        }
+
+    });
+    $('.close').on('click', function(event) {
+        event.preventDefault();
+        $('.mark').hide();
+    });
+</script>
+</body>
+</html>

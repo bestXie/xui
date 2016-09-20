@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>我</title>
+    <script src="js/mui.min.js"></script>
+    <link href="css/mui.css" rel="stylesheet"/>
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="css/iconfont.css"/>
+    <script type="text/javascript" charset="utf-8">
+      	mui.init();
+    </script>
+    <style type="text/css">
+    	.mui-badge{
+    		background: none;
+    		color: #9B9B9B;
+    	}
+    	.mui-table-view-cell .mui-navigate-right > .mui-badge.size-big{
+    		font-size: 14px;
+    	}
+    	.mui-table-view-cell .list-icon{
+    		height: 14px;
+    		margin-right: 4px;
+    	}
+    	.mui-table-view-cell.my-list{
+    		padding-left: 30px;
+    	}
+    	.mui-table-view-chevron .mui-table-view-cell > a:not(.mui-btn).mui-active{
+    		background: none;
+    	}
+    	.mui-popover.mui-popover-action .mui-table-view{
+    		color: #333;
+    	}
+    	/*.mui-table-view-cell.my-icon1{
+			background: url(img/my-icon1.png) no-repeat 15px center;
+			background-size: 6%;
+		}*/
+		.my-top{
+			text-align: center;
+			padding: 20px 0;
+			background: url(img/my-top-bg.png) no-repeat center;
+			background-size: 100% 100%;
+			overflow: hidden;
+		}
+		.my-top .fl:first-of-type{
+			padding: 0 10px;
+		}
+		.my-top .photo{
+			height: 50px;
+			width: 50px;
+			border-radius: 30px;
+			border: 2px solid #FFF;
+		}
+		.my-top .fl .name{
+			text-align: left;
+		}
+		.my-text-cont{
+			padding: 10px;
+			margin-top: -2px;
+			border-bottom: 1px solid #ECECEC ;
+			position: relative;
+		}
+		.my-text-cont button{
+			position: absolute;
+			top: 16px;
+			right: 14px;
+		}
+    </style>
+</head>
+<body>
+	<div class="mui-content" style="padding-bottom: 60px;">
+		<div class="my-top">
+			<div class="fl">
+				<a href="#forward">
+					<img class="photo" src="img/pic1.png"/>
+				</a>
+			</div>
+			<div class="fl">
+				<h4 class="name">
+					名字要有个性
+					<i class="iconfont">&#xe63f;</i>
+				</h4>
+				<p>手机号:13983171812</p>
+			</div>
+		</div>
+		<div class="my-text-cont bg-white">
+			<p>可用额度</p>
+			<h4>未开通，预计额度￥6000</h4>
+			<button class="mui-btn-negative mui-btn-outlined circle-btn">线上申请</button>
+		</div>
+	    <ul class="mui-table-view mui-table-view-chevron has-m-top">
+			<li class="mui-table-view-cell my-list my-icon1">
+				<a href="#" class="mui-navigate-right">
+					<!--<img class="list-icon" src="img/my-icon1.png"/>-->
+					我要还款
+				</a>
+			</li>
+			<li class="mui-table-view-cell my-list my-icon2">
+				<a href="#" class="mui-navigate-right">
+					<!--<img class="list-icon" src="img/my-icon2.png"/>-->
+					我的订单
+				</a>
+			</li>
+			<li class="mui-table-view-cell my-list my-icon3">
+				<a href="#" class="mui-navigate-right">
+					<!--<img class="list-icon" src="img/my-icon3.png"/>-->
+					我的代金券
+				</a>
+			</li>
+			<li class="mui-table-view-cell my-list my-icon4">
+				<a href="#" class="mui-navigate-right">
+					<!--<img class="list-icon" src="img/my-icon4.png"/>-->
+					我的心愿单
+				</a>
+			</li>
+		</ul>
+		<ul class="mui-table-view mui-table-view-chevron has-m-top">
+			<li class="mui-table-view-cell my-list my-icon5">
+				<a href="#" class="mui-navigate-right">
+					<!--<img class="list-icon" src="img/my-icon4.png"/>-->
+					帮助中心
+				</a>
+			</li>
+			<li class="mui-table-view-cell my-list my-icon6">
+				<a href="#" class="mui-navigate-right">
+					<!--<img class="list-icon" src="img/my-icon4.png"/>-->
+					客服电话
+					<span class="color-grey mui-badge">021-60483658</span>
+				</a>
+			</li>
+			<li class="mui-table-view-cell my-list my-icon7">
+				<a href="#" class="mui-navigate-right">
+					<!--<img class="list-icon" src="img/my-icon4.png"/>-->
+					意见反馈
+				</a>
+			</li>
+		</ul>
+		<button class="mui-btn mui-btn-block mui-btn-negative">退出当前账号</button>
+		<div id="forward" class="mui-popover mui-popover-action mui-popover-bottom">
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell">
+					<a href="#">拍照</a>
+				</li>
+				<li class="mui-table-view-cell">
+					<a href="#">从手机相册选择</a>
+				</li>
+			</ul>
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell">
+					<a href="#forward"><b>取消</b></a>
+				</li>
+			</ul>
+		</div>
+		<nav class="mui-bar mui-bar-tab">
+		  <a class="mui-tab-item" href="#mff">
+				<span class="mui-icon">
+					<i class="iconfont">&#xe616;</i>
+				</span>
+				<span class="mui-tab-label">美分分</span>
+			</a>
+			<a class="mui-tab-item" href="#project">
+				<span class="mui-icon">
+					<i class="iconfont">&#xe600;</i>
+				</span>
+				<span class="mui-tab-label">项目</span>
+			</a>
+			<a class="mui-tab-item mui-active" href="#me">
+				<span class="mui-icon">
+					<i class="iconfont">&#xe60e;</i>
+				</span>
+				<span class="mui-tab-label">我</span>
+			</a>
+		</nav>
+	</div>
+</body>
+</html>

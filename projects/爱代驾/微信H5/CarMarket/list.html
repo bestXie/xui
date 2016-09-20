@@ -1,0 +1,170 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>爱代驾-汽车后市场</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+<link href="style/list.css" rel="stylesheet">
+<script>
+		$(function(){
+ 		$('.shareBtn').on('touchstart',function(){
+ 			$('.mask').css('display','block')
+ 			// $('.img').css('display','none')
+ 		})
+ 		$('.mask').on('touchstart',function(){
+ 			$(this).css('display','none')
+ 			$('.img').css('display','block')
+ 		})
+ 		$('.tit-1').on('touchstart',function(){
+ 			$('.shad').css('display','block')
+ 		})
+ 		$('.know').on('touchstart', function () {
+ 		    $('.shad').css('display', 'none')
+ 		})
+
+ 		urlinfo = window.location.href; //获取当前页面的url
+ 		len = urlinfo.length;//获取url的长度
+ 		offset = urlinfo.indexOf("?");//设置参数字符串开始的位置
+ 		newsidinfo = urlinfo.substr(offset, len)//取出参数字符串 这里会获得类似“id=1”这样的字符串
+ 		offset1 = newsidinfo.indexOf("&");
+ 		newsidinfo1 = newsidinfo.substr(offset1, len);
+ 		newsids = newsidinfo.split("=");//对获得的参数字符串按照“=”进行分割
+ 		newsids1 = newsidinfo1.split("=");
+ 		newsid = newsids[1].substr(0, 1);//得到参数值
+ 		newsid1 = newsids1[1].substr(0, 28);//得到参数值
+ 		newsname = newsids[0];//得到参数名字
+ 		$('#lblphone').text(newsid1);
+
+ 		if (newsid == 1) {
+ 		    $("#div0").hide();
+ 		    $("#div1").show();
+
+ 		} else {
+ 		    $("#div0").show();
+ 		    $("#div1").hide();
+ 		}
+
+ 		$("#orderhref").click(function () {
+ 		    location.href = "http://h.aidaijia.com/redirect?s=45b413e3032c02acc8924a05417386f1";
+ 		});
+
+ 	})	
+</script>
+
+</head>
+<body>
+    <div style="display:none;">
+        <img src="http://wx.aidaijia.com/Activities/CarMarket/images/bg.jpg" />
+    </div>
+<div class="layout-default">
+	<div class="from">
+		<div id="div0" style="display:none;"><p>优惠券已放入 <label id="lblphone"></label></p></div>
+        <div id="div1" style="display:none;"><p>您已经领取过优惠券啦，赶快使用吧！</p></div>
+        <img src="images/yhq.png">
+        <input id="orderhref" type="button" value="立即下单">
+		<input type="button" value="分享给小伙伴" class='shareBtn'>
+	</div>
+	<div class="tit tit-1">使用说明</div>
+	<div class="img">
+		<img src="images/code.png">
+	</div>
+
+	<!-- <div class="cod">
+		<img src="images/code-ng.png"  alt="" class='no1'>
+		<div class="con">
+			<img src="images/ewm.png" alt="" class='no2'>			
+		</div>		
+	</div> -->
+	<div class="mask">
+		<img src="images/share.png">
+	</div>
+</div>
+<div class="shad">
+		<article>
+			<div class="tit">使用说明</div>
+			<div class="txt">本券有效期至2015年8月15日;</div>
+			<div class="txt">本券可在爱代驾APP与微信使用;</div>
+			<div class="txt">本优惠与爱代驾其他优惠不叠加;</div>
+			<div class="txt">爱代驾400订单不可使用;</div>
+			<div class="txt">优惠券一次性使用，不设找零，不兑现;</div>
+			<div class="txt">可在爱代驾APP“优惠券”中查看详情.</div>
+			<div class="know"><span>我知道了</span></div>
+		</article>
+</div>
+    <script src="../../js/jweixin-1.0.0.js"></script>
+    <script src="js/zepto.min.js"></script>
+    <script type="text/javascript">
+        var chars = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
+        function generateMixed(n) {
+            var res = "";
+            for (var i = 0; i < n ; i++) {
+                var id = Math.ceil(Math.random() * 35);
+                res += chars[id];
+            }
+            return res;
+        }
+
+        $(function () {
+            var sign;
+            var nonce = generateMixed(15);
+            var times = Date.parse(new Date());
+            var url = location.href.split('#')[0];
+            //判断系统中是否存在
+            function getSign() {
+                $.ajax({
+                    async: false,
+                    type: "GET",
+                    url: "../../GetSignature.ashx?nonceStr=" + nonce + "&timestamp=" + times + "&url=" + encodeURIComponent(url),
+                    dataType: "text",
+                    success: function (data) {
+                        sign = data;
+                    },
+                    error: function (XMLHttpRequest, textStatus, errorThrown) {
+                        alert(textStatus);
+                    },
+                    complete: function (XMLHttpRequest, textStatus) {
+                    }
+                });
+                return sign;
+            }
+            wx.config({
+                debug: false, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
+                appId: 'wx1fd2478602e6c8e4', // 必填，公众号的唯一标识
+                timestamp: times, // 必填，生成签名的时间戳
+                nonceStr: nonce, // 必填，生成签名的随机串
+                signature: getSign(),// 必填，签名，见附录1
+                jsApiList: ['onMenuShareTimeline', 'onMenuShareAppMessage'] // 必填，需要使用的JS接口列表，所有JS接口列表见附录2
+            });
+
+            wx.ready(function () {
+                wx.onMenuShareTimeline({
+                    title: '爱代驾38元大礼包，速速领取！', // 分享标题
+                    link: 'http://wx.aidaijia.com/Activities/CarMarket/index.html', // 分享链接
+                    imgUrl: 'http://wx.aidaijia.com/Activities/CarMarket/images/bg.jpg', // 分享图标
+                    success: function () {
+                    },
+                    cancel: function () {
+                    }
+                });
+
+                wx.onMenuShareAppMessage({
+                    title: '爱代驾38元大礼包，速速领取！', // 分享标题
+                    desc: '38元代驾券陪你拼！摆好姿势，速速领取！', // 分享描述
+                    link: 'http://wx.aidaijia.com/Activities/CarMarket/index.html', // 分享链接
+                    imgUrl: 'http://wx.aidaijia.com/Activities/CarMarket/images/bg.jpg', // 分享图标
+                    type: 'link', // 分享类型,music、video或link，不填默认为link
+                    dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
+                    success: function () {
+                    },
+                    cancel: function () {
+                    }
+                });
+            });
+        });
+    </script>
+    
+</body>
+</html>

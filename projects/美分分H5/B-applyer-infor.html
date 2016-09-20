@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>个人信息</title>
+		<link href="css/mui.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="css/iconfont.css"/>
+		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+		<link rel="stylesheet" type="text/css" href="css/popover.css"/>
+		<link rel="stylesheet" type="text/css" href="css/app.css"/>
+  		<link rel="stylesheet" type="text/css" href="css/mui.picker.min.css" />
+		<script type="text/javascript" charset="utf-8">
+			mui.init();
+		</script>
+		<style type="text/css">
+		    .mui-input-group .mui-input-row{
+		    	height: 46px;
+		    }
+			.mui-input-row label ~ input,.mui-input-row label ~ select{
+				margin-top: 4px;
+				width: 65%;
+				text-align: left;
+				/*border: 1px solid red;*/
+				font-size: 14px;
+				color: #333;
+			}
+			.mui-input-row label ~ select{
+				color: #9B9B9B;
+			}
+			.mui-input-row label ~ select{
+				position: relative;
+				left: -3px;
+			}
+			.mui-input-row label ~ i{
+				position: absolute;
+				top: 12px;
+				right: 5%;
+				color: #3A3A3A;
+				font-size: 12px;
+			}
+			.mui-input-row label {
+				width: 110px;
+				padding: 15px 0 10px 12px;
+				/*margin-top: 8px;*/
+				/*border: 1px solid red;*/
+			}
+			.mui-input-row label i{
+				font-size: 22px;
+			}
+			#school-dialog{
+	    		/*height: 400px;
+	    		width: 320px;
+	    		margin: -200px 0 0 -160px;*/
+	    		overflow-y: scroll;
+	    		padding:30px 0 50px ;
+	    		position: absolute;
+	    		top: 0;
+	    		left: 0;
+	    		border-radius: 0;
+	    	}
+	    	.icon-close.iconfont{
+	    		font-size: 25px;
+	    		color: #9B9B9B;
+	    		position: absolute;
+	    		top: 6px;
+	    		right: 6px;
+	    		font-size: 30px;
+	    		z-index: 100;
+	    	}
+	    	.search-cont{
+	    		position: relative;
+	    		width: 94%;
+	    		margin-left: 3%;
+	    	}
+	    	.search-cont input{
+	    		padding-left: 25px;
+	    		height: 30px;
+	    	}
+	    	.search-cont i{
+	    		position: absolute;
+	    		top: 5px;
+	    		left: 6px;
+	    		color: #9B9B9B;
+	    	}
+	    	#school-name,#demo1,#demo2{
+	    		display: inline-block;
+	    		height: 44px;
+	    		line-height: 44px;
+	    		color: #9B9B9B;
+	    		width: 65%;
+	    		float: right;
+	    	}
+
+		</style>
+	</head>
+	<body>
+		<div class="mui-content">
+			<div class="limit-cont">
+				<div class="blue-bg">
+					<span class="size-big-xl">￥6000</span>
+					<span>起消费额度</span>
+				</div>
+				<p class="has-lr-padded" style="padding-left: 14px;">只需简单2步</p>
+				<ul class="limit-process">
+					<li>
+						<span class="circle bg-blue">1</span>
+						填写基本信息
+					</li>
+					<li>
+						<span class="circle bg-no">2</span>
+						上传手持证件照片
+					</li>
+				</ul>
+			</div>
+			<form class="mui-input-group">
+				<div class="mui-input-row">
+					<label>
+						姓名
+					</label>
+					<input type="text" value="" placeholder="请输入你的姓名">
+				</div>
+				<div class="mui-input-row" style="position: relative;">
+					<label>
+						身份证号
+					</label>
+					<input type="text" value="" placeholder="请输入你的身份证号">
+				</div>
+				<div class="mui-input-row" id="school-pop">
+					<label>
+						学校名称
+					</label>
+					<!--<input id="school-name" type="text" value="" placeholder="请选择你就读学校名称" disabled="disabled">-->
+					<span id="school-name">请选择你就读学校名称</span>
+					<i class="iconfont">&#xe639;</i>
+				</div>
+				<div class="mui-input-row">
+					<label>
+						入学时间
+					</label>
+					<span class="btn" id="demo1" data-options='{"type":"month"}'>请选择你入学时间</span>
+					<i class="iconfont">&#xe639;</i>
+				</div>
+				<div class="mui-input-row">
+					<label>
+						毕业时间
+					</label>
+					<span class="btn" id="demo2" data-options='{"type":"month"}'>请选择你毕业时间</span>
+					<i class="iconfont">&#xe639;</i>
+				</div>
+				<div class="mui-input-row">
+					<label>
+						学历
+					</label>
+					<select class="select-infor" name="college">
+						<option value="1">请选择你的学历</option>
+						<option value="2">博士</option>
+						<option value="3">硕士</option>
+						<option value="4">本科</option>
+						<option value="5">专科</option>
+						<option value="6">其他</option>
+					</select>
+					<i class="iconfont">&#xe639;</i>
+				</div>
+				<div class="mui-input-row">
+					<label>
+						专业
+					</label>
+					<input type="text" value="" placeholder="请输入你的专业">
+				</div>
+				<div class="mui-input-row">
+					<label>
+						学号
+					</label>
+					<input type="text" value="" placeholder="请输入你的学号">
+				</div>
+				<div class="mui-input-row">
+					<label>
+						宿舍详细地址
+					</label>
+					<input type="text" value="" placeholder="请输入你的宿舍地址">
+				</div>
+				<div class="mui-input-row">
+					<label>
+						学信网账号
+						<i id="apply-pop" class="iconfont">&#xe629;</i>
+					</label>
+					<input type="text" value="" placeholder="请输入你的学信网账号">
+				</div>
+				<div class="mui-input-row">
+					<label>
+						学信网密码
+					</label>
+					<input type="text" value="" placeholder="请输入你的学信网密码">
+				</div>
+				<div class="mui-input-row">
+					<label>
+						父或母联系电话
+					</label>
+					<input type="tel" value="" placeholder="请输入你的父母联系号码">
+				</div>
+			</form>
+			<button disabled="disabled" class="mui-btn mui-btn-negative mui-btn-block">下一步</button>
+			<div id='result' class="ui-alert" style="display: none;"></div>
+			<!--弹出层开始-->
+			<div id="dialogBg"></div>
+			<div id="apply-dialog" class="animated dialog">
+				<p class="color-black text-cont">
+					学信网（www.chsi.com.cn）是教育部指定
+					的学籍查询唯一网站，为方便核实学籍信息
+					需您提供本人在学信网的账号密码，以加快
+					额度申请审核通过。另，如您还未有账号密
+					码可以前往学信网注册获得，所提供的账号
+					密码美分分会严格保密。
+				</p>
+				<ul class="btn-ul">
+					<li>
+						<a class="close-pop">
+							取消
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							去注册
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div id="school-dialog" class="animated dialog">
+				<i class="icon-close iconfont">&#xe625;</i>
+				 <div class="search-cont">
+					<input type="text" placeholder="请输入学校名称">
+					<i class="iconfont">&#xe610;</i>
+				</div>
+				 <ul class="mui-table-view mui-table-view-chevron school-list">
+					<li class="mui-table-view-cell">
+						<span>上海大学</span>
+					</li>
+					<li class="mui-table-view-cell">
+						<span>上海交通大学</span>
+					</li>
+					<li class="mui-table-view-cell">
+						<span>上海复旦大学</span>
+					</li>
+					<li class="mui-table-view-cell">
+						<span>上海理工大学</span>
+					</li>
+				</ul>
+				<!--<ul class="btn-ul">
+					<li>
+						<a class="close-pop">
+							取消
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							确定
+						</a>
+					</li>
+				</ul>-->
+			</div>
+			<!--弹出层结束-->
+		</div>
+		<script type="text/javascript" src="js/jquery.min.js" ></script>
+		<script type="text/javascript">
+			var w,h;
+			function getSrceenWH(){
+				w = $(window).width();
+				h = $("html").height();
+				hw=$(window).height();
+				$('#dialogBg').width(w).height(h);
+				$("#school-dialog").width(w).height(hw);
+			}
+			
+			window.onresize = function(){  
+				getSrceenWH();
+			}  
+			$(window).resize();  
+			
+			$(function(){
+				getSrceenWH();
+				//显示弹框
+				$('#apply-pop').click(function(){
+					$('#dialogBg').fadeIn(300);
+					$('#apply-dialog').removeClass('animated').addClass('animated dialog'+"bounceIn"+'').fadeIn();
+				});
+				
+				$('#school-pop').click(function(){
+					$('#dialogBg').fadeIn(300);
+					$('#school-dialog').removeClass('animated').addClass('animated dialog'+"bounceIn"+'').fadeIn();
+				});
+				
+				//关闭弹窗
+				$('.close-pop').click(function(){
+					$('#dialogBg').fadeOut(300,function(){
+						$('#apply-dialog').removeClass('animated').addClass('animated dialog'+'bounceOutUp'+'').fadeOut();
+						$('#school-dialog').removeClass('animated').addClass('animated dialog'+'bounceOutUp'+'').fadeOut();
+					});
+				});
+				$('.icon-close.iconfont').click(function(){
+				$('#dialogBg').fadeOut(300,function(){
+					$('#school-dialog').removeClass('animated').addClass('animated dialog'+'bounceOutUp'+'').fadeOut();
+				});
+				
+			});
+//				选择学校之后关闭弹框
+				$(".school-list li").on("click",function(){
+					$('#dialogBg').fadeOut(300);
+					$("#school-name").html($(this).find("span").html()).css("color","#333");
+					$('#school-dialog').removeClass('animated').addClass('animated dialog'+'bounceOutUp'+'').fadeOut();
+					
+				});
+				
+				$("select").on("change",function(){
+					if($(this).val()==1){
+						$(this).css("color","#9B9B9B");
+					}else{
+						$(this).css("color","#333");
+					}
+				});
+			});
+		</script>
+		<script src="js/mui.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/mui.picker.min.js"></script>
+		<script>
+			(function($) {
+					$.init();
+					var result = $('#result')[0];
+					var btns = $('.btn');
+					btns.each(function(i, btn) {
+						btn.addEventListener('tap', function() {
+							var optionsJson = this.getAttribute('data-options') || '{}';
+							var options = JSON.parse(optionsJson);
+							var id = this.getAttribute('id');
+							/*
+							 * 首次显示时实例化组件
+							 * 示例为了简洁，将 options 放在了按钮的 dom 上
+							 * 也可以直接通过代码声明 optinos 用于实例化 DtPicker
+							 */
+							var picker = new $.DtPicker(options);
+							picker.show(function(rs) {
+								/*
+								 * rs.value 拼合后的 value
+								 * rs.text 拼合后的 text
+								 * rs.y 年，可以通过 rs.y.vaue 和 rs.y.text 获取值和文本
+								 * rs.m 月，用法同年
+								 * rs.d 日，用法同年
+								 * rs.h 时，用法同年
+								 * rs.i 分（minutes 的第二个字母），用法同年
+								 */
+								result.innerText = '选择结果: ' + rs.text;
+								
+								if(id=="demo1"){
+									document.getElementById("demo1").innerHTML=rs.text;
+									document.getElementById("demo1").style.color="#333";
+								}else{
+									document.getElementById("demo2").innerHTML=rs.text;
+									document.getElementById("demo2").style.color="#333";
+								}
+								/* 
+								 * 返回 false 可以阻止选择框的关闭
+								 * return false;
+								 */
+								/*
+								 * 释放组件资源，释放后将将不能再操作组件
+								 * 通常情况下，不需要示放组件，new DtPicker(options) 后，可以一直使用。
+								 * 当前示例，因为内容较多，如不进行资原释放，在某些设备上会较慢。
+								 * 所以每次用完便立即调用 dispose 进行释放，下次用时再创建新实例。
+								 */
+								picker.dispose();
+							});
+						}, false);
+					});
+				})(mui);
+		</script>
+	</body>
+</html>

@@ -1,0 +1,177 @@
+html,body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, p, blockquote, th, td{
+	margin: 0;
+	padding: 0;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+    font-family:'\5B8B\4F53',Arial;;
+}
+a{
+	text-decoration: none;
+	color: #333;
+}
+ul,li{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.main-cont{
+	min-height: 780px;
+	padding-top: 66px;
+	padding-bottom: 40px;
+}
+.fl{
+	float: left;
+}
+.fr{
+	float: right;
+}
+.color-red{
+	color: red;
+}
+.line{
+	margin: 0 8px;
+}
+.top-nav-cont{
+	height: 66px;
+	width: 100%;
+	background: #ff6565;
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+.top-nav,.main-cont,.page-tit{
+	width: 900px;
+	margin:0 auto;
+}
+.top-nav .logo{
+	margin-top: 14px;
+	width: 100px;
+}
+.top-navbar{
+	padding-left: 80px;
+	overflow: hidden;
+	display: inline-block;
+} 
+.top-navbar li{
+	float: left;
+}
+.top-navbar li a{
+	display: inline-block;
+	height: 20px;
+	line-height: 20px;
+	padding: 0 30px;
+	color: #FFF;
+	text-decoration: none;
+	font-size: 16px;
+	margin-top: 23px;
+	position: relative;
+	border-right: 1px solid #FFF;
+}
+.top-navbar li .no-border{
+	border: 0;
+}
+/*.top-navbar li .active,.top-navbar li a:hover{
+	border-bottom:3px solid #FFE936;
+	color: #FFE936;
+}*/
+
+/*底部信息栏开始*/
+
+.foot-cont{
+	width: 100%;
+	overflow: hidden;
+	background: #FF6565;
+	height: 66px;
+}
+.foot{
+	width: 900px;
+	margin: auto;
+	text-align: center;
+	height: 66px;
+}
+.foot p{
+	line-height: 20px;
+	color: #FFF;
+}
+.foot .has-m-top{
+	margin-top: 13px;
+}
+/*底部信息栏结束*/
+
+.top-cont{
+	width: 100%;
+	background: #FF6565;
+	margin-top: 66px;
+}
+.img-cont{
+	width: 900px;
+	margin: auto;
+}
+.img-cont img{
+	width: 100%;
+}
+.top-cont .img-cont img{
+	margin-bottom: -6px;
+}
+.img-cont.has-m-top{
+	margin-top: 50px;
+}
+
+
+.top-bar{
+	height: 180px;
+	width: 100%;
+	margin-top: 40px;
+}
+.top-bar .fl{
+	height: 120px;
+	width: 180px;
+	text-align: center;
+	font-size: 18px;
+	padding-top: 60px;
+	color: #FFF;
+}
+.top-bar .fl i{
+	font-size: 30px;
+	margin-top: 20px;
+}
+.top-bar .fr{
+	width: 718px;
+	height: 180px;
+	margin-left: 2px;
+}
+.top-bar .fr img{
+	height: 100%;
+	width: 100%;
+}
+.intro-text{
+	color: #333;
+	line-height: 24px;
+	margin-top: 40px;
+}
+/*加入我们*/
+.join-tit{
+	font-size: 18px;
+	color: #FF6565;
+	margin-top: 40px;
+}
+.join-tit2{
+	font-size: 16px;
+	margin: 20px 0;
+}
+.join-text{
+	line-height: 25px;
+}
+.line{
+	height: 1px;
+	width: 100%;
+	background: #D8D8D8;
+	margin-top: 40px;
+}
+.contact-text{
+	line-height: 30px;
+}
+.contact-text.has-m-top{
+	margin-top: 40px;
+}

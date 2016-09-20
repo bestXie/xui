@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>提交订单</title>
+    <script src="js/mui.min.js"></script>
+    <link href="css/mui.css" rel="stylesheet"/>
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="css/iconfont.css"/>
+    <link rel="stylesheet" type="text/css" href="css/popover.css"/>
+    <script type="text/javascript" charset="utf-8">
+      	mui.init();
+    </script>
+    <style type="text/css">
+    	html{
+    		min-height: 100%;
+    	}
+    	.sub-top{
+    		text-align: center;
+    		padding: 15px 0;
+    		border-bottom: 1px solid #D8D8D8;
+    	}
+    	.sub-top .icon-success{
+    		font-size: 35px;
+    		color: #73BA49;
+    	}
+    	.mui-table-view .mui-media-object {
+			height: 60px;
+			max-width: 60px;
+		}
+		.mui-btn.mui-btn-outlined.mui-btn-primary{
+			border-radius: 20px;
+			padding: 3px 20px 1px 20px;
+			margin-top: 6px;
+			border: 1px solid #00abec;
+			color: #00abec;
+		}
+		.mui-badge{
+			background: none;
+			padding: 0;
+			color: #ffa200;
+		}
+		.mui-table-view.lower-table-view .mui-table-view-cell{
+			padding: 6px 15px 0 15px;
+			font-size: 12px;
+			color: #9B9B9B;
+		}
+		.mui-table-view.lower-table-view .mui-table-view-cell.mui-active{
+			background: #FFF;
+		}
+		.mui-table-view.lower-table-view{
+			padding-bottom: 6px;
+		}
+		.operation-cont{
+			background: #F4F4F4;
+			position: fixed;
+			bottom: 0;
+			left: 0;
+			display: none;
+			z-index: 100;
+		}
+		.operation-cont ul,.operation-cont{
+			width: 100%;
+			margin: 0;
+			padding: 0;
+		}
+		.operation-cont ul li{
+			position: relative;
+		}
+		.operation-cont ul .mui-media{
+			padding: 4px 15px 6px;
+		}
+		.operation-cont ul .mui-media .size-sm{
+			line-height: 14px;
+			margin-top: -2px;
+		}
+		.operation-cont ul i{
+			position: absolute;
+			top: 11px;
+			right: 14px;
+		}
+		.operation-cont .mui-btn-block{
+			width: 100%;
+			margin: 0;
+			border: 0;
+			margin-top: 4px;
+			border-top: 1px solid #D8D8D8;
+			border-radius: 0;
+		}
+    </style>
+</head>
+<body>
+	<div class="mui-content">
+	    <div class="sub-top bg-white">
+	    	<i class="iconfont icon-success">&#xe63d;</i>
+	    	<h5 class="color-black">申请额度提交成功，你可以提交订单啦</h5>
+	    </div>
+	    <ul class="mui-table-view has-m-top">
+			<li class="mui-table-view-cell mui-media">
+				<a>
+					<img class="mui-media-object mui-pull-left" src="img/pic1.png"/>
+					<div class="mui-media-body">
+						最新华丽美版Ulthera 还你紧致童颜
+						<p class='mui-ellipsis'>
+							<span>上海春夏秋冬外科整形医院</span>
+						</p>
+						<p class='mui-ellipsis'>
+							售价：<span class="color-red">￥600</span>
+							医院价：<span class="line-throu">￥1000</span>
+						</p>
+					</div>
+				</a>
+			</li>
+		</ul>
+		<ul class="mui-table-view has-m-top">
+			<li class="mui-table-view-cell">
+				<a id="pop-btn" class="mui-navigate-right">
+					代金券
+					<span class="mui-badge">
+						￥
+						<span id="num">100</span>
+					</span>
+				</a>
+			</li>
+		</ul>
+		<ul class="mui-table-view lower-table-view has-m-top">
+			<li class="mui-table-view-cell no-after-line">
+				订单金额
+				<span class="mui-pull-right">￥680</span>
+			</li>
+			<li class="mui-table-view-cell no-after-line">
+				代金券
+				<span class="mui-pull-right">￥180</span>
+			</li>
+			<li class="mui-table-view-cell no-after-line">
+				分期金额
+				<span class="mui-pull-right">￥380</span>
+			</li>
+			<li class="mui-table-view-cell no-after-line">
+				分期月数
+				<span class="mui-pull-right">3个月</span>
+			</li>
+			<li class="mui-table-view-cell no-after-line">
+				分期月借
+				<span class="mui-pull-right">￥126.54 (含服务费￥22)</span>
+			</li>
+		</ul>
+		<ul class="mui-table-view">
+			<li class="mui-table-view-cell mui-media">
+				<a>
+					<div class="mui-media-body">
+						需首付：
+						<span class="color-red mui-pull-right">￥200</span>
+						<p class="size-sm">
+							(首付金额＝总价－你的可用额度234元)
+						</p>
+					</div>
+				</a>
+			</li>
+		</ul>
+		<button class="mui-btn mui-btn-block mui-btn-negative">提交</button>
+		<div id="dialogBg"></div>
+		<div class="operation-cont">
+			<ul class="mui-table-view select-operation">
+				<li class="mui-table-view-cell">
+					请选择代金券
+				</li>
+				<li class="mui-table-view-cell mui-media active">
+					<span class="color-red">
+						<span class="coupon-num">100</span>元
+					</span>
+					<p class="size-sm">全部通用，2天到期</p>
+					<i class="iconfont mui-pull-right">&#xe627;</i>
+				</li>
+				<li class="mui-table-view-cell mui-media">
+					<span class="color-red">
+						<span class="coupon-num">200</span>元
+					</span>
+					<p class="size-sm">全部通用，2天到期</p>
+					<i class="iconfont mui-pull-right">&#xe63e;</i>
+				</li>
+			</ul>
+			<button class="mui-btn mui-btn-block">确定</button>
+
+		</div>
+	</div>
+	<script type="text/javascript" src="js/jquery.min.js" ></script>
+		<script type="text/javascript">
+			var w,h;
+			function getSrceenWH(){
+				w = $(window).width();
+				h = $("html").height();
+				$('#dialogBg').width(w).height(h);
+			}
+			
+			window.onresize = function(){  
+				getSrceenWH();
+			}  
+			$(window).resize();  
+			$(document).ready(function(){
+				getSrceenWH();
+				$("#pop-btn").on("click",function(){
+					$(".operation-cont").css("display","block");
+					$("#dialogBg").fadeIn(300);
+				});
+				
+				$(".select-operation .mui-media").on("click",function(){
+					$(".select-operation .mui-media").removeClass("active").find("i").html("&#xe63e;");
+					$(this).addClass("active").find("i").html("&#xe627;");
+					$("#dialogBg").fadeOut(300);
+					$(".operation-cont").css("display","none");
+					$("#num").html($(this).find(".coupon-num").html());  
+				});
+				
+				$(".operation-cont .mui-btn-block").on("click",function(){
+					$("#dialogBg").fadeOut(300);
+					$(".operation-cont").css("display","none");
+				});
+			});
+		</script>
+
+</body>
+</html>
