@@ -62,7 +62,7 @@
         </ul>
     </header>
     <header>
-        <h2><a class="menu-campaigns" href="http://wildwithin.cn/2016vr/m-campaigns.html">活动集锦</a></h2>
+        <h2><a class="menu-campaigns" href="m-campaigns.html">活动集锦</a></h2>
     </header>
 </nav>
 <script type="text/javascript" src='app_js/zepto.js'></script>
@@ -94,7 +94,6 @@
     $(".video_link2").click( function() {
         var link = 'http://cdn.wildwithin.cn/2016ebo/ski-vr/index.html';
         $.post(g.SERVER_URL.INC_LINK_VIEW, {url: link}, function(ret) {
-            window.location.href = 'video.html';
         }, "json");
     });
 </script>

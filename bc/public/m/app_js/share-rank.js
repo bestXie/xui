@@ -1,7 +1,8 @@
 var g = window.global;
 
 $(function () {
-    var pageN = 1, flag = true, isLoad = false;
+    var pageN = 1, flag = true, isLoad = false, clickFlag = true;
+
     function getList(pageN) {
         if (!flag) {
             return false;
@@ -63,16 +64,22 @@ $(function () {
             }
         }
     });
-
+    $('#xui-toast-close').click(function () {
+        $('#xui-toast').hide();
+    });
     getList(1);
     var btb_s = true;
     $('.btn').live('tap', function () {
-        var _this=$(this);
+        var _this = $(this);
+        //if (!clickFlag) {
+        //    $('#xui-toast').show();
+        //    return false;
+        //}
         if (!btb_s) {
             return false;
         }
         btb_s = false;
-        var id=_this.parents('.rank-entry').attr('data-nid');
+        var id = _this.parents('.rank-entry').attr('data-nid');
         $.ajax({
             type: 'POST',
             url: g.SERVER_PATH + '/record/' + id + '/vote?access_token=' + g.ACCESS_TOKEN,
@@ -80,10 +87,11 @@ $(function () {
             success: function (data) {
                 btb_s = true;
                 if (data && data.code == 405) {
-                    _this.addClass('vote-btn');
-                    alert("每人每天可为每件作品送3个雪花");
+                    $('#xui-toast').show();
+                    clickFlag = false;
                     return false;
                 }
+
                 if (data && data.code == 200) {
                     _this.addClass('vote-btn');
                     var onum = _this.parents('.rank-entry').find('.vote-count')
@@ -93,7 +101,7 @@ $(function () {
                 }
             },
             error: function () {
-                 btb_s = true;
+                btb_s = true;
             }
         });
     })

@@ -7,27 +7,55 @@
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="stylesheet" href="css/index.css"/>
     <link rel="stylesheet" href="css/animate.min.css"/>
+<<<<<<< HEAD
     <title>VR全景视频</title>
+    <style>
+        @-ms-viewport { width:device-width; }
+        @media only screen and (min-device-width:800px) { html { overflow:hidden; } }
+        html { height:100%; }
+        body { height:100%; overflow:hidden; margin:0; padding:0; font-family:Arial, Helvetica, sans-serif; font-size:16px; color:#FFFFFF; background-color:#000000; }
+        .body-background-video { background: #000; }
+        #pano { position: absolute; left: 0; top: 0; }
+    </style>
+
+=======
+    <title>酷雪BC</title>
+>>>>>>> 1e4eec36b3073d80f0b3be5d41cafdbf3ee3b1e5
 </head>
 <body class="body-background-video">
 <header class="header">
-    <a href="http://www.hellobc.com.cn/" class="logo"><img src="images/logo.png" height="30" alt="logo"/></a>
+    <a href="http://www.hellobc.com.cn/" class="logo" target="_blank"><img src="images/logo.png" height="30" alt="logo"/></a>
     <img class="logo-2" src="images/logo_2.png" height="30" alt=""/>
     <nav class="nav">
         <a class="icon-home" href="index.html"></a>
         <a  class="active"  href="video.html">VR全景视频</a>
         <a href="product.html">早鸟优惠产品</a>
         <a href="campaigns.html">活动集锦</a>
-        <a class="icon-weibo " href="javascript:void (0);"></a>
+        <a class="icon-weibo " href="http://weibo.com/cowscreamery?refer_flag=1001030201"  target="_blank"></a>
         <a class="icon-weixin" href="javascript:void (0);">
             <i class="icon-wechat"></i>
         </a>
     </nav>
 </header>
-<iframe src="http://cdn.wildwithin.cn/2016ebo/ski-vr/index.html" width="100%" height="100%" frameborder="0"></iframe>
+<script src="http://wildwithin.cn/vr-assets/2016ebo/ski-vr/krpano.js"></script>
+
+<div id="pano" style="width:100%;height:100%;">
+    <noscript><table style="width:100%;height:100%;"><tr style="vertical-align:middle;text-align:center;"><td>ERROR:<br><br>Javascript not activated<br><br></td></tr></table></noscript>
+    <script>
+        embedpano({
+            swf:"http://wildwithin.cn/vr-assets/2016ebo/ski-vr/krpano.swf",
+            xml:"http://wildwithin.cn/vr-assets/2016ebo/ski-vr/ski-v2.xml?" + Math.random(),
+            target:"pano",
+            html5:"auto",
+            mobilescale:1.0
+        });
+    </script>
+</div>
+
 <script src="js/jquery.min.js"></script>
 <script src="js/share.js"></script>
 <script src="js/index.js"></script>
+<script src="http://cdn.wildwithin.cn/2016ebo/javascripts/track.js"></script>
 <script src="http://cdn.wildwithin.cn/2016ebo/javascripts/vr-tip.js"></script>
 </body>
 </html>

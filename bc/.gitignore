@@ -4,3 +4,5 @@ node_modules/*
 .idea/*
 public/libs/
 public/libs/*
+log
+npm-debug.log

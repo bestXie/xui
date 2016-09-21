@@ -73,7 +73,7 @@
         </ul>
     </header>
     <header>
-        <h2><a class="menu-campaigns" href="http://wildwithin.cn/2016vr/m-campaigns.html">活动集锦</a></h2>
+        <h2><a class="menu-campaigns" href="m-campaigns.html">活动集锦</a></h2>
     </header>
 </nav>
 <!--common start-->
@@ -97,7 +97,8 @@
     }
     initWxShare();
 
-    var productList =['http://www.aoyou.com/group/groupproductdetail/index?ProductID=104272',
+    var productList =[
+        'http://www.aoyou.com/group/groupproductdetail/index?ProductID=104272',
         'http://www.tuniu.com/tours/210336279',
         'http://vacations.ctrip.com/grouptravel/p3149588s2.html',
         'http://vacations.ctrip.com/grouptravel/p11790320s2.html',
@@ -118,7 +119,7 @@
     ];
     var productHtml = '';
     var str = '<a href="{{herf}}" class="product-item"> <img src="app_img/cp_{{num}}.jpg" alt=""/></a>';
-    for (var i = 0, len = productList.length; i < len; i++) {
+    for (var i = 1, len = productList.length; i < len; i++) {
         productHtml += str.replace(/{{herf}}/g, productList[i]).replace(/{{num}}/g,i+1)
     }
     $('#productList').html(productHtml);
@@ -136,7 +137,6 @@
     $(".video_link2").click( function() {
         var link = 'http://cdn.wildwithin.cn/2016ebo/ski-vr/index.html';
         $.post(g.SERVER_URL.INC_LINK_VIEW, {url: link}, function(ret) {
-            window.location.href = 'video.html';
         }, "json");
     });
 </script>

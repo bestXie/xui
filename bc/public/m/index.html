@@ -12,8 +12,6 @@
     <title>加拿大BC省早鸟优惠计划</title>
     <link rel="stylesheet" href="app_css/index.css">
     <link rel="stylesheet" href="app_css/demo.css">
-    <script src="app_js/access_token.js"></script>
-    <script src="app_js/const.js"></script>
     <script type="text/javascript" src="app_js/fx.js"></script>
 </head>
 <body class="index">
@@ -56,7 +54,7 @@
 <script src="app_js/jquery.min.js"></script>
 <script src="app_js/canvas-video-player.js"></script>
 <script type="text/javascript" src="app_js/iscroll-probe.js"></script>
-<script type="text/javascript" src='app_js/wx-share.js'></script>
+<!--<script type="text/javascript" src='app_js/wx-share.js'></script>-->
 <script>
     $('#myVideo').get(0).load();
     var isIphone = navigator.userAgent.toLowerCase().indexOf('iphone') >= 0;
@@ -137,16 +135,16 @@
         e.preventDefault();
     });
 
-    //微信分享
-    function initWxShare() {
-        var title = "越早越省！【酷雪BC】滑雪早鸟优惠计划";
-        var desc = "冬游加拿大BC省，享超值优惠，赢双人旅行大奖。";
-        var link = "http://wildwithin.cn/vr2016/m/";
-        if (window.wx) {
-            wxShare({pic: "http://wildwithin.cn/vr2016/m/app_img/wx-share.jpg", link: link, desc: desc, title: title});
-        }
-    }
-    initWxShare();
+//    //微信分享
+//    function initWxShare() {
+//        var title = "越早越省！【酷雪BC】滑雪早鸟优惠计划";
+//        var desc = "冬游加拿大BC省，享超值优惠，赢双人旅行大奖。";
+//        var link = "http://wildwithin.cn/vr2016/m/";
+//        if (window.wx) {
+//            wxShare({pic: "http://wildwithin.cn/vr2016/m/app_img/wx-share.jpg", link: link, desc: desc, title: title});
+//        }
+//    }
+//    initWxShare();
 </script>
 </body>
 </html>

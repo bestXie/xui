@@ -2,7 +2,7 @@
  * Created by think on 2016/9/11.
  */
 window.global = {};
-var SERVER_PATH="";
+var SERVER_PATH="/vr2016";
 window.global.SERVER_PATH = SERVER_PATH;
 window.global.ACCESS_TOKEN = getAccessToken();
 window.global.SERVER_URL = {

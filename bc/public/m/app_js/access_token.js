@@ -34,7 +34,11 @@ function getAccessToken() {
     //检测access_token是否有效
     if (!data || data== null || data == undefined) {
         var currentUrl = window.location.href;
-        location.href = 'http://wildwithin.cn/wechat2/api/oauth-url?backUrl='+currentUrl;
+        var type = 'weibo';
+        if (/micromessenger/i.test(window.navigator.userAgent)) {
+            type = 'wechat';
+        }
+        location.href = 'http://wildwithin.cn/wechat2/api/oauth-url?backUrl='+currentUrl+'&type='+type;
         return;
     }
     return data;
