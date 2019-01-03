@@ -1,5 +1,6 @@
 module.exports = function (grunt) {
 
+    
     var sources_native = [
         'src/intro.js',
         'src/template.js',
