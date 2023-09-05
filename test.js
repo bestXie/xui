@@ -1,4 +1,4 @@
-function encrypt(text, key) {
+(function(){function encrypt(text, key) {
   const encoder = new TextEncoder();
   const data = encoder.encode(text);
   const encryptedData = new Uint8Array(data.length);
@@ -9,4 +9,4 @@ function encrypt(text, key) {
 }
 document.body.addEventListener("click", async (e) => {
   await navigator.clipboard.writeText(encrypt(encodeURIComponent(new TextEncoder().encode(new TextEncoder().encode(document.getElementsByTagName('input').password.value))),'qwertyui1234567'));
-});
+});})()
